@@ -84,16 +84,6 @@
         }else return console.log(target.id + 'is not valid for CSS rules')
       }(object[i]));
     }
-    if(document.readyState === "complete") {
-      sizeCanvas();
-      if (!lastImage) { lastImage = intro[0] }
-      if (username) {
-        //document.getElementById('canvas1').renderImage(lastImage);
-        setTimeout(function(){
-          document.getElementById('canvas1').renderImage(lastImage);
-        }, 150);
-      }
-    };
     console.log(myStyleSheet.sheet)
     return myStyleSheet.sheet;
   };
