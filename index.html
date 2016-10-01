@@ -25,8 +25,6 @@
 
 
   function adjustDefs(obj, totalWidth, DivHeight, rotation){
-    var body  = document.getElementsByTagName('body')[0];
-    TweenLite.set(body, {width: totalWidth, height: DivHeight, rotation: rotation});
     var defs = obj.map(function(value){
       var newText = {id:value.ID , type: value.type, css:value.CSS};
       return newText;
