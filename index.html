@@ -188,7 +188,13 @@
         }
         console.log(myStyleSheet.sheet)
         return myStyleSheet.sheet;
-    };
+    }
+
+    function setNotesPosition(){
+        var orientation = window.innerWidth/window.innerHeight
+        console.log(orientation)
+
+    }
 
     var sizeCanvas = function(){
         //console.log('resizing canvas')
@@ -200,7 +206,7 @@
                 canvas[a].height = parent.clientHeight;
             }(a));
         };
-    }
+    };
 
     function resize(){
         var width = window.outerWidth;
