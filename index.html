@@ -294,9 +294,6 @@
     };
 
     window.onload = function(){
-        console.log('loaded')
-        
-        console.log(myPrefix.css)
         Elements = new buildDoMM(propeties);
         //sizeCanvas(); //uncomment this line if you have canvas elements
         window.addEventListener('resize', debounce(resize, 50), false);
