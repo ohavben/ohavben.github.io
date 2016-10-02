@@ -128,6 +128,12 @@
             return newText;
         });
 
+        function NotesPosition(){
+            var orientation = window.innerWidth/window.innerHeight, result = [];
+            console.log(orientation);
+            return result;
+        }
+
         //var DivHeight = window.innerHeight;
         //var totalWidth = window.innerWidth;
         var itemsToBeReplaced = ['totalWidth', 'totalHeight','carouselHeight', 'marginWidth', 'marginHeight', 'marginCarouselHeight'];
@@ -158,7 +164,6 @@
             return Child;
         });
         resize();
-        setNotesPosition();
         return objects;
     }
 
@@ -191,11 +196,7 @@
         return myStyleSheet.sheet;
     }
 
-    function setNotesPosition(){
-        var orientation = window.innerWidth/window.innerHeight
-        console.log(orientation)
-
-    }
+    
 
     var sizeCanvas = function(){
         //console.log('resizing canvas')
