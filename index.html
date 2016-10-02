@@ -309,6 +309,7 @@
             e.preventDefault();
             if (!e.target.parentElement.classList.contains('items')) return
             console.log(e.target.parentElement);
+            e.target.parentElement.classList.add('fullscreen');
         }, false);
     };
 }()); // end of main scope
