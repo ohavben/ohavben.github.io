@@ -309,7 +309,7 @@
             e.preventDefault();
             if (!e.target.parentElement.classList.contains('items')) return
             console.log(e.target.parentElement);
-            e.target.parentElement.classList.add('fullScreen');
+            e.target.parentElement.classList.toggle('fullScreen');
         }, false);
     };
 }()); // end of main scope
