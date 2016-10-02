@@ -301,8 +301,10 @@
 
         Elements[0].addEventListener('dblclick', function (e) {
             e.preventDefault();
-            if (!test.classList.contains('items') return
-            console.log(e.target.parentElement);
+            if (test.classList.contains('items') {
+                console.log(e.target.parentElement);
+            }
+            else return
         }, false);
     };
 }()); // end of main scope
