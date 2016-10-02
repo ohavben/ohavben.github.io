@@ -295,6 +295,7 @@
 
     window.onload = function(){
         Elements = new buildDoMM(propeties);
+        console.log(Elements)
         //sizeCanvas(); //uncomment this line if you have canvas elements
         window.addEventListener('resize', debounce(resize, 50), false);
     };
