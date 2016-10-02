@@ -298,6 +298,11 @@
         console.log(Elements)
         //sizeCanvas(); //uncomment this line if you have canvas elements
         window.addEventListener('resize', debounce(resize, 50), false);
+
+        Elements[0].addEventListener('dblclick', function (e) {
+            e.preventDefault();
+            console.log(e.target);
+        }, false);
     };
 }()); // end of main scope
         </script>
