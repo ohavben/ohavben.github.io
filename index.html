@@ -77,7 +77,8 @@
       Parent.appendChild(Child);
       return Child;
     });
-  return objects;
+    resize();
+    return objects;
   };
 
   function setStyleSheet(object){
@@ -99,7 +100,7 @@
           return
         }else if(target.type == 'keyframe'){
           return myStyleSheet.sheet.insertRule( '@' + myPrefix + 'keyframes ' + target.id + '{'+ target.css + '}', 0 );
-        }else return console.log(target.id + 'is not valid for CSS rules')
+        }else return console.log(target.id + 'is not valid target for CSS rules')
       }(object[i]));
     }
     console.log(myStyleSheet.sheet)
@@ -174,9 +175,10 @@
   };
 
   window.onload = function(){
-    //console.log('loaded')
+    console.log('loaded')
     Elements = new buildDoMM(propeties);
-    resize();
+    //sizeCanvas(); //uncomment this line if you have canvas elements
+    //resize();
     window.addEventListener('resize', debounce(resize, 50), false);
   };
 }()); // end of main scope
