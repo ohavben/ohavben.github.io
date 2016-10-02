@@ -13,7 +13,7 @@
     {
       "type": "div",
       "ID": "carousel",
-      "parent": "wrapper",
+      "parent": "body",
       "class": "",
       "text": "",
       "html":"",
@@ -69,7 +69,8 @@
   function buildDoMM(data){
     var objects = data.map(function(defs){
       if (defs.type == 'class' || defs.type == 'keyframe') return null;
-      var Parent = document.getElementById(defs.parent)
+      var Parent = document.getElementById(defs.parent);
+      if (!Parent) { Parent = document.getElementsByTagName('body')[0];}
       var Child = document.createElement(defs.type);
       Child.id = defs.ID;
       if (defs.class && defs.class !=='') { Child.classList.add(defs.class) }
@@ -178,7 +179,6 @@
     console.log('loaded')
     Elements = new buildDoMM(propeties);
     //sizeCanvas(); //uncomment this line if you have canvas elements
-    //resize();
     window.addEventListener('resize', debounce(resize, 50), false);
   };
 }()); // end of main scope
