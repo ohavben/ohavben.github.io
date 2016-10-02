@@ -301,6 +301,7 @@
 
         Elements[0].addEventListener('dblclick', function (e) {
             e.preventDefault();
+            if (!test.classList.contains('items') return
             console.log(e.target.parentElement);
         }, false);
     };
