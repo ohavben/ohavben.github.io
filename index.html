@@ -216,7 +216,7 @@
                     return
                 }
                 else if(target.type == 'keyframe'){
-                    return myStyleSheet.sheet.insertRule( '@' + myPrefix + 'keyframes ' + target.id + '{'+ target.css + '}', 0 );
+                    return myStyleSheet.sheet.insertRule( '@' + myPrefix.css + 'keyframes ' + target.id + '{'+ target.css + '}', 0 );
                 }
                 else return console.log(target.id + 'is not valid target for CSS rules')
             }(object[i]));
@@ -296,7 +296,7 @@
     window.onload = function(){
         console.log('loaded')
         
-        console.log(myPrefix)
+        console.log(myPrefix.css)
         Elements = new buildDoMM(propeties);
         //sizeCanvas(); //uncomment this line if you have canvas elements
         window.addEventListener('resize', debounce(resize, 50), false);
