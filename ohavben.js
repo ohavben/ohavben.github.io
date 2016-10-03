@@ -94,7 +94,7 @@
          {
             "type": "class",
             "ID":"*",
-            "CSS":"font-family: 'chalk';"
+            "CSS":"font-family: 'Times New Roman';"
         },
         
         {
