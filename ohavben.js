@@ -8,7 +8,11 @@
             "class": "",
             "text": "",
             "html":"",
-            "CSS":"width: totalWidth; height: totalHeight; position: relative; display:block; overflow:hidden;"
+            "CSS":  "width: totalWidth;\
+                     height: totalHeight;\
+                     position: relative;\
+                     display:block;\
+                     overflow:hidden;"
         }, 
 
         {
@@ -18,7 +22,17 @@
             "class": "items",
             "text": "",
             "html":"<i class='pin'></i><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur et consequat elit.<br>Donec viverra eros eget ipsum semper lacinia. Sed dictum mattis arcu. <br> Proin ipsum tellus, gravida ac dui quis, venenatis venenatis dolor. <br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur et consequat elit.<br>Donec viverra eros eget ipsum semper lacinia.</p>",
-            "CSS":"background-color: yellow ;width: 30vmin; height:30vmin; overflow:hidden; top: note1Top; left: note1Left;-webkit-transform: skew(0deg) rotate(0deg); -moz-transform: skew(0deg) rotate(0deg); -ms-transform: skew(0deg) rotate(0deg); -o-transform: skew(0deg) rotate(0deg); transform: skew(0deg) rotate(0deg);"
+            "CSS":  "width: 30vmin;\
+                     height:30vmin;\
+                     overflow:hidden;\
+                     top: note1Top;\
+                     left: note1Left;\
+                     -webkit-transition-property: width height font-size left top;\
+                     -webkit-transition-duration: 2s;\
+                     -webkit-transition-timing-function: ease;\
+                     transition-property: width height background-color font-size left top color;\
+                     transition-duration: 2s;\
+                     transition-timing-function: ease;"
         }, 
 
          {
@@ -28,7 +42,17 @@
             "class": "items",
             "text": "",
             "html":"<i class='pin'></i><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur et consequat elit.<br>Donec viverra eros eget ipsum semper lacinia. Sed dictum mattis arcu. <br> Proin ipsum tellus, gravida ac dui quis, venenatis venenatis dolor. <br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur et consequat elit.<br>Donec viverra eros eget ipsum semper lacinia. Sed dictum mattis arcu. <br> Proin ipsum tellus, gravida ac dui quis, venenatis venenatis dolor. <br></p>",
-            "CSS":"background-color: green; width: 40vmin; height:30vmin; overflow:hidden; top: note2Top; left: note2Left;-webkit-transform: skew(-3deg) rotate(-3deg); -moz-transform: skew(-3deg) rotate(-3deg); -ms-transform: skew(-3deg) rotate(-3deg); -o-transform: skew(-3deg) rotate(-3deg); transform: skew(-3deg) rotate(-3deg);"
+            "CSS":  "width: 40vmin;\
+                    height:30vmin;\
+                    top: note2Top;\
+                    left: note2Left;\
+                    overflow:hidden;\
+                    -webkit-transition-property: width height font-size left top;\
+                    -webkit-transition-duration: 2s;\
+                    -webkit-transition-timing-function: ease;\
+                    transition-property: width height background-color font-size left top color;\
+                    transition-duration: 2s;\
+                    transition-timing-function: ease;"
         }, 
 
          {
@@ -38,7 +62,17 @@
             "class": "items",
             "text": "",
             "html":"<i class='pin'></i><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur et consequat elit.<br>Donec viverra eros eget ipsum semper lacinia. Sed dictum mattis arcu. <br> Proin ipsum tellus, gravida ac dui quis, venenatis venenatis dolor.</p>",
-            "CSS":"background-color:red; width: 20vmin; height:30vmin; overflow:hidden; top: note3Top; left: note3Left;-webkit-transform: skew(3deg) rotate(3deg); -moz-transform: skew(3deg) rotate(3deg); -ms-transform: skew(3deg) rotate(3deg); -o-transform: skew(3deg) rotate(3deg); transform: skew(3deg) rotate(3deg);"
+            "CSS":  "width: 20vmin;\
+                    height:30vmin;\
+                    overflow:hidden;\
+                    top: note3Top;\
+                    left: note3Left;\
+                    -webkit-transition-property: width height font-size left top;\
+                    -webkit-transition-duration: 2s;\
+                    -webkit-transition-timing-function: ease;\
+                    transition-property: width height background-color font-size left top color;\
+                    transition-duration: 2s;\
+                    transition-timing-function: ease;"
         }, 
 
          {
@@ -48,7 +82,17 @@
             "class": "items",
             "text": "",
             "html":"<i class='pin'></i><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur et consequat elit.<br>Donec viverra eros eget ipsum semper lacinia. Sed dictum mattis arcu. <br> Proin ipsum tellus, gravida ac dui quis, venenatis venenatis dolor. <br>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>",
-            "CSS":"background-color:blue; width: 40vmin; height:30vmin;overflow:hidden; top: note4Top; left: note4Left;-webkit-transform: skew(-2deg) rotate(-5deg); -moz-transform: skew(-2deg) rotate(-2deg); -ms-transform: skew(-2deg) rotate(-2deg); -o-transform: skew(-2deg) rotate(-2deg); transform: skew(-2deg) rotate(-2deg);"
+            "CSS":  "width: 40vmin;\
+                    height:30vmin;\
+                    overflow:hidden;\
+                    top: note4Top;\
+                    left: note4Left;\
+                    -webkit-transition-property: width height font-size left top;\
+                    -webkit-transition-duration: 2s;\
+                    -webkit-transition-timing-function: ease;\
+                    transition-property: width height background-color font-size left top color;\
+                    transition-duration: 2s;\
+                    transition-timing-function: ease;"
         }, 
 
          {
@@ -58,7 +102,17 @@
             "class": "items",
             "text": "",
             "html":"<i class='pin'></i><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur et consequat elit.<br>Donec viverra eros eget ipsum semper lacinia. Sed dictum mattis arcu. <br> Proin ipsum tellus, gravida ac dui quis, venenatis venenatis dolor.</p>",
-            "CSS":"background-color: pink; width: 50vmin; height:20vmin;overflow:hidden; top: note5Top; left: note5Left;-webkit-transform: skew(3deg) rotate(3deg); -moz-transform: skew(3deg) rotate(3deg); -ms-transform: skew(3deg) rotate(3deg); -o-transform: skew(3deg) rotate(3deg); transform: skew(3deg) rotate(3deg);"
+            "CSS":  "width: 50vmin;\
+                    height:20vmin;\
+                    overflow:hidden;\
+                    top: note5Top;\
+                    left: note5Left;\
+                    -webkit-transition-property: width height font-size left top;\
+                    -webkit-transition-duration: 2s;\
+                    -webkit-transition-timing-function: ease;\
+                    transition-property: width height background-color font-size left top color;\
+                    transition-duration: 2s;\
+                    transition-timing-function: ease;"
         }, 
 
         {
@@ -68,7 +122,16 @@
             "class": "items",
             "text": "",
             "html":"<i class='pin'></i><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur et consequat elit.<br>Donec viverra eros eget ipsum semper lacinia. Sed dictum mattis arcu. <br> Proin ipsum tellus, gravida ac dui quis, venenatis venenatis dolor. <br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur et consequat elit.<br>Donec viverra eros eget ipsum semper lacinia. Sed dictum mattis arcu. <br> Proin ipsum tellus, gravida ac dui quis, venenatis venenatis dolor. <br></p>",
-            "CSS":"background-color: purple;width:20vmin; height:30vmin; overflow:hidden; top: note6Top; left: note6Left;-webkit-transform: skew(-5deg) rotate(-5deg); -moz-transform: skew(-5deg) rotate(-5deg); -ms-transform: skew(-5deg) rotate(-5deg); -o-transform: skew(-5deg) rotate(-5deg); transform: skew(-5deg) rotate(-5deg);"
+            "CSS":  "width:20vmin;\
+                    height:30vmin;\
+                    overflow:hidden;\
+                    top: note6Top; left: note6Left;\
+                    -webkit-transition-property: width height font-size left top;\
+                    -webkit-transition-duration: 2s;\
+                    -webkit-transition-timing-function: ease;\
+                    transition-property: width height background-color font-size left top color;\
+                    transition-duration: 2s;\
+                    transition-timing-function: ease;"
         }, 
         /*
          {
@@ -94,13 +157,13 @@
          {
             "type": "class",
             "ID":"*",
-            "CSS":"font-family: 'CoalhandLuke';"
+            "CSS":"font-family: 'CoalhandLuke'; color:white;"
         },
         
         {
             "type": "class",
             "ID":"html",
-            "CSS":"background: url('https://www.colehardware.com/wp-content/themes/cole/images/corkboard-background.jpg') no-repeat center center fixed; background-size: 100%; -webkit-background-size: 100%;"
+            "CSS":"background: url('https://res.cloudinary.com/carousel/image/upload/v1475538924/chalkboard_1_w619v4.jpg') no-repeat center center fixed; background-size: 100%; -webkit-background-size: 100%;"
         },
 
         {
@@ -114,14 +177,14 @@
             "ID":".items",
             "CSS":"font-size: 2vmin; position:absolute; box-shadow: 0 10px 10px 2px rgba(0,0,0,0.3);"
         },
-
+        /*
         {
             "type":"class",
             "ID":".pin",
             "CSS":"background-color: #aaa;display: block;height: 32px;width: 2px;position: absolute;left: 50%;top: -16px;z-index: 1;"
         },
 
-         {
+        {
             "type":"class",
             "ID":".pin:after",
             "CSS":"background-color: #A31;background-image: radial-gradient(25% 25%, circle, hsla(0,0%,100%,.3), hsla(0,0%,0%,.3));border-radius: 50%;box-shadow: inset 0 0 0 1px hsla(0,0%,0%,.1),inset 3px 3px 3px hsla(0,0%,100%,.2),inset -3px -3px 3px hsla(0,0%,0%,.2),23px 20px 3px hsla(0,0%,0%,.15);content: '';height: 12px;left: -5px;position: absolute;top: -10px; width: 12px;"
@@ -132,7 +195,7 @@
             "ID":".pin:before",
             "CSS":"background-color: hsla(0,0%,0%,0.1);box-shadow: 0 0 .25em hsla(0,0%,0%,.1);content: '';height: 24px;width: 2px;left: 0;position: absolute;top: 8px;transform: rotate(57.5deg);-moz-transform: rotate(57.5deg);-webkit-transform: rotate(57.5deg);-o-transform: rotate(57.5deg);-ms-transform: rotate(57.5deg);transform-origin: 50% 100%;-moz-transform-origin: 50% 100%;-webkit-transform-origin: 50% 100%;-ms-transform-origin: 50% 100%;-o-transform-origin: 50% 100%;"
         },
-
+        */
         {
             "type":"class",
             "ID":".fullScreen",
