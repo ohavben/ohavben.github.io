@@ -240,7 +240,7 @@
         var width = window.outerWidth;
         var height = window.outerHeight;
         var orientation = width/height;
-        var styleSheet = document.getElementsByTagName('style')[0];
+        var styleSheet = document.getElementsByTagName('style')[1];
         if (styleSheet) styleSheet.parentNode.removeChild(styleSheet);
         if (orientation < 1 ) return new setStyleSheet(adjustDefs(propeties, width, height, 0));
         else if (orientation > 1 ) return new setStyleSheet(adjustDefs(propeties, width, height, 0));
