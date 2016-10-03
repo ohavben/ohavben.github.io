@@ -18,7 +18,7 @@
             "class": "items",
             "text": "",
             "html":"<i class='pin'></i><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur et consequat elit.<br>Donec viverra eros eget ipsum semper lacinia. Sed dictum mattis arcu. <br> Proin ipsum tellus, gravida ac dui quis, venenatis venenatis dolor. <br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur et consequat elit.<br>Donec viverra eros eget ipsum semper lacinia.</p>",
-            "CSS":"background-color: yellow ;width: 30vmin; height:30vmin; overflow:hidden; top: note1Top; left: note1Left;-webkit-transform: skew(5deg) rotate(5deg); -moz-transform: skew(5deg) rotate(5deg); -ms-transform: skew(5deg) rotate(5deg); -o-transform: skew(5deg) rotate(5deg); transform: skew(5deg) rotate(5deg);"
+            "CSS":"background-color: yellow ;width: 30vmin; height:30vmin; overflow:hidden; top: note1Top; left: note1Left;-webkit-transform: skew(0deg) rotate(0deg); -moz-transform: skew(0deg) rotate(0deg); -ms-transform: skew(0deg) rotate(0deg); -o-transform: skew(0deg) rotate(0deg); transform: skew(0deg) rotate(0deg);"
         }, 
 
          {
@@ -94,7 +94,7 @@
          {
             "type": "class",
             "ID":"*",
-            "CSS":"font-family: 'Times New Roman';"
+            "CSS":"font-family: 'CoalhandLuke';"
         },
         
         {
