@@ -91,6 +91,12 @@
             "CSS":"background-color:cyan ; width:30vmin; height:40vmin; overflow:hidden; top: note8Top; left: note8Left;"
         }, 
         */
+         {
+            "type": "class",
+            "ID":"*",
+            "CSS":"font-family: 'chalk';"
+        },
+        
         {
             "type": "class",
             "ID":"html",
