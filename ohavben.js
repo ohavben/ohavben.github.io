@@ -47,10 +47,11 @@
                     top: note2Top;\
                     left: note2Left;\
                     overflow:hidden;\
-                    -webkit-transition-property: width height font-size left top;\
+                    opacity: 1;\
+                    -webkit-transition-property: width height font-size left top opacity;\
                     -webkit-transition-duration: 2s;\
                     -webkit-transition-timing-function: ease;\
-                    transition-property: width height background-color font-size left top color;\
+                    transition-property: width height font-size left top opacity;\
                     transition-duration: 2s;\
                     transition-timing-function: ease;"
         }, 
@@ -67,10 +68,11 @@
                     overflow:hidden;\
                     top: note3Top;\
                     left: note3Left;\
-                    -webkit-transition-property: width height font-size left top;\
+                    opacity: 1;\
+                    -webkit-transition-property: width height font-size left top opacity;\
                     -webkit-transition-duration: 2s;\
                     -webkit-transition-timing-function: ease;\
-                    transition-property: width height background-color font-size left top color;\
+                    transition-property: width height font-size left top opacity;\
                     transition-duration: 2s;\
                     transition-timing-function: ease;"
         }, 
@@ -87,10 +89,11 @@
                     overflow:hidden;\
                     top: note4Top;\
                     left: note4Left;\
-                    -webkit-transition-property: width height font-size left top;\
+                    opacity: 1;\
+                    -webkit-transition-property: width height font-size left top opacity;\
                     -webkit-transition-duration: 2s;\
                     -webkit-transition-timing-function: ease;\
-                    transition-property: width height background-color font-size left top color;\
+                    transition-property: width height font-size left top opacity;\
                     transition-duration: 2s;\
                     transition-timing-function: ease;"
         }, 
@@ -107,10 +110,11 @@
                     overflow:hidden;\
                     top: note5Top;\
                     left: note5Left;\
-                    -webkit-transition-property: width height font-size left top;\
+                    opacity: 1;\
+                    -webkit-transition-property: width height font-size left top opacity;\
                     -webkit-transition-duration: 2s;\
                     -webkit-transition-timing-function: ease;\
-                    transition-property: width height background-color font-size left top color;\
+                    transition-property: width height font-size left top opacity;\
                     transition-duration: 2s;\
                     transition-timing-function: ease;"
         }, 
@@ -125,11 +129,12 @@
             "CSS":  "width:20vmin;\
                     height:30vmin;\
                     overflow:hidden;\
+                    opacity: 1;\
                     top: note6Top; left: note6Left;\
-                    -webkit-transition-property: width height font-size left top;\
+                    -webkit-transition-property: width height font-size left top opacity;\
                     -webkit-transition-duration: 2s;\
                     -webkit-transition-timing-function: ease;\
-                    transition-property: width height background-color font-size left top color;\
+                    transition-property: width height font-size left top opacity;\
                     transition-duration: 2s;\
                     transition-timing-function: ease;"
         }, 
