@@ -175,7 +175,7 @@
         {
             "type":"class",
             "ID":".items",
-            "CSS":"font-size: 2vmin; position:absolute; box-shadow: 0 10px 10px 2px rgba(0,0,0,0.3);"
+            "CSS":"font-size: 2vmin; position:absolute; background: none;"
         },
         /*
         {
