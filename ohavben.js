@@ -162,7 +162,7 @@
          {
             "type": "class",
             "ID":"*",
-            "CSS":"font-family: 'CoalhandLuke'; color:white;"
+            "CSS":"font-family: 'comic sans'; color:white;"
         },
         
         {
