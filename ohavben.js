@@ -169,13 +169,13 @@
         {
             "type":"class",
             "ID":"body",
-            "CSS":"width: totalWidth; height: totalHeight; margin: 0 auto;  overflow:hidden;"
+            "CSS":"width: totalWidth; height: totalHeight; margin: 0 auto;  overflow: hidden;"
         },
 
         {
             "type":"class",
             "ID":".items",
-            "CSS":"font-size: 2vmin; position:absolute; background: none;"
+            "CSS":"font-size: 2vmin; position: absolute; background: none;"
         },
         /*
         {
