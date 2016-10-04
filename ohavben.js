@@ -95,7 +95,7 @@
                     overflow:hidden;\
                     top: note4Top;\
                     left: note4Left;\
-                    opacity: 1;\ 
+                    opacity: 1;\
                     font-family: 'comic sans';\
                     color:white;\
                     -webkit-transition-property: width height font-size left top opacity;\
