@@ -27,7 +27,6 @@
                      overflow:hidden;\
                      top: note1Top;\
                      left: note1Left;\
-                     font-family: 'CoalhandLuke';\
                      color:white;\
                      -webkit-transition-property: width height font-size left top;\
                      -webkit-transition-duration: 2s;\
@@ -50,7 +49,6 @@
                     left: note2Left;\
                     overflow:hidden;\
                     opacity: 1;\
-                    font-family: 'CoalhandLuke';\
                     color:white;\
                     -webkit-transition-property: width height font-size left top opacity;\
                     -webkit-transition-duration: 2s;\
@@ -73,7 +71,6 @@
                     top: note3Top;\
                     left: note3Left;\
                     opacity: 1;\
-                    font-family: 'CoalhandLuke';\
                     color:white;\
                     -webkit-transition-property: width height font-size left top opacity;\
                     -webkit-transition-duration: 2s;\
@@ -96,7 +93,6 @@
                     top: note4Top;\
                     left: note4Left;\
                     opacity: 1;\
-                    font-family: 'CoalhandLuke';\
                     color:white;\
                     -webkit-transition-property: width height font-size left top opacity;\
                     -webkit-transition-duration: 2s;\
@@ -119,7 +115,6 @@
                     top: note5Top;\
                     left: note5Left;\
                     opacity: 1;\
-                    font-family: 'CoalhandLuke';\
                     color:white;\
                     -webkit-transition-property: width height font-size left top opacity;\
                     -webkit-transition-duration: 2s;\
@@ -140,7 +135,6 @@
                     height:30vmin;\
                     overflow:hidden;\
                     opacity: 1;\
-                    font-family: 'CoalhandLuke';\
                     color:white;\
                     top: note6Top; left: note6Left;\
                     -webkit-transition-property: width height font-size left top opacity;\
