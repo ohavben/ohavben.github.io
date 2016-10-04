@@ -27,6 +27,8 @@
                      overflow:hidden;\
                      top: note1Top;\
                      left: note1Left;\
+                     font-family: 'comic sans';\
+                     color:white;\
                      -webkit-transition-property: width height font-size left top;\
                      -webkit-transition-duration: 2s;\
                      -webkit-transition-timing-function: ease;\
@@ -48,6 +50,8 @@
                     left: note2Left;\
                     overflow:hidden;\
                     opacity: 1;\
+                    font-family: 'comic sans';\
+                    color:white;\
                     -webkit-transition-property: width height font-size left top opacity;\
                     -webkit-transition-duration: 2s;\
                     -webkit-transition-timing-function: ease;\
@@ -69,6 +73,8 @@
                     top: note3Top;\
                     left: note3Left;\
                     opacity: 1;\
+                    font-family: 'comic sans';\
+                    color:white;\
                     -webkit-transition-property: width height font-size left top opacity;\
                     -webkit-transition-duration: 2s;\
                     -webkit-transition-timing-function: ease;\
@@ -89,7 +95,9 @@
                     overflow:hidden;\
                     top: note4Top;\
                     left: note4Left;\
-                    opacity: 1;\
+                    opacity: 1;\ 
+                    font-family: 'comic sans';\
+                    color:white;\
                     -webkit-transition-property: width height font-size left top opacity;\
                     -webkit-transition-duration: 2s;\
                     -webkit-transition-timing-function: ease;\
@@ -111,6 +119,8 @@
                     top: note5Top;\
                     left: note5Left;\
                     opacity: 1;\
+                    font-family: 'comic sans';\
+                    color:white;\
                     -webkit-transition-property: width height font-size left top opacity;\
                     -webkit-transition-duration: 2s;\
                     -webkit-transition-timing-function: ease;\
@@ -130,6 +140,8 @@
                     height:30vmin;\
                     overflow:hidden;\
                     opacity: 1;\
+                    font-family: 'comic sans';\
+                    color:white;\
                     top: note6Top; left: note6Left;\
                     -webkit-transition-property: width height font-size left top opacity;\
                     -webkit-transition-duration: 2s;\
@@ -162,7 +174,7 @@
          {
             "type": "class",
             "ID":"*",
-            "CSS":"font-family: 'comic sans'; color:white;"
+            "CSS":""
         },
         
         {
