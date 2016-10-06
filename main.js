@@ -41,9 +41,7 @@
                     height:30vmin;\
                     top: note2Top;\
                     left: note2Left;\
-                    overflow:hidden;\
                     opacity: 1;\
-                    color:white;\
                     transition: all 1s ease-out;\
                     -webkit-transition: all 1s ease-out;"
         }, 
@@ -57,11 +55,9 @@
             "html":"<i class='pin'></i><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur et consequat elit.<br>Donec viverra eros eget ipsum semper lacinia. Sed dictum mattis arcu. <br> Proin ipsum tellus, gravida ac dui quis, venenatis venenatis dolor.</p>",
             "CSS":  "width: 20vmin;\
                     height:30vmin;\
-                    overflow:hidden;\
                     top: note3Top;\
                     left: note3Left;\
                     opacity: 1;\
-                    color:white;\
                     transition: all 1s ease-out;\
                     -webkit-transition: all 1s ease-out;"
         }, 
@@ -75,11 +71,9 @@
             "html":"<i class='pin'></i><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur et consequat elit.<br>Donec viverra eros eget ipsum semper lacinia. Sed dictum mattis arcu. <br> Proin ipsum tellus, gravida ac dui quis, venenatis venenatis dolor. <br>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>",
             "CSS":  "width: 40vmin;\
                     height:30vmin;\
-                    overflow:hidden;\
                     top: note4Top;\
                     left: note4Left;\
                     opacity: 1;\
-                    color:white;\
                     transition: all 1s ease-out;\
                     -webkit-transition: all 1s ease-out;"
         }, 
@@ -93,11 +87,9 @@
             "html":"<i class='pin'></i><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur et consequat elit.<br>Donec viverra eros eget ipsum semper lacinia. Sed dictum mattis arcu. <br> Proin ipsum tellus, gravida ac dui quis, venenatis venenatis dolor.</p>",
             "CSS":  "width: 50vmin;\
                     height:20vmin;\
-                    overflow:hidden;\
                     top: note5Top;\
                     left: note5Left;\
                     opacity: 1;\
-                    color:white;\
                     transition: all 1s ease-out;\
                     -webkit-transition: all 1s ease-out;"
         }, 
@@ -111,9 +103,7 @@
             "html":"<i class='pin'></i><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur et consequat elit.<br>Donec viverra eros eget ipsum semper lacinia. Sed dictum mattis arcu. <br> Proin ipsum tellus, gravida ac dui quis, venenatis venenatis dolor. <br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur et consequat elit.<br>Donec viverra eros eget ipsum semper lacinia. Sed dictum mattis arcu. <br> Proin ipsum tellus, gravida ac dui quis, venenatis venenatis dolor. <br></p>",
             "CSS":  "width:20vmin;\
                     height:30vmin;\
-                    overflow:hidden;\
                     opacity: 1;\
-                    color:white;\
                     top: note6Top; left: note6Left;\
                     transition: all 1s ease-out;\
                     -webkit-transition: all 1s ease-out;"
@@ -191,9 +181,7 @@
             "ID":".fullScreen",
             "CSS": "width:100vmin;\
                     height:100vmin;\
-                    overflow:hidden;\
                     opacity: 1;\
-                    color:white;\
                     top: 0;\
                     left: 0;\
                     -webkit-transition: all 1s ease-out;\
