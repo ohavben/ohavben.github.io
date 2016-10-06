@@ -178,7 +178,7 @@
         */
         {
             "type":"class",
-            "ID":".fullScreen",
+            "ID":".items:hover",
             "CSS": "width:100vmin;\
                     height:100vmin;\
                     opacity: 1;\
