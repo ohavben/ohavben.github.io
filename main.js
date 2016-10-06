@@ -183,9 +183,7 @@
                     height:100vmin;\
                     opacity: 1;\
                     top: 0;\
-                    left: 0;\
-                    -webkit-transition: all 1s ease-out;\
-                    transition: all 1s ease-out;"
+                    left: 0;"
         },
 
         {
