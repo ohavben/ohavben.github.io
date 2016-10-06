@@ -210,7 +210,18 @@
         {
             "type":"class",
             "ID":".fullScreen",
-            "CSS":"animation: zoomIn 1s 2s 3 alternate backwards;"
+            "CSS":" "width:100vmin;\
+                    height:100vmin;\
+                    overflow:hidden;\
+                    opacity: 1;\
+                    color:white;\
+                    top: note6Top; left: note6Left;\
+                    -webkit-transition-property: width height font-size left top opacity;\
+                    -webkit-transition-duration: 2s;\
+                    -webkit-transition-timing-function: ease;\
+                    transition-property: width height font-size left top opacity;\
+                    transition-duration: 2s;\
+                    transition-timing-function: ease;"
         },
 
         {
