@@ -26,8 +26,8 @@
                      height:30vmin;\
                      top: note1Top;\
                      left: note1Left;\
-                    -webkit-transition: width height font-size left top opacity 1s ease-out;\
-                    -webkit-transition: width height font-size left top opacity 1s ease-out;"
+                    -webkit-transition: all 1s ease-out;\
+                    -webkit-transition: all 1s ease-out;"
         }, 
 
          {
@@ -44,8 +44,8 @@
                     overflow:hidden;\
                     opacity: 1;\
                     color:white;\
-                    -webkit-transition: width height font-size left top opacity 1s ease-out;\
-                    -webkit-transition: width height font-size left top opacity 1s ease-out;"
+                    -webkit-transition: all 1s ease-out;\
+                    -webkit-transition: all 1s ease-out;"
         }, 
 
          {
@@ -62,8 +62,8 @@
                     left: note3Left;\
                     opacity: 1;\
                     color:white;\
-                    -webkit-transition: width height font-size left top opacity 1s ease-out;\
-                    -webkit-transition: width height font-size left top opacity 1s ease-out;"
+                    -webkit-transition: all 1s ease-out;\
+                    -webkit-transition: all 1s ease-out;"
         }, 
 
          {
@@ -80,8 +80,8 @@
                     left: note4Left;\
                     opacity: 1;\
                     color:white;\
-                    -webkit-transition: width height font-size left top opacity 1s ease-out;\
-                    -webkit-transition: width height font-size left top opacity 1s ease-out;"
+                    -webkit-transition: all 1s ease-out;\
+                    -webkit-transition: all 1s ease-out;"
         }, 
 
          {
@@ -98,8 +98,8 @@
                     left: note5Left;\
                     opacity: 1;\
                     color:white;\
-                    -webkit-transition: width height font-size left top opacity 1s ease-out;\
-                    -webkit-transition: width height font-size left top opacity 1s ease-out;"
+                    -webkit-transition: all 1s ease-out;\
+                    -webkit-transition: all 1s ease-out;"
         }, 
 
         {
@@ -115,8 +115,8 @@
                     opacity: 1;\
                     color:white;\
                     top: note6Top; left: note6Left;\
-                    -webkit-transition: width height font-size left top opacity 1s ease-out;\
-                    -webkit-transition: width height font-size left top opacity 1s ease-out;"
+                    -webkit-transition: all 1s ease-out;\
+                    -webkit-transition: all 1s ease-out;"
         }, 
         /*
          {
@@ -196,8 +196,8 @@
                     color:white;\
                     top: 0;\
                     left: 0;\
-                    -webkit-transition: width height font-size left top opacity 1s ease-out;\
-                    -webkit-transition: width height font-size left top opacity 1s ease-out;"
+                    -webkit-transition: all 1s ease-out;\
+                    -webkit-transition: all 1s ease-out;"
         },
 
         {
