@@ -210,7 +210,7 @@
         {
             "type":"class",
             "ID":".fullScreen",
-            "CSS":" "width:100vmin;\
+            "CSS": "width:100vmin;\
                     height:100vmin;\
                     overflow:hidden;\
                     opacity: 1;\
