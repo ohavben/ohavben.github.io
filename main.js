@@ -161,11 +161,9 @@
             "type":"class",
             "ID":".items",
             "CSS":  "font-size: 2vmin;\
-                    position: absolute;\
-                    background: none;\
+                     position: absolute;\
+                     background: none;\
                      overflow:hidden;\
-                     top: note1Top;\
-                     left: note1Left;\
                      color:white;\
                      font-family: 'CoalhandLuke';"
         },
