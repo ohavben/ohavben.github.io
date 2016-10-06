@@ -24,10 +24,8 @@
             "html":"<i class='pin'></i><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur et consequat elit.<br>Donec viverra eros eget ipsum semper lacinia. Sed dictum mattis arcu. <br> Proin ipsum tellus, gravida ac dui quis, venenatis venenatis dolor. <br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur et consequat elit.<br>Donec viverra eros eget ipsum semper lacinia.</p>",
             "CSS":  "width: 30vmin;\
                      height:30vmin;\
-                     overflow:hidden;\
                      top: note1Top;\
                      left: note1Left;\
-                     color:white;\
                     -webkit-transition: width height font-size left top opacity 1s ease-out;\
                     -webkit-transition: width height font-size left top opacity 1s ease-out;"
         }, 
@@ -158,13 +156,20 @@
             "ID":"body",
             "CSS":"width: totalWidth; height: totalHeight; margin: 0 auto;  overflow: hidden;"
         },
-        /*
+        
         {
             "type":"class",
             "ID":".items",
-            "CSS":"font-size: 2vmin; position: absolute; background: none;"
+            "CSS":  "font-size: 2vmin;\
+                    position: absolute;\
+                    background: none;\
+                     overflow:hidden;\
+                     top: note1Top;\
+                     left: note1Left;\
+                     color:white;\
+                     font-family: 'CoalhandLuke';"
         },
-        
+        /*
         {
             "type":"class",
             "ID":".pin",
