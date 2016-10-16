@@ -278,6 +278,8 @@
     var transition = function(element){
         //var tl = new TimelineLite();
         console.log(element)
+        var elements = document.getElementsByClassName('items');
+        console.log(elements)
     };
 
     var sizeCanvas = function(){
