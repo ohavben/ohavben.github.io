@@ -275,7 +275,10 @@
         return myStyleSheet.sheet;
     }
 
-    
+    var transition = function(element){
+        //var tl = new TimelineLite();
+        console.log(element)
+    };
 
     var sizeCanvas = function(){
         //console.log('resizing canvas')
@@ -352,8 +355,9 @@
         Elements[0].addEventListener('dblclick', function (e) {
             e.preventDefault();
             if (!e.target.parentElement.classList.contains('items')) return
-            console.log(e.target.parentElement);
-            e.target.parentElement.classList.toggle('fullScreen');
+            //console.log(e.target.parentElement);
+            //e.target.parentElement.classList.toggle('fullScreen');
+            var currentTransition = new transition(e.target.parentElement);
         }, false);
     };
 }()); 
