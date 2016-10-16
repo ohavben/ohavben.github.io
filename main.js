@@ -281,7 +281,7 @@
         var elements = document.getElementsByClassName('items');
         for ( i = 0 ; i < elements.length; i ++){
             if (elements[i] === element) {
-                 tl.to(elements[i], 0.25, {left: 0, top: 0, width: 100vmin, height: 100vmin });
+                 tl.to(elements[i], 0.25, {left: 0, top: 0 });
             } else {
                 tl.to(elements[i], 0.25, {opacity:0});
 
