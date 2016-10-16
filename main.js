@@ -276,10 +276,14 @@
     }
 
     var transition = function(element){
+        var i;
         //var tl = new TimelineLite();
         console.log(element)
         var elements = document.getElementsByClassName('items');
-        console.log(elements)
+        //console.log(elements);
+        for ( i = 0 ; i < elements.length; i ++){
+            console.log(elements[i])
+        }
     };
 
     var sizeCanvas = function(){
