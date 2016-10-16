@@ -277,12 +277,15 @@
 
     var transition = function(element){
         var i;
-        //var tl = new TimelineLite();
-        //console.log(element)
+        var tl = new TimelineLite();
         var elements = document.getElementsByClassName('items');
-        //console.log(elements);
         for ( i = 0 ; i < elements.length; i ++){
-            if (elements[i] === element) {console.log(elements[i])}
+            if (elements[i] === element) {
+                 tl.to(elements[i], 0.25, {left: 0, top: 0, width: 100vmin, height: 100vmin });
+            } else {
+                tl.to(elements[i], 0.25, {opacity:0});
+
+            }
         }
     };
 
