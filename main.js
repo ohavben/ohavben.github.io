@@ -372,6 +372,7 @@
 
         Elements[0].addEventListener('dblclick', function (e) {
             e.preventDefault();
+            if (active == true){ return currentTransition.reverse(); }
             //var currentTransition;
             if (!e.target.parentElement.classList.contains('items')) return
             //console.log(e.target.parentElement);
