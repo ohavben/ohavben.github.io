@@ -1,5 +1,5 @@
 (function(){
-    var definitions, Elements, sheet, myStyleSheet, myPrefix =  prefix(), propeties = [
+    var definitions, Elements, sheet, myStyleSheet, currentTransition, active = false, myPrefix =  prefix(), propeties = [
 
         {
             "type": "div",
@@ -275,8 +275,6 @@
         return myStyleSheet.sheet;
     }
 
-    var active = false;
-
     var transition = function(element){
         console.log(active)
         var i;
@@ -372,16 +370,14 @@
 
         Elements[0].addEventListener('dblclick', function (e) {
             e.preventDefault();
-            if (active == true){ return currentTransition.reverse(); }
-            //var currentTransition;
             if (!e.target.parentElement.classList.contains('items')) return
-            //console.log(e.target.parentElement);
-            //e.target.parentElement.classList.toggle('fullScreen');
-             var currentTransition = new transition(e.target.parentElement);
-            //else currentTransition.reverse();
-            console.log(currentTransition)
-            console.log(active)
-            //return currentTransition.reverse();
+            if (active == true){ 
+                active = false;
+                return currentTransition.reverse(); 
+            }
+            else if (active == false) {
+                currentTransition = new transition(e.target.parentElement);
+            }
         }, false);
     };
 }()); 
