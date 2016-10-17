@@ -379,6 +379,7 @@
             if (active == false) var currentTransition = new transition(e.target.parentElement);
             //else currentTransition.reverse();
             console.log(currentTransition)
+            return currentTransition.reverse();
         }, false);
     };
 }()); 
