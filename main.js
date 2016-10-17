@@ -132,7 +132,7 @@
          {
             "type": "class",
             "ID":"a:link",
-            "CSS":"color:white;"
+            "CSS":"text-decoration:none; color:white;"
         },
         
         {
