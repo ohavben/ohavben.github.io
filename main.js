@@ -376,7 +376,7 @@
             if (!e.target.parentElement.classList.contains('items')) return
             //console.log(e.target.parentElement);
             //e.target.parentElement.classList.toggle('fullScreen');
-            if (active == false) var currentTransition = new transition(e.target.parentElement);
+             var currentTransition = new transition(e.target.parentElement);
             //else currentTransition.reverse();
             console.log(currentTransition)
             return currentTransition.reverse();
