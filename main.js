@@ -21,7 +21,7 @@
             "parent": "board",
             "class": "items",
             "text": "",
-            "html":"<i class='pin'></i><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur et consequat elit.<br>Donec viverra eros eget ipsum semper lacinia. Sed dictum mattis arcu. <br> Proin ipsum tellus, gravida ac dui quis, venenatis venenatis dolor. <br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur et consequat elit.<br>Donec viverra eros eget ipsum semper lacinia.</p>",
+            "html":"<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur et consequat elit.<br>Donec viverra eros eget ipsum semper lacinia. Sed dictum mattis arcu. <br> Proin ipsum tellus, gravida ac dui quis, venenatis venenatis dolor. <br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur et consequat elit.<br>Donec viverra eros eget ipsum semper lacinia.</p>",
             "CSS":  "width: 30vmin;\
                      height:30vmin;\
                      top: note1Top;\
@@ -36,7 +36,7 @@
             "parent": "board",
             "class": "items",
             "text": "",
-            "html":"<i class='pin'></i><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur et consequat elit.<br>Donec viverra eros eget ipsum semper lacinia. Sed dictum mattis arcu. <br> Proin ipsum tellus, gravida ac dui quis, venenatis venenatis dolor. <br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur et consequat elit.<br>Donec viverra eros eget ipsum semper lacinia. Sed dictum mattis arcu. <br> Proin ipsum tellus, gravida ac dui quis, venenatis venenatis dolor. <br></p>",
+            "html":"<h2> To do:</h2><ol><li>Build cool websites</li><li>Make apps</li><li>Work at a digital agency</li><li>Learn PHP</li><li>Take the Oriental Express</li><li>Build the Internet</li></ol>",
             "CSS":  "width: 40vmin;\
                     height:30vmin;\
                     top: note2Top;\
