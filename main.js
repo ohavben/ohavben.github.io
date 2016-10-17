@@ -36,7 +36,7 @@
             "parent": "board",
             "class": "items",
             "text": "",
-            "html":"<h2> To do:</h2><ol><li>Build cool websites</li><li>Make apps</li><li>Work at a digital agency</li><li>Learn PHP</li><li>Take the Oriental Express</li><li>Build the Internet</li></ol>",
+            "html":"<h2> To do:</h2><p>   1. Build cool websites<br>   2.Make apps<br>   3.Work at a digital agency<br>   4.Learn PHP<br>   5.Take the Oriental Express<br>   6.Build the Internet</p>",
             "CSS":  "width: 40vmin;\
                     height:30vmin;\
                     top: note2Top;\
