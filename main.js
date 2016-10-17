@@ -138,7 +138,7 @@
         {
             "type": "class",
             "ID":"html",
-            "CSS":"background: url('https://res.cloudinary.com/carousel/image/upload/v1475538924/chalkboard_1_w619v4.jpg') no-repeat center center fixed; background-size: 100%; -webkit-background-size: 100%;"
+            "CSS":"background: url('http://res.cloudinary.com/carousel/image/upload/v1476742949/GitHubPagesBackGround_sluuzg.jpg') no-repeat center center fixed; background-size: 100%; -webkit-background-size: 100%;"
         },
 
         {
