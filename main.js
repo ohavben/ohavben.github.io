@@ -52,7 +52,7 @@
             "parent": "board",
             "class": "items",
             "text": "",
-            "html":"<h2>Links:</h2><a href='http://www.w3schools.com'>LinkedIn</a><br><a href='http://www.w3schools.com'>GitHub</a><br><a href='http://www.w3schools.com'>Project</a>",
+            "html":"<h2>Links:</h2><br><a href='http://www.w3schools.com'>LinkedIn</a><br><a href='http://www.w3schools.com'>GitHub</a><br><a href='http://www.w3schools.com'>Project</a>",
             "CSS":  "width: 20vmin;\
                     height:30vmin;\
                     top: note3Top;\
