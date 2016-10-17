@@ -291,7 +291,7 @@
             }
         }
         tl.to(currentElement, 0.25, { left: 0, top: 0, width: window.innerWidth, height: window.innerHeight });
-        tl.to(currentElement, 0.25, { fontSize: 30 +'vmin',  autoRound: false });
+        tl.to(currentElement, 0.25, { fontSize: 6 +'vmin',  autoRound: false });
         active = true;
         return tl;
     };
