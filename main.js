@@ -155,7 +155,8 @@
                      background: none;\
                      overflow:hidden;\
                      color:white;\
-                     font-family: 'CoalhandLuke';"
+                     font-family: 'CoalhandLuke';\
+                     opacity:0;"
         },
         /*
         {
