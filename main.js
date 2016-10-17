@@ -372,6 +372,7 @@
             //console.log(e.target.parentElement);
             //e.target.parentElement.classList.toggle('fullScreen');
             var currentTransition = new transition(e.target.parentElement);
+            console.log(currentTransition)
         }, false);
     };
 }()); 
