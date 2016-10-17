@@ -131,8 +131,8 @@
         */
          {
             "type": "class",
-            "ID":"a:link",
-            "CSS":"text-decoration:none; color:white;"
+            "ID":"a",
+            "CSS":"text-decoration:none; color:white; font-size: 3vmin;"
         },
         
         {
