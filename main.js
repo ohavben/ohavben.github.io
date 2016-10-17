@@ -131,7 +131,7 @@
         */
          {
             "type": "class",
-            "ID":".a:link",
+            "ID":"a:link",
             "CSS":"color:white; text-decoration:none;"
         },
         
