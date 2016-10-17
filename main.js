@@ -275,10 +275,13 @@
         return myStyleSheet.sheet;
     }
 
+    var active = false;
+
     var transition = function(element){
+        console.log(active)
         var i;
         var currentElement;
-        var tl = new TimelineLite();
+        var tl = new TimelineLite({paused:true});
         var elements = document.getElementsByClassName('items');
         for ( i = 0 ; i < elements.length; i ++){
             if (elements[i] === element) {
@@ -291,6 +294,7 @@
         }
         tl.to(currentElement, 0.25, { left: 0, top: 0, width: window.innerWidth, height: window.innerHeight });
         tl.to(currentElement, 0.25, { fontSize: 40,  autoRound: false });
+        //active = true;
         return tl;
     };
 
