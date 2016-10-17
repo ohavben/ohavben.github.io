@@ -131,14 +131,14 @@
         */
          {
             "type": "class",
-            "ID":"a",
+            "ID":"a:link",
             "CSS":"text-decoration:none; color:white; font-size: 3vmin;"
         },
         
         {
             "type": "class",
             "ID":"html",
-            "CSS":"background: url('http://res.cloudinary.com/carousel/image/upload/v1476742949/GitHubPagesBackGround_sluuzg.jpg') no-repeat center center fixed; background-size: 100%; -webkit-background-size: 100%;"
+            "CSS":"background: url('https://res.cloudinary.com/carousel/image/upload/v1475538924/chalkboard_1_w619v4.jpg') no-repeat center center fixed; background-size: 100%; -webkit-background-size: 100%;"
         },
 
         {
@@ -155,8 +155,7 @@
                      background: none;\
                      overflow:hidden;\
                      color:white;\
-                     font-family: 'CoalhandLuke';\
-                     opacity:0;"
+                     font-family: 'CoalhandLuke';"
         },
         /*
         {
