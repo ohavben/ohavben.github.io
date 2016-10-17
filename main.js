@@ -379,7 +379,8 @@
              var currentTransition = new transition(e.target.parentElement);
             //else currentTransition.reverse();
             console.log(currentTransition)
-            return currentTransition.reverse();
+            console.log(active)
+            //return currentTransition.reverse();
         }, false);
     };
 }()); 
