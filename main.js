@@ -17,38 +17,40 @@
 
         {
             "type": "div",
-            "ID": "item_1",
+            "ID": "face",
             "parent": "board",
             "class": "items",
             "text": "",
-            "html":"<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur et consequat elit.<br>Donec viverra eros eget ipsum semper lacinia. Sed dictum mattis arcu. <br> Proin ipsum tellus, gravida ac dui quis, venenatis venenatis dolor. <br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur et consequat elit.<br>Donec viverra eros eget ipsum semper lacinia.</p>",
+            "html":"",
             "CSS":  "width: 30vmin;\
                      height:30vmin;\
                      top: note1Top;\
                      left: note1Left;\
                      transition: all 1s ease-out;\
-                    -webkit-transition: all 1s ease-out;"
+                    -webkit-transition: all 1s ease-out;\
+                    background: url('http://res.cloudinary.com/carousel/image/upload/v1476747115/transparentHeadChalk_aac2n0.jpg') no-repeat center center fixed; background-size: 100%; -webkit-background-size: 100%;"
         }, 
 
          {
             "type": "div",
-            "ID": "item_2",
+            "ID": "name",
             "parent": "board",
             "class": "items",
             "text": "",
-            "html":"<h2> To do:</h2><p>   1. Build cool websites<br>   2.Make apps<br>   3.Work at a digital agency<br>   4.Learn PHP<br>   5.Take the Oriental Express<br>   6.Build the Internet</p>",
+            "html":"",
             "CSS":  "width: 40vmin;\
                     height:30vmin;\
                     top: note2Top;\
                     left: note2Left;\
                     opacity: 1;\
                     transition: all 1s ease-out;\
-                    -webkit-transition: all 1s ease-out;"
+                    -webkit-transition: all 1s ease-out;\
+                    background: url('https://res.cloudinary.com/carousel/image/upload/v1476746632/NameChlk_gcl0ro.jpg') no-repeat center center fixed; background-size: 100%; -webkit-background-size: 100%;"
         }, 
 
          {
             "type": "div",
-            "ID": "item_3",
+            "ID": "skills",
             "parent": "board",
             "class": "items",
             "text": "",
@@ -59,54 +61,58 @@
                     left: note3Left;\
                     opacity: 1;\
                     transition: all 1s ease-out;\
-                    -webkit-transition: all 1s ease-out;"
+                    -webkit-transition: all 1s ease-out;\
+                    background: url('https://res.cloudinary.com/carousel/image/upload/v1476746633/SkillsChalk_a7lgvb.jpg') no-repeat center center fixed; background-size: 100%; -webkit-background-size: 100%;"
         }, 
 
          {
             "type": "div",
-            "ID": "item_4",
+            "ID": "todo",
             "parent": "board",
             "class": "items",
             "text": "",
-            "html":"<i class='pin'></i><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur et consequat elit.<br>Donec viverra eros eget ipsum semper lacinia. Sed dictum mattis arcu. <br> Proin ipsum tellus, gravida ac dui quis, venenatis venenatis dolor. <br>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>",
+            "html":"",
             "CSS":  "width: 40vmin;\
                     height:30vmin;\
                     top: note4Top;\
                     left: note4Left;\
                     opacity: 1;\
                     transition: all 1s ease-out;\
-                    -webkit-transition: all 1s ease-out;"
+                    -webkit-transition: all 1s ease-out;\
+                    background: url('https://res.cloudinary.com/carousel/image/upload/v1476746633/ToDoChalk_gvkudw.jpg') no-repeat center center fixed; background-size: 100%; -webkit-background-size: 100%;"
         }, 
 
          {
             "type": "div",
-            "ID": "item_5",
+            "ID": "about",
             "parent": "board",
             "class": "items",
             "text": "",
-            "html":"<i class='pin'></i><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur et consequat elit.<br>Donec viverra eros eget ipsum semper lacinia. Sed dictum mattis arcu. <br> Proin ipsum tellus, gravida ac dui quis, venenatis venenatis dolor.</p>",
+            "html":"",
             "CSS":  "width: 50vmin;\
                     height:20vmin;\
                     top: note5Top;\
                     left: note5Left;\
                     opacity: 1;\
                     transition: all 1s ease-out;\
-                    -webkit-transition: all 1s ease-out;"
+                    -webkit-transition: all 1s ease-out;\
+                    background: url('https://res.cloudinary.com/carousel/image/upload/v1476747757/AboutChalk_pqd0g9.jpg') no-repeat center center fixed; background-size: 100%; -webkit-background-size: 100%;"
         }, 
 
         {
             "type": "div",
-            "ID": "item_6",
+            "ID": "links",
             "parent": "board",
             "class": "items",
             "text": "",
-            "html":"<i class='pin'></i><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur et consequat elit.<br>Donec viverra eros eget ipsum semper lacinia. Sed dictum mattis arcu. <br> Proin ipsum tellus, gravida ac dui quis, venenatis venenatis dolor. <br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur et consequat elit.<br>Donec viverra eros eget ipsum semper lacinia. Sed dictum mattis arcu. <br> Proin ipsum tellus, gravida ac dui quis, venenatis venenatis dolor. <br></p>",
+            "html":"",
             "CSS":  "width:20vmin;\
                     height:30vmin;\
                     opacity: 1;\
                     top: note6Top; left: note6Left;\
                     transition: all 1s ease-out;\
-                    -webkit-transition: all 1s ease-out;"
+                    -webkit-transition: all 1s ease-out;\
+                    background: url('https://res.cloudinary.com/carousel/image/upload/v1476746633/LinksChalk_kla0ov.jpg') no-repeat center center fixed; background-size: 100%; -webkit-background-size: 100%;"
         }, 
         /*
          {
