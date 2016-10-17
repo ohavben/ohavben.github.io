@@ -277,16 +277,21 @@
 
     var transition = function(element){
         var i;
+        var currentElement;
         var tl = new TimelineLite();
         var elements = document.getElementsByClassName('items');
         for ( i = 0 ; i < elements.length; i ++){
             if (elements[i] === element) {
-                 tl.to(elements[i], 0.25, {left: 0, top: 0, width: window.innerWidth, height: window.innerHeight, fontSize: 50});
+                  currentElement = elements[i];
+                 //tl.to(elements[i], 0.25, {left: 0, top: 0, width: window.innerWidth, height: window.innerHeight, fontSize: 50});
             } else {
                 tl.to(elements[i], 0.25, {opacity:0});
 
             }
         }
+        tl.to(currentElement, 0.25, {left: 0, top: 0, width: window.innerWidth, height: window.innerHeight});
+        tl.to(currentElement, 0.25 { fontSize: 40});
+        return tl;
     };
 
     var sizeCanvas = function(){
