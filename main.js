@@ -377,8 +377,8 @@
             //console.log(e.target.parentElement);
             //e.target.parentElement.classList.toggle('fullScreen');
             if (active == false) var currentTransition = new transition(e.target.parentElement);
-            else currentTransition.reverse();
-            //console.log(currentTransition)
+            //else currentTransition.reverse();
+            console.log(currentTransition)
         }, false);
     };
 }()); 
