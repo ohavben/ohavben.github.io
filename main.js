@@ -52,7 +52,7 @@
             "parent": "board",
             "class": "items",
             "text": "",
-            "html":"<i class='pin'></i><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur et consequat elit.<br>Donec viverra eros eget ipsum semper lacinia. Sed dictum mattis arcu. <br> Proin ipsum tellus, gravida ac dui quis, venenatis venenatis dolor.</p>",
+            "html":"<h2>Links:</h2><a href='http://www.w3schools.com'>LinkedIn</a><a href='http://www.w3schools.com'>GitHub</a><a href='http://www.w3schools.com'>Project</a>",
             "CSS":  "width: 20vmin;\
                     height:30vmin;\
                     top: note3Top;\
