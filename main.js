@@ -281,7 +281,7 @@
         console.log(active)
         var i;
         var currentElement;
-        var tl = new TimelineLite({paused:true});
+        var tl = new TimelineLite();
         var elements = document.getElementsByClassName('items');
         for ( i = 0 ; i < elements.length; i ++){
             if (elements[i] === element) {
