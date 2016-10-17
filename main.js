@@ -372,11 +372,11 @@
 
         Elements[0].addEventListener('dblclick', function (e) {
             e.preventDefault();
-            var currentTransition;
+            //var currentTransition;
             if (!e.target.parentElement.classList.contains('items')) return
             //console.log(e.target.parentElement);
             //e.target.parentElement.classList.toggle('fullScreen');
-            if (active == false) currentTransition = new transition(e.target.parentElement);
+            if (active == false) var currentTransition = new transition(e.target.parentElement);
             else currentTransition.reverse();
             //console.log(currentTransition)
         }, false);
