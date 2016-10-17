@@ -294,7 +294,7 @@
         }
         tl.to(currentElement, 0.25, { left: 0, top: 0, width: window.innerWidth, height: window.innerHeight });
         tl.to(currentElement, 0.25, { fontSize: 40,  autoRound: false });
-        //active = true;
+        active = true;
         return tl;
     };
 
@@ -372,11 +372,13 @@
 
         Elements[0].addEventListener('dblclick', function (e) {
             e.preventDefault();
+            var currentTransition;
             if (!e.target.parentElement.classList.contains('items')) return
             //console.log(e.target.parentElement);
             //e.target.parentElement.classList.toggle('fullScreen');
-            var currentTransition = new transition(e.target.parentElement);
-            console.log(currentTransition)
+            if (active == false) currentTransition = new transition(e.target.parentElement);
+            else currentTransition.reverse();
+            //console.log(currentTransition)
         }, false);
     };
 }()); 
