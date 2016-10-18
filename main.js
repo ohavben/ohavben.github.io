@@ -110,8 +110,8 @@
             "class": "items",
             "text": "",
             "html":"",
-            "CSS":  "width:20vmin;\
-                    height:30vmin;\
+            "CSS":  "width:30vmin;\
+                    height:35vmin;\
                     opacity: 1;\
                     top: note6Top; left: note6Left;\
                     transition: all 1s ease-out;\
