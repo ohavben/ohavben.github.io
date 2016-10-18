@@ -42,7 +42,7 @@
             "class": "items",
             "text": "",
             "html":"",
-            "CSS":  "width: 40vmin;\
+            "CSS":  "width: 60vmin;\
                     height:30vmin;\
                     top: note2Top;\
                     left: note2Left;\
