@@ -215,7 +215,7 @@
         var NotesPosition = function(){
             var width = window.innerWidth, height = window.innerHeight, result;
                 if(width/height > 1){ //landscape
-                    result = [ '8%',  '24%', '-5%',  '36%',  '7%', '65%', '52%', '8%', '30%', '25%', '47%', '65%' ];
+                    result = [ '8%',  '24%', '-5%',  '36%',  '7%', '65%', '52%', '8%', '30%', '28%', '47%', '65%' ];
                 }
                 else { //portrait
                     result = ['7%',  '4%', '-2%',  '24%', '35%', '9%', '35%', '46%', '18%', '12%', '65%', '60%' ];
