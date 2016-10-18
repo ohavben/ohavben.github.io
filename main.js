@@ -380,13 +380,13 @@
 
         Elements[0].addEventListener('dblclick', function (e) {
             e.preventDefault();
-            if (!e.target.parentElement.classList.contains('items')) return
+            if (!e.target.classList.contains('items')) return
             if (active == true){ 
                 active = false;
                 return currentTransition.reverse(); 
             }
             else if (active == false) {
-                currentTransition = new transition(e.target.parentElement);
+                currentTransition = new transition(e.target);
             }
         }, false);
     };
