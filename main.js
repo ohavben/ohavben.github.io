@@ -68,7 +68,7 @@
                     -webkit-transition: all 1s ease-out;\
                     background: url('https://res.cloudinary.com/carousel/image/upload/v1476755902/skillsChalk1_ozesbu.png') no-repeat center center; background-size: 100%; -webkit-background-size: 100%;"
         }, 
-/*
+
          {
             "type": "div",
             "ID": "todo",
@@ -85,7 +85,7 @@
                     -webkit-transition: all 1s ease-out;\
                     background: url('https://res.cloudinary.com/carousel/image/upload/v1476757506/ToDOChalk_dchn9s.png') no-repeat center center; background-size: 100%; -webkit-background-size: 100%;"
         }, 
-*/
+
          {
             "type": "div",
             "ID": "about",
@@ -300,7 +300,7 @@
 
             }
         }
-        tl.to(currentElement, 0.25, { left: 30, top: 20, width: window.innerWidth, height: window.innerHeight });
+        tl.to(currentElement, 0.25, { left: 0, top: 0, width: window.innerWidth, height: window.innerHeight });
         //tl.to(currentElement, 0.25, { fontSize: 6 +'vmin',  autoRound: false });
         active = true;
         return tl;
