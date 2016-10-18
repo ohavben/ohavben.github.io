@@ -49,7 +49,7 @@
                     opacity: 1;\
                     transition: all 1s ease-out;\
                     -webkit-transition: all 1s ease-out;\
-                    background: url('https://res.cloudinary.com/carousel/image/upload/v1476746632/NameChlk_gcl0ro.jpg') no-repeat center center; background-size: 100%; -webkit-background-size: 100%;"
+                    background: url('https://res.cloudinary.com/carousel/image/upload/v1476757921/nameChalk_tjso43.png') no-repeat center center; background-size: 100%; -webkit-background-size: 100%;"
         }, 
 
          {
