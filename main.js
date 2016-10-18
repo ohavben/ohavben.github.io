@@ -22,8 +22,8 @@
             "class": "items",
             "text": "",
             "html":"",
-            "CSS":  "width: 30vmin;\
-                     height:30vmin;\
+            "CSS":  "width: 20vmin;\
+                     height:20vmin;\
                      top: note1Top;\
                      left: note1Left;\
                      transition: all 1s ease-out;\
