@@ -83,7 +83,7 @@
                     opacity: 1;\
                     transition: all 1s ease-out;\
                     -webkit-transition: all 1s ease-out;\
-                    background: url('https://res.cloudinary.com/carousel/image/upload/v1476746633/ToDoChalk_gvkudw.jpg') no-repeat center center; background-size: 100%; -webkit-background-size: 100%;"
+                    background: url('https://res.cloudinary.com/carousel/image/upload/v1476757506/ToDOChalk_dchn9s.png') no-repeat center center; background-size: 100%; -webkit-background-size: 100%;"
         }, 
 
          {
