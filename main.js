@@ -27,8 +27,13 @@
                      top: note1Top;\
                      left: note1Left;\
                      transition: all 1s ease-out;\
-                    -webkit-transition: all 1s ease-out;\
-                    background: url('https://res.cloudinary.com/carousel/image/upload/v1476750072/profileChalk11_l7kwpv.png') no-repeat center center fixed; background-size: 100%; -webkit-background-size: 100%;"
+                     -webkit-transition: all 1s ease-out;\
+                     background-image: url('https://res.cloudinary.com/carousel/image/upload/v1476750072/profileChalk11_l7kwpv.png');\
+                     background-size: 100%;\
+                     -webkit-background-size: 100%;\
+                     background-repeat: no-repeat;\
+                     background-attachment: fixed;\
+                     background-position: center center;"
         }, 
 
          {
