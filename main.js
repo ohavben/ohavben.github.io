@@ -58,7 +58,7 @@
             "parent": "board",
             "class": "items",
             "text": "",
-            "html":"<h2>Links:</h2><br><a href='http://www.w3schools.com'>   1. LinkedIn</a><br><a href='http://www.w3schools.com'>   2. GitHub</a><br><a href='http://www.w3schools.com'>   3. Project</a>",
+            "html":"",
             "CSS":  "width: 20vmin;\
                     height:30vmin;\
                     top: note3Top;\
@@ -118,7 +118,7 @@
                     -webkit-transition: all 1s ease-out;\
                     background: url('https://res.cloudinary.com/carousel/image/upload/v1476753735/LinksChalk5_igjohp.png') no-repeat center center; background-size: 100%; -webkit-background-size: 100%;"
         }, 
-        /*
+        /*    <a href='http://www.w3schools.com'>   1. LinkedIn</a><br><a href='http://www.w3schools.com'>   2. GitHub</a><br><a href='http://www.w3schools.com'>   3. Project</a>
          {
             "type": "div",
             "ID": "item_7",
