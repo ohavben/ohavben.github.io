@@ -51,8 +51,8 @@
                     -webkit-transition: all 1s ease-out;\
                     background: url('https://res.cloudinary.com/carousel/image/upload/v1476757921/nameChalk_tjso43.png') no-repeat center center; background-size: 100%; -webkit-background-size: 100%;"
         }, 
-
-         {
+/*
+        {
             "type": "div",
             "ID": "skills",
             "parent": "board",
