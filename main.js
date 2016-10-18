@@ -42,8 +42,8 @@
             "class": "items",
             "text": "",
             "html":"",
-            "CSS":  "width: 60vmin;\
-                    height:30vmin;\
+            "CSS":  "width: 70vmin;\
+                    height:50vmin;\
                     top: note2Top;\
                     left: note2Left;\
                     opacity: 1;\
