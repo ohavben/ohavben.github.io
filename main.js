@@ -59,8 +59,8 @@
             "class": "items",
             "text": "",
             "html":"",
-            "CSS":  "width: 20vmin;\
-                    height:30vmin;\
+            "CSS":  "width: 30vmin;\
+                    height:70vmin;\
                     top: note3Top;\
                     left: note3Left;\
                     opacity: 1;\
