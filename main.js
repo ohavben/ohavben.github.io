@@ -28,7 +28,7 @@
                      left: note1Left;\
                      transition: all 1s ease-out;\
                     -webkit-transition: all 1s ease-out;\
-                    background: url('https://res.cloudinary.com/carousel/image/upload/v1476748792/profileChalk_fatjig.png') no-repeat center center fixed; background-size: 100%; -webkit-background-size: 100%;"
+                    background: url('https://res.cloudinary.com/carousel/image/upload/v1476749527/profileChalk1_dirjet.png') no-repeat center center fixed; background-size: 100%; -webkit-background-size: 100%;"
         }, 
 
          {
