@@ -102,7 +102,7 @@
                     -webkit-transition: all 1s ease-out;\
                     background: url('https://res.cloudinary.com/carousel/image/upload/v1476756447/AboutChalk_meph53.png') no-repeat center center; background-size: 100%; -webkit-background-size: 100%;"
         }, 
-
+/*
         {
             "type": "div",
             "ID": "links",
@@ -218,7 +218,7 @@
                     result = [ '8%',  '24%', '-5%',  '36%',  '7%', '75%', '52%', '8%', '30%', '28%', '47%', '65%' ];
                 }
                 else { //portrait
-                    result = ['7%',  '4%', '-2%',  '24%', '55%', '6%', '35%', '46%', '22%', '12%', '65%', '60%' ];
+                    result = ['7%',  '4%', '-2%',  '24%', '55%', '6%', '55%', '50%', '22%', '12%', '65%', '60%' ];
                 }
             return result;
         };
