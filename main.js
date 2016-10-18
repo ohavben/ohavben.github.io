@@ -100,7 +100,7 @@
                     opacity: 1;\
                     transition: all 1s ease-out;\
                     -webkit-transition: all 1s ease-out;\
-                    background: url('https://res.cloudinary.com/carousel/image/upload/v1476747757/AboutChalk_pqd0g9.jpg') no-repeat center center; background-size: 100%; -webkit-background-size: 100%;"
+                    background: url('https://res.cloudinary.com/carousel/image/upload/v1476756447/AboutChalk_meph53.png') no-repeat center center; background-size: 100%; -webkit-background-size: 100%;"
         }, 
 
         {
