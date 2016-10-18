@@ -116,7 +116,7 @@
                     top: note6Top; left: note6Left;\
                     transition: all 1s ease-out;\
                     -webkit-transition: all 1s ease-out;\
-                    background: url('https://res.cloudinary.com/carousel/image/upload/v1476746633/LinksChalk_kla0ov.jpg') no-repeat center center; background-size: 100%; -webkit-background-size: 100%;"
+                    background: url('http://res.cloudinary.com/carousel/image/upload/v1476753566/LinksChalk4_iaqaet.png') no-repeat center center; background-size: 100%; -webkit-background-size: 100%;"
         }, 
         /*
          {
