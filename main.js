@@ -49,7 +49,7 @@
                     opacity: 1;\
                     transition: all 1s ease-out;\
                     -webkit-transition: all 1s ease-out;\
-                    background: url('https://res.cloudinary.com/carousel/image/upload/v1476746632/NameChlk_gcl0ro.jpg') no-repeat center center fixed; background-size: 100%; -webkit-background-size: 100%;"
+                    background: url('https://res.cloudinary.com/carousel/image/upload/v1476746632/NameChlk_gcl0ro.jpg') no-repeat center center; background-size: 100%; -webkit-background-size: 100%;"
         }, 
 
          {
@@ -66,7 +66,7 @@
                     opacity: 1;\
                     transition: all 1s ease-out;\
                     -webkit-transition: all 1s ease-out;\
-                    background: url('https://res.cloudinary.com/carousel/image/upload/v1476746633/SkillsChalk_a7lgvb.jpg') no-repeat center center fixed; background-size: 100%; -webkit-background-size: 100%;"
+                    background: url('https://res.cloudinary.com/carousel/image/upload/v1476746633/SkillsChalk_a7lgvb.jpg') no-repeat center center; background-size: 100%; -webkit-background-size: 100%;"
         }, 
 
          {
@@ -83,7 +83,7 @@
                     opacity: 1;\
                     transition: all 1s ease-out;\
                     -webkit-transition: all 1s ease-out;\
-                    background: url('https://res.cloudinary.com/carousel/image/upload/v1476746633/ToDoChalk_gvkudw.jpg') no-repeat center center fixed; background-size: 100%; -webkit-background-size: 100%;"
+                    background: url('https://res.cloudinary.com/carousel/image/upload/v1476746633/ToDoChalk_gvkudw.jpg') no-repeat center center; background-size: 100%; -webkit-background-size: 100%;"
         }, 
 
          {
@@ -100,7 +100,7 @@
                     opacity: 1;\
                     transition: all 1s ease-out;\
                     -webkit-transition: all 1s ease-out;\
-                    background: url('https://res.cloudinary.com/carousel/image/upload/v1476747757/AboutChalk_pqd0g9.jpg') no-repeat center center fixed; background-size: 100%; -webkit-background-size: 100%;"
+                    background: url('https://res.cloudinary.com/carousel/image/upload/v1476747757/AboutChalk_pqd0g9.jpg') no-repeat center center; background-size: 100%; -webkit-background-size: 100%;"
         }, 
 
         {
@@ -116,7 +116,7 @@
                     top: note6Top; left: note6Left;\
                     transition: all 1s ease-out;\
                     -webkit-transition: all 1s ease-out;\
-                    background: url('https://res.cloudinary.com/carousel/image/upload/v1476746633/LinksChalk_kla0ov.jpg') no-repeat center center fixed; background-size: 100%; -webkit-background-size: 100%;"
+                    background: url('https://res.cloudinary.com/carousel/image/upload/v1476746633/LinksChalk_kla0ov.jpg') no-repeat center center; background-size: 100%; -webkit-background-size: 100%;"
         }, 
         /*
          {
