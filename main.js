@@ -148,7 +148,7 @@
         {
             "type": "class",
             "ID":"html",
-            "CSS":"background: url('https://res.cloudinary.com/carousel/image/upload/v1475538924/chalkboard_1_w619v4.jpg');"
+            "CSS":"background: url('http://res.cloudinary.com/carousel/image/upload/v1473011080/add_zs2uql.png');"
         },
 
         {
