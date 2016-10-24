@@ -29,7 +29,7 @@
                      transition: all 1s ease-out;\
                      -webkit-transition: all 1s ease-out;\
                      background-size: 100%;\
-                     -webkit-background-size: 100%;\
+                     -webkit-background-size: 100%;"
         }, 
 
          {
