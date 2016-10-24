@@ -148,7 +148,7 @@
         {
             "type": "class",
             "ID":"html",
-            "CSS":"background-image: url('https://res.cloudinary.com/carousel/image/upload/v1475538924/chalkboard_1_w619v4.jpg');"
+            "CSS":"background-image: url('https://res.cloudinary.com/carousel/image/upload/v1475538924/chalkboard_1_w619v4.jpg') no-repeat center center fixed; background-size: 100%; -webkit-background-size: 100%;"
         },
 
         {
@@ -203,6 +203,8 @@
         }
     ];
 
+    var backgroundImages = []
+
     //-------------------------------- building and setting up the domm ---------------------------------------------//
 
 
@@ -246,7 +248,9 @@
             var Parent = document.getElementById(defs.parent);
             var Child = document.createElement(defs.type);
             if (!Parent) { Parent = document.getElementsByTagName('body')[0];}
-            if (defs.class && defs.class !=='') { Child.classList.add(defs.class); }
+            if (defs.class && defs.class !=='') { Child.classList.add(defs.class);
+                addClasses(defs.class)    
+             }
             if (defs.html) {Child.innerHTML = defs.html;}
             Child.id = defs.ID;
             Parent.appendChild(Child);
@@ -254,6 +258,11 @@
         });
         resize();
         return objects;
+    }
+
+    function addClasses(defs) {
+        var classes = defs.split('');
+        console.log(classes)
     }
 
     function setStyleSheet(object){
