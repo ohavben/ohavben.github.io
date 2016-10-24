@@ -279,7 +279,7 @@
         for (i = 0; i < ImgLength; i++){
             (function(counter){
                 Divs[counter].style.backgroundImage = images[counter];
-                console.log(Divs[counter] , images[counter])
+                console.log(Divs[counter].style , images[counter])
             }(i));
         }
     }
