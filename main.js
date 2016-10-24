@@ -249,7 +249,7 @@
             var Child = document.createElement(defs.type);
             if (!Parent) { Parent = document.getElementsByTagName('body')[0];}
             if (defs.class && defs.class !=='') { Child.classList.add(defs.class);
-                addClasses(defs.class)    
+                addClasses(Child, defs.class)    
              }
             if (defs.html) {Child.innerHTML = defs.html;}
             Child.id = defs.ID;
@@ -260,9 +260,9 @@
         return objects;
     }
 
-    function addClasses(defs) {
-        var classes = defs.split('');
-        console.log(classes)
+    function addClasses(target, defs) {
+        var classes = defs.split(' ');
+        console.log(target, classes)
     }
 
     function setStyleSheet(object){
