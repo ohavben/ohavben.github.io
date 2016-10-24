@@ -26,14 +26,15 @@
                      height:20vmin;\
                      top: note1Top;\
                      left: note1Left;\
-                     transition: all 1s ease-out;\
-                     -webkit-transition: all 1s ease-out;\
                      background-image: url('https://res.cloudinary.com/carousel/image/upload/v1476750072/profileChalk11_l7kwpv.png');\
                      background-size: 100%;\
-                     -webkit-background-size: 100%;\
                      background-repeat: no-repeat;\
                      background-position: center center;\
-                     background-attachment: scroll;"
+                     background-attachment: scroll;\
+                     -webkit-background-size: 100%;\
+                     -webkit-background-repeat: no-repeat;\
+                     -webkit-background-position: center center;\
+                     -webkit-background-attachment: scroll;"
         }, 
 
          {
