@@ -389,6 +389,5 @@
                 currentTransition = new transition(e.target);
             }
         }, false);
-        alert('its working')
     };
 }()); 
