@@ -33,7 +33,7 @@
                      -webkit-background-size: 100%;\
                      background-repeat: no-repeat;\
                      background-position: center center;\
-                     background-attachment: fixed;"
+                     background-attachment: scroll;"
         }, 
 
          {
