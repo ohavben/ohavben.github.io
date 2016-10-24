@@ -278,7 +278,7 @@
         var i;
         for (i = 0; i < ImgLength; i++){
             (function(counter){
-                Divs[counter].style.backgroundImage = images[counter];
+                Divs[counter].style.background = images[counter];
                 console.log(Divs[counter].style , images[counter])
             }(i));
         }
