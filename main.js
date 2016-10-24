@@ -28,8 +28,11 @@
                      left: note1Left;\
                      transition: all 1s ease-out;\
                      -webkit-transition: all 1s ease-out;\
+                     background-image: url('https://res.cloudinary.com/carousel/image/upload/v1476750072/profileChalk11_l7kwpv.png');\
                      background-size: 100%;\
-                     -webkit-background-size: 100%;"
+                     -webkit-background-size: 100%;\
+                     background-repeat: no-repeat;\
+                     background-position: center center;"
         }, 
 
          {
@@ -44,10 +47,9 @@
                     top: note2Top;\
                     left: note2Left;\
                     opacity: 1;\
-                    background-repeat: no-repeat;\
-                    background-position: center center;\
-                    background-size: 100%; \
-                    -webkit-background-size: 100%;"
+                    transition: all 1s ease-out;\
+                    -webkit-transition: all 1s ease-out;\
+                    background: url('https://res.cloudinary.com/carousel/image/upload/v1476757921/nameChalk_tjso43.png') no-repeat center center; background-size: 100%; -webkit-background-size: 100%;"
         }, 
 
         {
@@ -62,10 +64,9 @@
                     top: note3Top;\
                     left: note3Left;\
                     opacity: 1;\
-                    background-repeat: no-repeat;\
-                    background-position: center center;\
-                    background-size: 100%; \
-                    -webkit-background-size: 100%;"
+                    transition: all 1s ease-out;\
+                    -webkit-transition: all 1s ease-out;\
+                    background: url('https://res.cloudinary.com/carousel/image/upload/v1476755902/skillsChalk1_ozesbu.png') no-repeat center center; background-size: 100%; -webkit-background-size: 100%;"
         }, 
 
          {
@@ -80,10 +81,9 @@
                     top: note4Top;\
                     left: note4Left;\
                     opacity: 1;\
-                    background-repeat: no-repeat;\
-                    background-position: center center; \
-                    background-size: 100%; \
-                    -webkit-background-size: 100%;"
+                    transition: all 1s ease-out;\
+                    -webkit-transition: all 1s ease-out;\
+                    background: url('https://res.cloudinary.com/carousel/image/upload/v1476757506/ToDOChalk_dchn9s.png') no-repeat center center; background-size: 100%; -webkit-background-size: 100%;"
         }, 
 
          {
@@ -114,9 +114,9 @@
                     height:35vmin;\
                     opacity: 1;\
                     top: note6Top; left: note6Left;\
-                     background-repeat: no-repeat;\
-                     background-position: center center; \background-size: 100%;\
-                     -webkit-background-size: 100%;"
+                    transition: all 1s ease-out;\
+                    -webkit-transition: all 1s ease-out;\
+                    background: url('https://res.cloudinary.com/carousel/image/upload/v1476753735/LinksChalk5_igjohp.png') no-repeat center center; background-size: 100%; -webkit-background-size: 100%;"
         }, 
         /*    <a href='http://www.w3schools.com'>   1. LinkedIn</a><br><a href='http://www.w3schools.com'>   2. GitHub</a><br><a href='http://www.w3schools.com'>   3. Project</a>
          {
@@ -278,8 +278,7 @@
         var i;
         for (i = 0; i < ImgLength; i++){
             (function(counter){
-                Divs[counter].style.background = images[counter];
-                console.log(Divs[counter].style , images[counter])
+                Divs[counter].style.backgroundImage = images[counter];
             }(i));
         }
     }
@@ -402,7 +401,7 @@
 
     window.onload = function(){
         Elements = new buildDoMM(propeties);
-        setPictures();
+        //setPictures();
         console.log(Elements)
         //sizeCanvas(); //uncomment this line if you have canvas elements
         window.addEventListener('resize', debounce(resize, 50), false);
