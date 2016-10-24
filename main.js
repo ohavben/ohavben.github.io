@@ -248,9 +248,7 @@
             var Parent = document.getElementById(defs.parent);
             var Child = document.createElement(defs.type);
             if (!Parent) { Parent = document.getElementsByTagName('body')[0];}
-            if (defs.class && defs.class !=='') { Child.classList.add(defs.class);
-                addClasses(Child, defs.class)    
-             }
+            if (defs.class && defs.class !=='') {  addClasses(Child,defs.class);}
             if (defs.html) {Child.innerHTML = defs.html;}
             Child.id = defs.ID;
             Parent.appendChild(Child);
@@ -262,7 +260,14 @@
 
     function addClasses(target, defs) {
         var classes = defs.split(' ');
-        console.log(target, classes)
+        var Clength = classes.length;
+        var i;
+
+        for (i = 0 ; i < Clength ; i++){
+            (function(counter){
+                target.classList.add(classes[counter]);
+            }(i));
+        }
     }
 
     function setStyleSheet(object){
