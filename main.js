@@ -19,7 +19,7 @@
             "type": "div",
             "ID": "face",
             "parent": "board",
-            "class": "items",
+            "class": "items photos",
             "text": "",
             "html":"",
             "CSS":  "width: 20vmin;\
@@ -39,7 +39,7 @@
             "type": "div",
             "ID": "name",
             "parent": "board",
-            "class": "items",
+            "class": "items photos",
             "text": "",
             "html":"",
             "CSS":  "width: 70vmin;\
@@ -56,7 +56,7 @@
             "type": "div",
             "ID": "skills",
             "parent": "board",
-            "class": "items",
+            "class": "items photos",
             "text": "",
             "html":"",
             "CSS":  "width: 45vmin;\
@@ -73,7 +73,7 @@
             "type": "div",
             "ID": "todo",
             "parent": "board",
-            "class": "items",
+            "class": "items photos",
             "text": "",
             "html":"",
             "CSS":  "width: 40vmin;\
@@ -90,7 +90,7 @@
             "type": "div",
             "ID": "about",
             "parent": "board",
-            "class": "items",
+            "class": "items photos",
             "text": "",
             "html":"",
             "CSS":  "width: 80vmin;\
@@ -107,7 +107,7 @@
             "type": "div",
             "ID": "links",
             "parent": "board",
-            "class": "items",
+            "class": "items photos",
             "text": "",
             "html":"",
             "CSS":  "width:30vmin;\
