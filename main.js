@@ -8,6 +8,22 @@
             "class": "board",
             "text": "",
             "html":"",
+
+            "CSS":  "width: totalWidth;\
+                     height: totalHeight;\
+                     position: relative;\
+                     display:block;\
+                     overflow:hidden;\
+                     background-image: url('https://res.cloudinary.com/carousel/image/upload/v1475538924/chalkboard_1_w619v4.jpg');\
+                     background-attachment: fixed;\
+                     background-position: top;\
+                     background-size: cover;\
+                    -webkit-background-size: cover;\
+                    -moz-background-size: cover;\
+                    -o-background-size: cover;\
+                    background-position: center center;\
+                    background-repeat: no-repeat;"
+            /*
             "CSS":  "width: totalWidth;\
                      height: totalHeight;\
                      position: relative;\
@@ -20,7 +36,7 @@
                      background-attachment: scroll;\
                      -webkit-background-size: 100%;\
                      -webkit-background-repeat: no-repeat;\
-                     -webkit-background-position: center center;"
+                     -webkit-background-position: center center;"*/
         }, 
 
         {
