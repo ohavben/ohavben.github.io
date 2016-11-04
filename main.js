@@ -245,6 +245,7 @@
 
     function setPictures(){
         var images = ['https://res.cloudinary.com/carousel/image/upload/v1476750072/profileChalk11_l7kwpv.png', 'https://res.cloudinary.com/carousel/image/upload/v1476757921/nameChalk_tjso43.png', 'https://res.cloudinary.com/carousel/image/upload/v1476755902/skillsChalk1_ozesbu.png', 'https://res.cloudinary.com/carousel/image/upload/v1476757506/ToDOChalk_dchn9s.png', 'https://res.cloudinary.com/carousel/image/upload/v1476756447/AboutChalk_meph53.png', 'https://res.cloudinary.com/carousel/image/upload/v1476753735/LinksChalk5_igjohp.png', 'https://res.cloudinary.com/carousel/image/upload/v1475538924/chalkboard_1_w619v4.jpg' ];
+        /// 
         var Divs = document.getElementsByClassName('photos'); 
         var body = document.getElementsByTagName('body');
         var ImgLength = Divs.length;
@@ -310,10 +311,10 @@
         //console.log('resizing canvas')
         canvas = document.getElementsByTagName('canvas');
         for (a = 0; a < canvas.length; a++){
-            (function(a){
-                var parent = canvas[a].parentNode;
-                canvas[a].width = parent.clientWidth;
-                canvas[a].height = parent.clientHeight;
+            (function(A){
+                var parent = canvas[A].parentNode;
+                canvas[A].width = parent.clientWidth;
+                canvas[A].height = parent.clientHeight;
             }(a));
         };
     };
@@ -374,9 +375,8 @@
 
     window.onload = function(){
         Elements = new buildDoMM(propeties);
-        //setPictures();
         console.log(Elements)
-        //sizeCanvas(); //uncomment this line if you have canvas elements
+        //sizeCanvas(); //uncomment this line if you have canvas elements in div containers
         window.addEventListener('resize', debounce(resize, 50), false);
 
         Elements[0].addEventListener('dblclick', function (e) {
