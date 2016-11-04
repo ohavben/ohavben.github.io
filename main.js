@@ -14,11 +14,11 @@
                      display:block;\
                      overflow:hidden;\
                      background: url('/images/chalkboard_gb6dnb.jpg');\
-                     background-size: cover;\
+                     background-size: 100%;\
                      background-repeat: no-repeat;\
                      background-position: center center;\
                      background-attachment: scroll;\
-                     -webkit-background-size: cover;\
+                     -webkit-background-size: 100%;\
                      -webkit-background-repeat: no-repeat;\
                      -webkit-background-position: center center;"
         }, 
