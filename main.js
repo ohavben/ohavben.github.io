@@ -274,6 +274,7 @@
     }
 
     var transition = function(element){
+        console.log('transition')
         console.log(active)
         var i;
         var currentElement;
