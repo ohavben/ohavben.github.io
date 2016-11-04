@@ -370,6 +370,7 @@
         window.addEventListener('resize', debounce(resize, 50), false);
 
         Elements[0].addEventListener('dblclick', function (e) {
+            console.log(e.target)
             console.log('click')
             e.preventDefault();
             if (!e.target.classList.contains('board')) return
