@@ -12,7 +12,16 @@
                      height: totalHeight;\
                      position: relative;\
                      display:block;\
-                     overflow:hidden;"
+                     overflow:hidden;\
+                     background: url('https://res.cloudinary.com/carousel/image/upload/v1475538924/chalkboard_1_w619v4.jpg');\
+                     background-size: 100%;\
+                     background-repeat: no-repeat;\
+                     background-position: center center;\
+                     background-attachment: scroll;\
+                     -webkit-background-size: 100%;\
+                     -webkit-background-repeat: no-repeat;\
+                     -webkit-background-position: center center;\
+                     -webkit-background-attachment: scroll;"
         }, 
 
         {
@@ -183,7 +192,7 @@
         {
             "type":"class",
             "ID":"body",
-            "CSS":"width: totalWidth; height: totalHeight; margin: 0 auto;  overflow: hidden;  background-size: 100%; -webkit-background-size: 100%; background: url('https://res.cloudinary.com/carousel/image/upload/v1475538924/chalkboard_1_w619v4.jpg') no-repeat center center fixed;"
+            "CSS":""//width: totalWidth; height: totalHeight; margin: 0 auto;  overflow: hidden;  background-size: 100%; -webkit-background-size: 100%; background: url('https://res.cloudinary.com/carousel/image/upload/v1475538924/chalkboard_1_w619v4.jpg') no-repeat center center fixed;"
         },
         
         {
