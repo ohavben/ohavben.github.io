@@ -8,10 +8,6 @@
             "class": "board",
             "text": "",
             "html":"",
-
-            "CSS":  "width: totalWidth;\
-                     height: totalHeight;"
-            /*
             "CSS":  "width: totalWidth;\
                      height: totalHeight;\
                      position: relative;\
@@ -24,7 +20,7 @@
                      background-attachment: scroll;\
                      -webkit-background-size: 100%;\
                      -webkit-background-repeat: no-repeat;\
-                     -webkit-background-position: center center;"*/
+                     -webkit-background-position: center center;"
         }, 
 
         {
