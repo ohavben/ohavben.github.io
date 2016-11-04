@@ -243,20 +243,6 @@
         }
     }
 
-    function setPictures(){
-        var images = ['https://res.cloudinary.com/carousel/image/upload/v1476750072/profileChalk11_l7kwpv.png', 'https://res.cloudinary.com/carousel/image/upload/v1476757921/nameChalk_tjso43.png', 'https://res.cloudinary.com/carousel/image/upload/v1476755902/skillsChalk1_ozesbu.png', 'https://res.cloudinary.com/carousel/image/upload/v1476757506/ToDOChalk_dchn9s.png', 'https://res.cloudinary.com/carousel/image/upload/v1476756447/AboutChalk_meph53.png', 'https://res.cloudinary.com/carousel/image/upload/v1476753735/LinksChalk5_igjohp.png', 'https://res.cloudinary.com/carousel/image/upload/v1475538924/chalkboard_1_w619v4.jpg' ];
-        /// 
-        var Divs = document.getElementsByClassName('photos'); 
-        var body = document.getElementsByTagName('body');
-        var ImgLength = Divs.length;
-        var i;
-        for (i = 0; i < ImgLength; i++){
-            (function(counter){
-                Divs[counter].style.backgroundImage = images[counter];
-            }(i));
-        }
-    }
-
     function setStyleSheet(object){
         myStyleSheet = document.createElement('style');
         myStyleSheet.appendChild(document.createTextNode('')); // this is for webkit
@@ -298,7 +284,7 @@
                   currentElement = elements[i];
                  //tl.to(elements[i], 0.25, {left: 0, top: 0, width: window.innerWidth, height: window.innerHeight, fontSize: 50});
             } else {
-                tl.to(elements[i], 0.25, {opacity:0});
+                tl.to(elements[i], 0.25, {opacity:0, onUpdate:myFunction});
 
             }
         }
@@ -307,6 +293,8 @@
         active = true;
         return tl;
     };
+
+    function myFunction(){ console.log('update')}
 
     var sizeCanvas = function(){
         //console.log('resizing canvas')
