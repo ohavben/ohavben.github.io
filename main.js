@@ -192,7 +192,7 @@
         {
             "type":"class",
             "ID":"body",
-            "CSS":""margin: 0 auto;  overflow: hidden;"
+            "CSS":"margin: 0 auto;  overflow: hidden;"
         },
         
         {
