@@ -13,14 +13,7 @@
                      position: relative;\
                      display:block;\
                      overflow:hidden;\
-                     background-size: 100%;\
-                     background-repeat: no-repeat;\
-                     background-position: center center;\
-                     background-attachment: scroll;\
-                     -webkit-background-size: 100%;\
-                     -webkit-background-repeat: no-repeat;\
-                     -webkit-background-position: center center;\
-                     -webkit-background-attachment: scroll;"
+                    "
         }, //background: url('https://res.cloudinary.com/carousel/image/upload/v1475538924/chalkboard_1_w619v4.jpg');\
 
         {
