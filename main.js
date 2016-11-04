@@ -370,7 +370,7 @@
         window.addEventListener('resize', debounce(resize, 50), false);
 
         Elements[0].addEventListener('dblclick', function (e) {
-            console.log(e.target.parent)
+            console.log(e.target.parentNode)
             console.log('click')
             e.preventDefault();
             if (!e.target.classList.contains('board')) return
@@ -379,7 +379,7 @@
                 return currentTransition.reverse(); 
             }
             else if (active == false) {
-                currentTransition = new transition(e.target.parent);
+                currentTransition = new transition(e.target.parentNode);
             }
         }, false);
     };
