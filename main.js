@@ -5,7 +5,7 @@
             "type": "div",
             "ID": "board",
             "parent": "body",
-            "class": "",
+            "class": "board",
             "text": "",
             "html":"",
             "CSS":  "width: totalWidth;\
@@ -202,6 +202,7 @@
         //var totalWidth = window.innerWidth;
         var itemsToBeReplaced = ['totalWidth', 'totalHeight','carouselHeight', 'marginWidth', 'marginHeight', 'marginCarouselHeight', 'note1Top', 'note1Left',  'note2Top', 'note2Left',  'note3Top', 'note3Left',  'note4Top', 'note4Left',  'note5Top', 'note5Left',  'note6Top', 'note6Left'];
         var newValues = [totalWidth+'px', DivHeight+'px', Math.floor(DivHeight-130)+'px', Math.floor(totalWidth/-2)+'px',Math.floor(DivHeight/-2)+'px', Math.floor((DivHeight-130)/-2)+'px', NotesPosition()[0], NotesPosition()[1], NotesPosition()[2], NotesPosition()[3], NotesPosition()[4], NotesPosition()[5], NotesPosition()[6], NotesPosition()[7], NotesPosition()[8], NotesPosition()[9], NotesPosition()[10], NotesPosition()[11], NotesPosition()[12]];
+        ///
         var length = defs.length;
         var itemsLength = itemsToBeReplaced.length;
 
