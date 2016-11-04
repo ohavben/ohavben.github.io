@@ -372,7 +372,7 @@
         Elements[0].addEventListener('dblclick', function (e) {
             console.log('click')
             e.preventDefault();
-            if (!e.target.classList.contains('items')) return
+            if (!e.target.classList.contains('board')) return
             if (active == true){ 
                 active = false;
                 return currentTransition.reverse(); 
