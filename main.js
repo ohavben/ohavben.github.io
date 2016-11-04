@@ -7,7 +7,7 @@
             "parent": "body",
             "class": "board",
             "text": "",
-            "html":"",
+            "html":"<canvas id = 'canvas1'></canvas>",
             "CSS":  "width: totalWidth;\
                      height: totalHeight;\
                      position: relative;\
@@ -29,7 +29,7 @@
             "parent": "board",
             "class": "items face",
             "text": "",
-            "html":"",
+            "html":"<canvas id = 'canvas2'></canvas>",
             "CSS":  "width: 20vmin;\
                      height:20vmin;\
                      top: note1Top;\
@@ -51,7 +51,7 @@
             "parent": "board",
             "class": "items name",
             "text": "",
-            "html":"",
+            "html":"<canvas id = 'canvas3'></canvas>",
             "CSS":  "width: 70vmin;\
                     height:50vmin;\
                     top: note2Top;\
@@ -73,7 +73,7 @@
             "parent": "board",
             "class": "items skills",
             "text": "",
-            "html":"",
+            "html":"<canvas id = 'canvas4'></canvas>",
             "CSS":  "width: 45vmin;\
                     height:60vmin;\
                     top: note3Top;\
@@ -95,7 +95,7 @@
             "parent": "board",
             "class": "items todo",
             "text": "",
-            "html":"",
+            "html":"<canvas id = 'canvas5'></canvas>",
             "CSS":  "width: 40vmin;\
                     height:30vmin;\
                     top: note4Top;\
@@ -117,7 +117,7 @@
             "parent": "board",
             "class": "items about",
             "text": "",
-            "html":"",
+            "html":"<canvas id = 'canvas6'></canvas>",
             "CSS":  "width: 80vmin;\
                     height:50vmin;\
                     top: note5Top;\
@@ -139,7 +139,7 @@
             "parent": "board",
             "class": "items links",
             "text": "",
-            "html":"",
+            "html":"<canvas id = 'canvas7'></canvas>",
             "CSS":  "width:30vmin;\
                     height:35vmin;\
                     opacity: 1;\
