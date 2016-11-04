@@ -13,7 +13,7 @@
                      position: relative;\
                      display:block;\
                      overflow:hidden;\
-                     background: url('https://res.cloudinary.com/carousel/image/upload/v1475538924/chalkboard_1_w619v4.jpg');\
+                     background: url('/images/chalkboard_gb6dnb.jpg');\
                      background-size: 100%;\
                      background-repeat: no-repeat;\
                      background-position: center center;\
