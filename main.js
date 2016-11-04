@@ -283,6 +283,7 @@
             }(object[i]));
         }
         console.log(myStyleSheet.sheet)
+        sizeCanvas();
         return myStyleSheet.sheet;
     }
 
