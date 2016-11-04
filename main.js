@@ -159,7 +159,7 @@
          
         {
             "type":"class",
-            "ID":"body",
+            "ID":"*",
             "CSS":"margin: 0 auto;  overflow: hidden;"
         },
         
