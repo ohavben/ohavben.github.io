@@ -156,39 +156,8 @@
                     -webkit-background-position: center center;\
                     -webkit-background-attachment: scroll;"
         }, 
-        /*    <a href='http://www.w3schools.com'>   1. LinkedIn</a><br><a href='http://www.w3schools.com'>   2. GitHub</a><br><a href='http://www.w3schools.com'>   3. Project</a>
-         {
-            "type": "div",
-            "ID": "item_7",
-            "parent": "board",
-            "class": "items",
-            "text": "",
-            "html":"<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur et consequat elit.<br>Donec viverra eros eget ipsum semper lacinia. Sed dictum mattis arcu. <br> Proin ipsum tellus, gravida ac dui quis, venenatis venenatis dolor.</p>",
-            "CSS":"background-color:grey; width:30vmin; height: 20vmin; overflow:hidden;top: note7Top; left: note7Left;"
-        }, 
-
-         {
-            "type": "div",
-            "ID": "item_8",
-            "parent": "board",
-            "class": "items",
-            "text": "",
-            "html":"<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur et consequat elit.<br>Donec viverra eros eget ipsum semper lacinia. Sed dictum mattis arcu. <br> Proin ipsum tellus, gravida ac dui quis, venenatis venenatis dolor. <br>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>",
-            "CSS":"background-color:cyan ; width:30vmin; height:40vmin; overflow:hidden; top: note8Top; left: note8Left;"
-        }, 
-        */
-         {
-            "type": "class",
-            "ID":"a:link",
-            "CSS":"text-decoration:none; color:white; font-size: 3vmin;"
-        },
-        /*
-        {
-            "type": "class",
-            "ID":"body",
-            "CSS":"background: url('https://res.cloudinary.com/carousel/image/upload/v1475538924/chalkboard_1_w619v4.jpg') no-repeat center center fixed; background-size: 100%; -webkit-background-size: 100%;"
-        },
-        */
+          //<a href='http://www.w3schools.com'>   1. LinkedIn</a><br><a href='http://www.w3schools.com'>   2. GitHub</a><br><a href='http://www.w3schools.com'>   3. Project</a>
+         
         {
             "type":"class",
             "ID":"body",
@@ -204,42 +173,7 @@
                      overflow:hidden;\
                      color:white;\
                      font-family: 'CoalhandLuke';"
-        }/*,
-        
-        {
-            "type":"class",
-            "ID":".pin",
-            "CSS":"background-color: #aaa;display: block;height: 32px;width: 2px;position: absolute;left: 50%;top: -16px;z-index: 1;"
-        },
-
-        {
-            "type":"class",
-            "ID":".pin:after",
-            "CSS":"background-color: #A31;background-image: radial-gradient(25% 25%, circle, hsla(0,0%,100%,.3), hsla(0,0%,0%,.3));border-radius: 50%;box-shadow: inset 0 0 0 1px hsla(0,0%,0%,.1),inset 3px 3px 3px hsla(0,0%,100%,.2),inset -3px -3px 3px hsla(0,0%,0%,.2),23px 20px 3px hsla(0,0%,0%,.15);content: '';height: 12px;left: -5px;position: absolute;top: -10px; width: 12px;"
-        },
-
-        {
-            "type":"class",
-            "ID":".pin:before",
-            "CSS":"background-color: hsla(0,0%,0%,0.1);box-shadow: 0 0 .25em hsla(0,0%,0%,.1);content: '';height: 24px;width: 2px;left: 0;position: absolute;top: 8px;transform: rotate(57.5deg);-moz-transform: rotate(57.5deg);-webkit-transform: rotate(57.5deg);-o-transform: rotate(57.5deg);-ms-transform: rotate(57.5deg);transform-origin: 50% 100%;-moz-transform-origin: 50% 100%;-webkit-transform-origin: 50% 100%;-ms-transform-origin: 50% 100%;-o-transform-origin: 50% 100%;"
-        },
-       
-        {
-            "type":"class",
-            "ID":".items:hover",
-            "CSS": "width:100vmin;\
-                    height:100vmin;\
-                    opacity: 1;\
-                    top: 0;\
-                    left: 0;"
-        },
-         
-        {
-            "type":"keyframe",
-            "ID":"zoomIn",
-            "CSS":"100% { width: 100vw;height: 100vh;}"
         }
-        */
     ];
 
     var backgroundImages = []
