@@ -20,8 +20,7 @@
                      background-attachment: scroll;\
                      -webkit-background-size: 100%;\
                      -webkit-background-repeat: no-repeat;\
-                     -webkit-background-position: center center;\
-                     -webkit-background-attachment: scroll;"
+                     -webkit-background-position: center center;"
         }, 
 
         {
