@@ -373,7 +373,7 @@
             console.log(e.target.parentNode)
             console.log('click')
             e.preventDefault();
-            if (!e.target.classList.contains('board')) return
+            //if (!e.target.classList.contains('board')) return
             if (active == true){ 
                 active = false;
                 return currentTransition.reverse(); 
