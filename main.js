@@ -240,7 +240,7 @@
         }
         console.log(myStyleSheet.sheet)
         //setAllCanvas();
-        sizeCanvas();
+        //sizeCanvas();
         return myStyleSheet.sheet;
     }
 
@@ -271,7 +271,7 @@
         for (a = 0; a < canvas.length; a++){
             (function(A){
                 var parent = canvas[a].parentNode;
-                canvas[A].renderImage();
+                //canvas[A].renderImage();
             }(a));
         };
     };
@@ -364,7 +364,7 @@
                 currentTransition = new transition(e.target);
             }
         }, false);
-        //alert('its working')
+        alert('its working')
     };
 }()); 
 
