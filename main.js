@@ -18,7 +18,8 @@
                      height: calc(var(--height-factor) * 1px);\
                      position: relative;\
                      display:block;\
-                     overflow:hidden;"
+                     overflow:hidden;\
+                     background-color:grey;"
         }, 
         /*
         {
@@ -44,7 +45,8 @@
             "CSS":  "width: calc(var(--width-factor) * 0.95px);\
                     height: calc(var(--width-factor) * 0.223 * 0.95px);\
                     top: note2Top;\
-                    left: note2Left;"
+                    left: note2Left;\
+                     background-color:red;"
         }, 
 
         {
@@ -57,7 +59,8 @@
             "CSS":  "width: calc(var(--width-factor) * 0.95px);\
                      height: calc(var(--width-factor) * 0.66 * 0.95px);\
                     top: note5Top;\
-                    left: note5Left;"
+                    left: note5Left;\
+                     background-color:pink;"
         }, 
 
         {
@@ -70,7 +73,8 @@
             "CSS":  "width: calc(var(--width-factor) * 0.45px);\
                     height: calc(var(--width-factor) * 0.66 * 1px);\
                     top: note3Top;\
-                    left: note3Left;"
+                    left: note3Left;\
+                     background-color:blue;"
         }, 
 
         {
@@ -83,7 +87,8 @@
             "CSS":  "width: calc(var(--width-factor) * 0.45px);\
                     height: calc(var(--width-factor) * 0.66 * 0.45px);\
                     top: note4Top;\
-                    left: note4Left;"
+                    left: note4Left;\
+                     background-color:green;"
         }, 
 
         {
@@ -96,7 +101,8 @@
             "CSS":  "width: calc(var(--width-factor) * 0.45px);\
                     height: calc(var(--width-factor) * 0.66 * 0.45px);\
                     top: note6Top;\
-                    left: note6Left;"
+                    left: note6Left;\
+                     background-color:yellow;"
         }, 
         //    <a href='http://www.w3schools.com'>   1. LinkedIn</a><br><a href='http://www.w3schools.com'>   2. GitHub</a><br><a href='http://www.w3schools.com'>   3. Project</a>
         
@@ -358,7 +364,7 @@
                 currentTransition = new transition(e.target);
             }
         }, false);
-        alert('its working')
+        //alert('its working')
     };
 }()); 
 
