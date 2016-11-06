@@ -221,18 +221,9 @@
 
         for (i = 0; i< length; ++i){
             (function(target){
-                if (target.type == 'div' || target.type == 'canvas'){
+                if (target.type == 'div' || target.type == 'canvas' ||  target.type == 'class'){
                     try {
                         return myStyleSheet.sheet.insertRule(  target.id + ' {' + target.css + '}' , 0 );
-                    }
-                    catch(err) {
-                        console.log(err)
-                    }
-                    return
-                }
-                else if(target.type == 'class'){
-                    try {
-                        myStyleSheet.sheet.insertRule( target.id + ' {' + target.css + '}' , 0 );
                     }
                     catch(err) {
                         console.log(err)
