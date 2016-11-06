@@ -120,7 +120,7 @@
         */
         {
             "type":"class",
-            "ID":"#body",
+            "ID":"body",
             "CSS":"margin: 0 auto;  overflow: hidden;"
         },
         
