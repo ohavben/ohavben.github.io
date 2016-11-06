@@ -223,7 +223,8 @@
             (function(target){
                 if (target.type == 'div' || target.type == 'canvas' ||  target.type == 'class'){
                     try {
-                        return myStyleSheet.sheet.insertRule(  target.id + ' {' + target.css + '}' , 0 );
+                        //return myStyleSheet.sheet.insertRule(  target.id + ' {' + target.css + '}' , 0 );
+                        return addCSSRule(myStyleSheet.sheet, target.id, target.css);
                     }
                     catch(err) {
                         console.log(err)
@@ -232,7 +233,7 @@
                 }
                 else if(target.type == 'keyframe'){
                     try {
-                        return myStyleSheet.sheet.insertRule( '@' + myPrefix.css + 'keyframes ' + target.id + '{'+ target.css + '}', 0 );
+                        return myStyleSheet.sheet.insertRule( '@' + myPrefix.css + 'keyframes ' + target.id + '{'+ target.css + '}', 0 );s
                     }
                     catch(err) {
                         console.log(err)
