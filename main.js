@@ -223,7 +223,7 @@
             (function(target){
                 if (target.type == 'div' || target.type == 'canvas'){
                     try {
-                        return myStyleSheet.sheet.insertRule( '#' + target.id + ' {' + target.css + '}' , 0 );
+                        return myStyleSheet.sheet.insertRule(  target.id + ' {' + target.css + '}' , 0 );
                     }
                     catch(err) {
                         console.log(err)
