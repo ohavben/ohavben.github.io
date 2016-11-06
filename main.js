@@ -3,7 +3,7 @@
 
         {
             "type": "class",
-            "ID":"#:root",
+            "ID":":root",
             "CSS":"--width-factor: totalWidth; --height-factor: totalHeight;"
         },
 
