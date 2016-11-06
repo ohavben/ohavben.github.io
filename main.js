@@ -3,13 +3,13 @@
 
         {
             "type": "class",
-            "ID":":root",
+            "ID":"#:root",
             "CSS":"--width-factor: totalWidth; --height-factor: totalHeight;"
         },
 
         {
             "type": "div",
-            "ID": "board",
+            "ID": "#board",
             "parent": "body",
             "class": "",
             "text": "",
@@ -37,7 +37,7 @@
         */
          {
             "type": "div",
-            "ID": "name",
+            "ID": "#name",
             "parent": "board",
             "class": "items photo",
             "text": "",
@@ -51,7 +51,7 @@
 
         {
             "type": "div",
-            "ID": "about",
+            "ID": "#about",
             "parent": "board",
             "class": "items photo",
             "text": "",
@@ -65,7 +65,7 @@
 
         {
             "type": "div",
-            "ID": "skills",
+            "ID": "#skills",
             "parent": "board",
             "class": "items photo",
             "text": "",
@@ -79,7 +79,7 @@
 
         {
             "type": "div",
-            "ID": "todo",
+            "ID": "#todo",
             "parent": "board",
             "class": "items photo",
             "text": "",
@@ -93,7 +93,7 @@
 
         {
             "type": "div",
-            "ID": "links",
+            "ID": "#links",
             "parent": "board",
             "class": "items photo",
             "text": "",
@@ -108,7 +108,7 @@
         
          {
             "type": "class",
-            "ID":"a:link",
+            "ID":".a:link",
             "CSS":"text-decoration:none; color:white; font-size: 3vmin;"
         },
         /*
@@ -120,7 +120,7 @@
         */
         {
             "type":"class",
-            "ID":"body",
+            "ID":"#body",
             "CSS":"margin: 0 auto;  overflow: hidden;"
         },
         
@@ -182,7 +182,7 @@
             if (!Parent) { Parent = document.getElementsByTagName('body')[0];}
             if (defs.class && defs.class !=='') {  addClasses(Child,defs.class);}
             if (defs.html) {Child.innerHTML = defs.html;}
-            Child.id = defs.ID;
+            Child.id = defs.ID.substring(1);
             Parent.appendChild(Child);
             return Child;
         });
@@ -218,10 +218,17 @@
         document.documentElement.style.setProperty('--boardWidth-factor',  window.innerWidth);
         
         var length = object.length, i;
+
         for (i = 0; i< length; ++i){
             (function(target){
                 if (target.type == 'div' || target.type == 'canvas'){
-                    return myStyleSheet.sheet.insertRule( '#' + target.id + ' {' + target.css + '}' , 0 );
+                    try {
+                        return myStyleSheet.sheet.insertRule( '#' + target.id + ' {' + target.css + '}' , 0 );
+                    }
+                    catch(err) {
+                        console.log(err)
+                    }
+                    return
                 }
                 else if(target.type == 'class'){
                     try {
@@ -233,7 +240,13 @@
                     return
                 }
                 else if(target.type == 'keyframe'){
-                    return myStyleSheet.sheet.insertRule( '@' + myPrefix.css + 'keyframes ' + target.id + '{'+ target.css + '}', 0 );
+                    try {
+                        return myStyleSheet.sheet.insertRule( '@' + myPrefix.css + 'keyframes ' + target.id + '{'+ target.css + '}', 0 );
+                    }
+                    catch(err) {
+                        console.log(err)
+                    }
+                    return
                 }
                 else return console.log(target.id + 'is not valid target for CSS rules')
             }(object[i]));
@@ -243,6 +256,15 @@
         //sizeCanvas();
         return myStyleSheet.sheet;
     }
+
+    function addCSSRule(sheet, selector, rules, index) {
+        if('insertRule' in sheet) {
+            sheet.insertRule(selector + "{" + rules + "}", index);
+        }
+        else if('addRule' in sheet) {
+            sheet.addRule(selector, rules, index);
+        }
+    }     //   addCSSRule(document.styleSheets[0], "header", "float: left");
 
     var transition = function(element){
         console.log(active)
