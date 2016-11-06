@@ -182,7 +182,7 @@
             if (!Parent) { Parent = document.getElementsByTagName('body')[0];}
             if (defs.class && defs.class !=='') {  addClasses(Child,defs.class);}
             if (defs.html) {Child.innerHTML = defs.html;}
-            Child.id = defs.ID;//.substring(1);
+            Child.id = defs.ID.substring(1);
             Parent.appendChild(Child);
             return Child;
         });
