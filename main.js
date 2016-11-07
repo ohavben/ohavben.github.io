@@ -175,6 +175,7 @@
     }
 
     function buildDoMM(data){
+        resize();
         var objects = data.map(function(defs){
             if (defs.type == 'class' || defs.type == 'keyframe') return;
             var Parent = document.getElementById(defs.parent);
@@ -186,7 +187,7 @@
             Parent.appendChild(Child);
             return Child;
         });
-        resize();
+        //resize();
         return objects;
     }
 
