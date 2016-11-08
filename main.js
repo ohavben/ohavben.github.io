@@ -355,15 +355,15 @@
     console.log(Elements);
     window.addEventListener('resize', debounce(resize, 250), false);
 
-    Elements[1].addEventListener('dblclick', function (e) {
+    Elements[1].addEventListener('dblclick', function (event) {
             e.preventDefault();
-            if (!e.target.classList.contains('items')) return
+            if (!event.target.classList.contains('items')) return
             if (active == true){ 
                 active = false;
                 return currentTransition.reverse(); 
             }
             else if (active == false) {
-                currentTransition = new transition(e.target);
+                currentTransition = new transition(event.target);
             }
         }, false);
 
@@ -381,7 +381,7 @@
                 return currentTransition.reverse(); 
             }
             else if (active == false) {
-                currentTransition = new transition(e.target);
+                currentTransition = new transition(event.target);
             }
         } else {
             timeout = setTimeout(function() {
