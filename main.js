@@ -172,7 +172,7 @@
       var parent;
       if (defs.type == 'class' || defs.type == 'keyframe') return null;
       if (defs.parent == 'body')  Parent =  document.getElementsByName('body')[0];
-      else parent = ocument.getElementById(defs.parent);
+      else Parent = document.getElementById(defs.parent);
       var Child = document.createElement(defs.type);
       Child.id = defs.ID;
       if (defs.class && defs.class !=='') { Child.classList.add(defs.class) }
