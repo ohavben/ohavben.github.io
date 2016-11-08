@@ -62,7 +62,7 @@
                      height: calc(var(--width-factor) * 0.66 * 0.95px);\
                     top: note5Top;\
                     left: note5Left;\
-                    background: url('./images/about.png');\
+                    background: url('/images/About.png');\
                     background-size: 100%;\
                     background-repeat: no-repeat;\
                     background-position: center center;\
