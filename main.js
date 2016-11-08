@@ -284,7 +284,6 @@
   };
 
   var transition = function(element){
-        console.log(active)
         var i;
         var currentElement;
         var tl = new TimelineMax();
@@ -375,7 +374,6 @@
         if (tapLength < 500 && tapLength > 0) {
             //elm2.innerHTML = 'Double Tap';
             event.preventDefault();
-            console.log(event.target);
             if (active == true){ 
                 active = false;
                 return currentTransition.reverse(); 
