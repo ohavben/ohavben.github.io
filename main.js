@@ -13,13 +13,20 @@
             "parent": "body",
             "class": "",
             "text": "",
-            "html":"<canvas id = 'canvas0'></canvas>",
+            "html":"",
             "CSS":  "width: calc(var(--boardWidth-factor) * 1px);\
                      height: calc(var(--height-factor) * 1px);\
                      position: relative;\
                      display:block;\
                      overflow:hidden;\
-                     background-color:grey;"
+                     background: url('/images/chalkboard_gb6dnb.jpg');\
+                     background-size: 100%;\
+                     background-repeat: no-repeat;\
+                     background-position: center center;\
+                     background-attachment: scroll;\
+                     -webkit-background-size: 100%;\
+                     -webkit-background-repeat: no-repeat;\
+                     -webkit-background-position: center center;"
         }, 
         
          {
@@ -28,12 +35,20 @@
             "parent": "board",
             "class": "items photo",
             "text": "",
-            "html":"<canvas id = 'canvas1'></canvas>",
+            "html":"",
             "CSS":  "width: calc(var(--width-factor) * 0.95px);\
                     height: calc(var(--width-factor) * 0.223 * 0.95px);\
                     top: note2Top;\
                     left: note2Left;\
-                     background-color:red;"
+                    background: url('https://res.cloudinary.com/carousel/image/upload/v1476757921/nameChalk_tjso43.png');\
+                    background-size: 100%;\
+                    background-repeat: no-repeat;\
+                    background-position: center center;\
+                    background-attachment: scroll;\
+                    -webkit-background-size: 100%;\
+                    -webkit-background-repeat: no-repeat;\
+                    -webkit-background-position: center center;\
+                    -webkit-background-attachment: scroll;"
         }, 
 
         {
@@ -42,12 +57,20 @@
             "parent": "board",
             "class": "items photo",
             "text": "",
-            "html":"<canvas id = 'canvas2'></canvas>",
+            "html":"",
             "CSS":  "width: calc(var(--width-factor) * 0.95px);\
                      height: calc(var(--width-factor) * 0.66 * 0.95px);\
                     top: note5Top;\
                     left: note5Left;\
-                     background-color:pink;"
+                    background: url('https://res.cloudinary.com/carousel/image/upload/v1476756447/AboutChalk_meph53.png');\
+                    background-size: 100%;\
+                    background-repeat: no-repeat;\
+                    background-position: center center;\
+                    background-attachment: scroll;\
+                    -webkit-background-size: 100%;\
+                    -webkit-background-repeat: no-repeat;\
+                    -webkit-background-position: center center;\
+                    -webkit-background-attachment: scroll;"
         }, 
 
         {
@@ -56,12 +79,20 @@
             "parent": "board",
             "class": "items photo",
             "text": "",
-            "html":"<canvas id = 'canvas3'></canvas>",
+            "html":"",
             "CSS":  "width: calc(var(--width-factor) * 0.45px);\
                     height: calc(var(--width-factor) * 0.66 * 1px);\
                     top: note3Top;\
                     left: note3Left;\
-                     background-color:blue;"
+                    background: url('https://res.cloudinary.com/carousel/image/upload/v1476755902/skillsChalk1_ozesbu.png');\
+                    background-size: 100%;\
+                    background-repeat: no-repeat;\
+                    background-position: center center;\
+                    background-attachment: scroll;\
+                    -webkit-background-size: 100%;\
+                    -webkit-background-repeat: no-repeat;\
+                    -webkit-background-position: center center;\
+                    -webkit-background-attachment: scroll;"
         }, 
 
         {
@@ -70,12 +101,20 @@
             "parent": "board",
             "class": "items photo",
             "text": "",
-            "html":"<canvas id = 'canvas4'></canvas>",
+            "html":"",
             "CSS":  "width: calc(var(--width-factor) * 0.45px);\
                     height: calc(var(--width-factor) * 0.66 * 0.45px);\
                     top: note4Top;\
                     left: note4Left;\
-                     background-color:green;"
+                    background: url('https://res.cloudinary.com/carousel/image/upload/v1476757506/ToDOChalk_dchn9s.png');\
+                    background-size: 100%;\
+                    background-repeat: no-repeat;\
+                    background-position: center center;\
+                    background-attachment: scroll;\
+                    -webkit-background-size: 100%;\
+                    -webkit-background-repeat: no-repeat;\
+                    -webkit-background-position: center center;\
+                    -webkit-background-attachment: scroll;"
         }, 
 
         {
@@ -84,12 +123,20 @@
             "parent": "board",
             "class": "items photo",
             "text": "",
-            "html":"<canvas id = 'canvas5'></canvas>",
+            "html":"",
             "CSS":  "width: calc(var(--width-factor) * 0.45px);\
                     height: calc(var(--width-factor) * 0.66 * 0.45px);\
                     top: note6Top;\
                     left: note6Left;\
-                     background-color:yellow;"
+                    background: url('https://res.cloudinary.com/carousel/image/upload/v1476753735/LinksChalk5_igjohp.png');\
+                    background-size: 100%;\
+                    background-repeat: no-repeat;\
+                    background-position: center center;\
+                    background-attachment: scroll;\
+                    -webkit-background-size: 100%;\
+                    -webkit-background-repeat: no-repeat;\
+                    -webkit-background-position: center center;\
+                    -webkit-background-attachment: scroll;"
         }, 
         //    <a href='http://www.w3schools.com'>   1. LinkedIn</a><br><a href='http://www.w3schools.com'>   2. GitHub</a><br><a href='http://www.w3schools.com'>   3. Project</a>
         
