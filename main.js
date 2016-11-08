@@ -368,7 +368,7 @@
         }, false);
 
     Elements[1].addEventListener('touchend', function(event) {
-        if (!e.target.classList.contains('items')) return
+        if (!event.target.classList.contains('items')) return
         console.log(event.target)
         var currentTime = new Date().getTime();
         var tapLength = currentTime - lastTap;
