@@ -369,17 +369,15 @@
 
     Elements[1].addEventListener('touchend', function(event) {
         if (!event.target.classList.contains('items')) return
-        console.log(event.target)
         var currentTime = new Date().getTime();
         var tapLength = currentTime - lastTap;
         clearTimeout(timeout);
         if (tapLength < 500 && tapLength > 0) {
             //elm2.innerHTML = 'Double Tap';
             event.preventDefault();
+            console.log(event.target)
         } else {
-            //elm2.innerHTML = 'Single Tap';
             timeout = setTimeout(function() {
-                //elm2.innerHTML = 'Single Tap (timeout)';
                 clearTimeout(timeout);
             }, 500);
         }
