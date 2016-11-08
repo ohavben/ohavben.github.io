@@ -175,27 +175,20 @@
     myStyleSheet.appendChild(document.createTextNode('')); // this is for webkit
     document.head.appendChild(myStyleSheet);
     var length = object.length, i;
-    for (i = 0; i< length; ++i){
-      (function(target){
-        if (target.type == 'div' || target.type == 'canvas'){
-          return myStyleSheet.sheet.insertRule( '#' + target.id + ' {' + target.css + '}' , 0 );
-        }else if(target.type == 'class'){try {
-              myStyleSheet.sheet.insertRule( target.id + ' {' + target.css + '}' , 0 );
-          }
-          catch(err) {
-              console.log(err)
-          }
-        }else if(target.type == 'keyframe'){
-          return myStyleSheet.sheet.insertRule( '@' + myPrefix + 'keyframes ' + target.id + '{'+ target.css + '}', 0 );
-        }else return console.log(target.id + 'is not valid for CSS rules')
-      }(object[i]));
-    }
-    if(document.readyState === "complete") {
-      sizeCanvas();
-      if (!lastImage){
-        document.getElementById('canvas1').renderImage(photos[0]);
-      }else if (lastImage) {
-        document.getElementById('canvas1').renderImage(lastImage);
+      for (i = 0; i< length; ++i){
+        (function(target){
+          if (target.type == 'div' || target.type == 'canvas'){
+            return myStyleSheet.sheet.insertRule( '#' + target.id + ' {' + target.css + '}' , 0 );
+          }else if(target.type == 'class'){try {
+                myStyleSheet.sheet.insertRule( target.id + ' {' + target.css + '}' , 0 );
+            }
+            catch(err) {
+                console.log(err)
+            }
+          }else if(target.type == 'keyframe'){
+            return myStyleSheet.sheet.insertRule( '@' + myPrefix + 'keyframes ' + target.id + '{'+ target.css + '}', 0 );
+          }else return console.log(target.id + 'is not valid for CSS rules')
+        }(object[i]));
       }
     };
     return myStyleSheet.sheet;
