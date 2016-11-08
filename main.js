@@ -19,6 +19,8 @@
                      position: relative;\
                      display:block;\
                      overflow:hidden;\
+                     position:absolute\
+                     overflow:hidden;\
                      background: url('/images/chalkboard_gb6dnb.jpg');\
                      background-size: 100%;\
                      background-repeat: no-repeat;\
@@ -40,6 +42,8 @@
                     height: calc(var(--width-factor) * 0.223 * 0.95px);\
                     top: note2Top;\
                     left: note2Left;\
+                    position:absolute\
+                    overflow:hidden;\
                     background: url('/images/name.png');\
                     background-size: 100%;\
                     background-repeat: no-repeat;\
@@ -62,6 +66,8 @@
                      height: calc(var(--width-factor) * 0.66 * 0.95px);\
                     top: note5Top;\
                     left: note5Left;\
+                    position:absolute\
+                    overflow:hidden;\
                     background: url('/images/About.png');\
                     background-size: 100%;\
                     background-repeat: no-repeat;\
@@ -84,6 +90,8 @@
                     height: calc(var(--width-factor) * 0.66 * 1px);\
                     top: note3Top;\
                     left: note3Left;\
+                    position:absolute\
+                    overflow:hidden;\
                     background: url('/images/skillsChalk.png');\
                     background-size: 100%;\
                     background-repeat: no-repeat;\
@@ -106,6 +114,8 @@
                     height: calc(var(--width-factor) * 0.66 * 0.45px);\
                     top: note4Top;\
                     left: note4Left;\
+                    position:absolute\
+                    overflow:hidden;\
                     background: url('/images/ToDo.png');\
                     background-size: 100%;\
                     background-repeat: no-repeat;\
@@ -128,6 +138,8 @@
                     height: calc(var(--width-factor) * 0.66 * 0.45px);\
                     top: note6Top;\
                     left: note6Left;\
+                    position:absolute\
+                    overflow:hidden;\
                     background: url('/images/LinksChalk5.png');\
                     background-size: 100%;\
                     background-repeat: no-repeat;\
@@ -156,9 +168,6 @@
             "type":"class",
             "ID":".items",
             "CSS":  "font-size: 2vmin;\
-                     position: absolute;\
-                     background: none;\
-                     overflow:hidden;\
                      color:white;\
                      font-family: 'CoalhandLuke';"
         }
