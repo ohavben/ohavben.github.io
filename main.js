@@ -182,13 +182,25 @@
       else Parent = document.getElementById(defs.parent);
       var Child = document.createElement(defs.type);
       Child.id = defs.ID;
-      if (defs.class && defs.class !=='') { Child.classList.add(defs.class) }
+      if (defs.class && defs.class !=='') {  addClasses(Child,defs.class); }
       if (defs.html) {Child.innerHTML = defs.html;}
       Parent.appendChild(Child);
       return Child;
     });
   return objects;
   };
+
+  function addClasses(target, defs) {
+        var classes = defs.split(' ');
+        var Clength = classes.length;
+        var i;
+
+        for (i = 0 ; i < Clength ; i++){
+            (function(counter){
+                target.classList.add(classes[counter]);
+            }(i));
+        }
+    }
 //
   function setStyleSheet(object){
     myStyleSheet = document.createElement('style');
