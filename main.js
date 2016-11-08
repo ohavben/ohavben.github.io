@@ -181,7 +181,7 @@
       if (defs.parent == 'body')  Parent =  document.getElementsByTagName('body')[0];
       else Parent = document.getElementById(defs.parent);
       var Child = document.createElement(defs.type);
-      Child.id = defs.ID;
+      Child.id = defs.ID.substring(1);;
       if (defs.class && defs.class !=='') {  addClasses(Child,defs.class); }
       if (defs.html) {Child.innerHTML = defs.html;}
       Parent.appendChild(Child);
