@@ -177,6 +177,7 @@
       Child.id = defs.ID;
       if (defs.class && defs.class !=='') { Child.classList.add(defs.class) }
       if (defs.html) {Child.innerHTML = defs.html;}
+      console.log(Parent);
       Parent.appendChild(Child);
       return Child;
     });
