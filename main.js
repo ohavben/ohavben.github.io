@@ -375,7 +375,14 @@
         if (tapLength < 500 && tapLength > 0) {
             //elm2.innerHTML = 'Double Tap';
             event.preventDefault();
-            console.log(event.target)
+            console.log(event.target);
+            if (active == true){ 
+                active = false;
+                return currentTransition.reverse(); 
+            }
+            else if (active == false) {
+                currentTransition = new transition(e.target);
+            }
         } else {
             timeout = setTimeout(function() {
                 clearTimeout(timeout);
