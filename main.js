@@ -40,7 +40,7 @@
                     height: calc(var(--width-factor) * 0.223 * 0.95px);\
                     top: note2Top;\
                     left: note2Left;\
-                    background: url('https://res.cloudinary.com/carousel/image/upload/v1476757921/nameChalk_tjso43.png');\
+                    background: url('/images/name.png');\
                     background-size: 100%;\
                     background-repeat: no-repeat;\
                     background-position: center center;\
@@ -84,7 +84,7 @@
                     height: calc(var(--width-factor) * 0.66 * 1px);\
                     top: note3Top;\
                     left: note3Left;\
-                    background: url('https://res.cloudinary.com/carousel/image/upload/v1476755902/skillsChalk1_ozesbu.png');\
+                    background: url('/images/skillsChalk.png');\
                     background-size: 100%;\
                     background-repeat: no-repeat;\
                     background-position: center center;\
@@ -106,7 +106,7 @@
                     height: calc(var(--width-factor) * 0.66 * 0.45px);\
                     top: note4Top;\
                     left: note4Left;\
-                    background: url('https://res.cloudinary.com/carousel/image/upload/v1476757506/ToDOChalk_dchn9s.png');\
+                    background: url('/images/ToDo.png');\
                     background-size: 100%;\
                     background-repeat: no-repeat;\
                     background-position: center center;\
@@ -128,7 +128,7 @@
                     height: calc(var(--width-factor) * 0.66 * 0.45px);\
                     top: note6Top;\
                     left: note6Left;\
-                    background: url('https://res.cloudinary.com/carousel/image/upload/v1476753735/LinksChalk5_igjohp.png');\
+                    background: url('/images/LinksChalk5.png');\
                     background-size: 100%;\
                     background-repeat: no-repeat;\
                     background-position: center center;\
