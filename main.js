@@ -368,7 +368,7 @@
         }, false);
 
     Elements[1].addEventListener('touchend', function(event) {
-      alert(event.target)
+      console.log(event.target)
         var currentTime = new Date().getTime();
         var tapLength = currentTime - lastTap;
         clearTimeout(timeout);
@@ -376,7 +376,7 @@
             //elm2.innerHTML = 'Double Tap';
             event.preventDefault();
         } else {
-            elm2.innerHTML = 'Single Tap';
+            //elm2.innerHTML = 'Single Tap';
             timeout = setTimeout(function() {
                 //elm2.innerHTML = 'Single Tap (timeout)';
                 clearTimeout(timeout);
