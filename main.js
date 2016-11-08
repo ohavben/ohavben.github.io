@@ -1,5 +1,5 @@
 (function(){
-  var definitions, Elements, sheet, myStyleSheet, currentTransition, active = false, myPrefix =  prefix(), propeties = [
+  var definitions, Elements, sheet, myStyleSheet, currentTransition, active = false, myPrefix =  prefix(), timeout, lastTap = 0 ,propeties = [
 
         {
             "type": "class",
@@ -145,13 +145,7 @@
             "ID":".a:link",
             "CSS":"text-decoration:none; color:white; font-size: 3vmin;"
         },
-        /*
-        {
-            "type": "class",
-            "ID":"body",
-            "CSS":"background: url('https://res.cloudinary.com/carousel/image/upload/v1475538924/chalkboard_1_w619v4.jpg') no-repeat center center fixed; background-size: 100%; -webkit-background-size: 100%;"
-        },
-        */
+       
         {
             "type":"class",
             "ID":"body",
@@ -372,5 +366,23 @@
                 currentTransition = new transition(e.target);
             }
         }, false);
+
+    Elements[1].addEventListener('touchend', function(event) {
+      alert(event.target)
+        var currentTime = new Date().getTime();
+        var tapLength = currentTime - lastTap;
+        clearTimeout(timeout);
+        if (tapLength < 500 && tapLength > 0) {
+            //elm2.innerHTML = 'Double Tap';
+            event.preventDefault();
+        } else {
+            elm2.innerHTML = 'Single Tap';
+            timeout = setTimeout(function() {
+                //elm2.innerHTML = 'Single Tap (timeout)';
+                clearTimeout(timeout);
+            }, 500);
+        }
+        lastTap = currentTime;
+    });
   };
 }()); // end of main scope
