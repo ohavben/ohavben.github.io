@@ -62,7 +62,7 @@
                      height: calc(var(--width-factor) * 0.66 * 0.95px);\
                     top: note5Top;\
                     left: note5Left;\
-                    background: url('https://res.cloudinary.com/carousel/image/upload/v1476756447/AboutChalk_meph53.png');\
+                    background: url('/images/about.png');\
                     background-size: 100%;\
                     background-repeat: no-repeat;\
                     background-position: center center;\
