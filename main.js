@@ -170,7 +170,7 @@
     var objects = data.map(function(defs){
       console.log(defs)
       if (defs.type == 'class' || defs.type == 'keyframe') return null;
-      var Parent = document.getElementById(defs.parent)
+      var Parent = document.getElementById(defs.parent) || document.getElementsByName('body')[0];
       var Child = document.createElement(defs.type);
       Child.id = defs.ID;
       if (defs.class && defs.class !=='') { Child.classList.add(defs.class) }
