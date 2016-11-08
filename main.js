@@ -1,129 +1,140 @@
 (function(){
-  var definitions, Elements, sheet, myStyleSheet, Canvas, lastImage, location, propeties = [
-    {
-    "type": "div",
-    "ID": "carousel",
-    "parent": "body",
-    "class": "",
-    "text": "",
-    "CSS":"width: DivWidth; height: DivHeight; margin-top: marginHeight95; margin-left: marginWidth95; top: 50%; left: 50%; display: block; position: fixed; transform-style: preserve-3d; perspective:1000px; font-family: sans-serif; opacity: .99;"
-    },
+  var definitions, Elements, sheet, myStyleSheet, currentTransition, active = false, myPrefix =  prefix(), propeties = [
 
-    {
-    "type": "div",
-    "ID": "gallery",
-    "parent":"carousel",
-    "class": "",
-    "text": "",
-    "CSS":"background-color:; width: DivWidth; height: DivHeight; margin-top: marginHeight95; margin-left: marginWidth95; top: 50%; left: 50%; display: block; position: fixed; transform-style: preserve-3d; backface-visibility: hidden; -webkit-backface-visibility: hidden; z-index:1; opacity: .99;"
-    },
+        {
+            "type": "class",
+            "ID":":root",
+            "CSS":"--width-factor: totalWidth; --height-factor: totalHeight;"
+        },
 
-    {
-    "type": "div",
-    "ID": "search",
-    "parent":"carousel",
-    "class": "",
-    "text": "",
-    "html":"serach is coming",
-    "CSS":"width: DivWidth; height: DivHeight; margin-top: marginHeight95; margin-left: marginWidth95; top: 50%; left: 50%; display: block; position: fixed; transform-style: preserve-3d;transform: rotateX(180deg) rotate(180deg); backface-visibility: hidden; -webkit-backface-visibility: hidden; overflow: hidden;background: white;z-index:3;"
-    },
+        {
+            "type": "div",
+            "ID": "#board",
+            "parent": "body",
+            "class": "",
+            "text": "",
+            "html":"<canvas id = 'canvas0'></canvas>",
+            "CSS":  "width: calc(var(--boardWidth-factor) * 1px);\
+                     height: calc(var(--height-factor) * 1px);\
+                     position: relative;\
+                     display:block;\
+                     overflow:hidden;\
+                     background-color:grey;"
+        }, 
+        /*
+        {
+            "type": "div",
+            "ID": "face",
+            "parent": "board",
+            "class": "items face",
+            "text": "",
+            "html":"<canvas id = 'canvas1'></canvas>",
+            "CSS":  "width: calc(var(--width-factor) * 0.2px);\
+                     height: calc(var(--height-factor) * 0.2px);\
+                     top: note1Top;\
+                     left: note1Left;"
+        }, 
+        */
+         {
+            "type": "div",
+            "ID": "#name",
+            "parent": "board",
+            "class": "items photo",
+            "text": "",
+            "html":"<canvas id = 'canvas1'></canvas>",
+            "CSS":  "width: calc(var(--width-factor) * 0.95px);\
+                    height: calc(var(--width-factor) * 0.223 * 0.95px);\
+                    top: note2Top;\
+                    left: note2Left;\
+                     background-color:red;"
+        }, 
 
-    {
-    "type": "div",
-    "ID": "face1",
-    "parent": "gallery",
-    "class": "",
-    "text": "",
-    "CSS":"background-color:; width: DivWidth; height: calc( DivHeight * 0.7); margin-top: marginHeight70; margin-left: marginWidth95; top: 50%; left: 50%; display: block; position: fixed; -webkit-backface-visibility: hidden; backface-visibility: hidden; transform: rotateX(0deg); overflow: hidden; background: white;"
-    },
+        {
+            "type": "div",
+            "ID": "#about",
+            "parent": "board",
+            "class": "items photo",
+            "text": "",
+            "html":"<canvas id = 'canvas2'></canvas>",
+            "CSS":  "width: calc(var(--width-factor) * 0.95px);\
+                     height: calc(var(--width-factor) * 0.66 * 0.95px);\
+                    top: note5Top;\
+                    left: note5Left;\
+                     background-color:pink;"
+        }, 
 
-    {
-    "type": "div",
-    "ID": "face2",
-    "parent": "gallery",
-    "class": "",
-    "text": "",
-    "CSS":"background-color:;width: DivWidth; height: calc( DivHeight * 0.7); margin-top: marginHeight70; margin-left: marginWidth95; top: 50%; left: 50%; display: block; position: fixed; transform: rotateX(180deg); backface-visibility: hidden; -webkit-backface-visibility: hidden; overflow: hidden;background:white;"
-    },
+        {
+            "type": "div",
+            "ID": "#skills",
+            "parent": "board",
+            "class": "items photo",
+            "text": "",
+            "html":"<canvas id = 'canvas3'></canvas>",
+            "CSS":  "width: calc(var(--width-factor) * 0.45px);\
+                    height: calc(var(--width-factor) * 0.66 * 1px);\
+                    top: note3Top;\
+                    left: note3Left;\
+                     background-color:blue;"
+        }, 
 
-    {
-    "type": "canvas",
-    "ID": "canvas1",
-    "parent": "face1",
-    "class": "",
-    "text": "",
-    "CSS": ""
-    },
+        {
+            "type": "div",
+            "ID": "#todo",
+            "parent": "board",
+            "class": "items photo",
+            "text": "",
+            "html":"<canvas id = 'canvas4'></canvas>",
+            "CSS":  "width: calc(var(--width-factor) * 0.45px);\
+                    height: calc(var(--width-factor) * 0.66 * 0.45px);\
+                    top: note4Top;\
+                    left: note4Left;\
+                     background-color:green;"
+        }, 
 
-    {
-    "type": "canvas",
-    "ID": "canvas2",
-    "parent": "face2",
-    "class": "",
-    "text": "",
-    "CSS": ""
-    },
-
-    {
-    "type": "div",
-    "ID": "NewCarousel",
-    "parent": "carousel",
-    "class": "",
-    "text": "",
-    "html":"NEW CAROUSEL",
-    "CSS": "width: 200px; height: 2.5em; position: fixed; display: block; bottom: 2%; left: calc(50% - 100px); z-index:3; line-height: 2.5em; border-radius: 2px;font-size: 0.9em;background-color: #4285f4;;color: #fff;text-align: center; transition: box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1);transition-delay: 0.2s;box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26); font-family: 'Roboto', sans-serif; font-size:1.2em;" //border-radius: 15px;border: 0; background: #F44336; color: #fff; font-size: 200%; font-weight: 100; text-align:center; line-height:60px;"
-    },
-
-    {
-      "type":"class",
-      "ID":".bottom .send:hover",
-      "CSS":"cursor: pointer;"
-    },
-
-    {
-      "type":"class",
-      "ID":"*",
-      "CSS":"box-sizing: border-box;  backface-visibility: hidden;-webkit-backface-visibility: hidden; "
-    },
-
-    {
-    "type": "class",
-    "ID": "body",
-    "CSS": "margin: 0 auto; overflow: hidden; background: white;"
-    },
-
-    {
-    "type":"class",
-    "ID":"::-webkit-scrollbar",
-    "CSS":"display: none;"
-    },
-
-    {
-      "type":"class",
-      "ID":".center",
-      "CSS":"width: 100%; height:50%; display: inline-block; position: relative; top: 70%; -webkit-transform: translateY(-50%);transform: translateY(-50%); color: #FF5722; text-align:center; font-size:20px; -webkit-backface-visibility: hidden;backface-visibility: hidden;"
-    },
-
-    {
-      "type":"class",
-      "ID":".title",
-      "CSS":"color: #fff; font-size: 200%; font-weight: 100; text-align:center;"
-    },
-
-    {
-      "type":"class",
-      "ID":"#NewCarousel:active",
-      "CSS":"box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2);transition-delay: 0s; x: -2px;"
-    }
-  ];
-
-  var  photos = [
-    'http://res.cloudinary.com/carousel/image/upload/v1471644763/SwipeUpDown_r8ow3m.svg',
-    'http://res.cloudinary.com/carousel/image/upload/v1471644763/swipeleftright_jouk2w.svg',
-    'http://res.cloudinary.com/carousel/image/upload/v1471644919/launchNewChatRoomsvg_ooxpsa.svg',
-    'http://res.cloudinary.com/carousel/image/upload/v1471644764/searchChats_znjbs8.svg',
-    'http://res.cloudinary.com/carousel/image/upload/v1471644764/shareFriends_kojad9.svg'
-  ];
+        {
+            "type": "div",
+            "ID": "#links",
+            "parent": "board",
+            "class": "items photo",
+            "text": "",
+            "html":"<canvas id = 'canvas5'></canvas>",
+            "CSS":  "width: calc(var(--width-factor) * 0.45px);\
+                    height: calc(var(--width-factor) * 0.66 * 0.45px);\
+                    top: note6Top;\
+                    left: note6Left;\
+                     background-color:yellow;"
+        }, 
+        //    <a href='http://www.w3schools.com'>   1. LinkedIn</a><br><a href='http://www.w3schools.com'>   2. GitHub</a><br><a href='http://www.w3schools.com'>   3. Project</a>
+        
+         {
+            "type": "class",
+            "ID":".a:link",
+            "CSS":"text-decoration:none; color:white; font-size: 3vmin;"
+        },
+        /*
+        {
+            "type": "class",
+            "ID":"body",
+            "CSS":"background: url('https://res.cloudinary.com/carousel/image/upload/v1475538924/chalkboard_1_w619v4.jpg') no-repeat center center fixed; background-size: 100%; -webkit-background-size: 100%;"
+        },
+        */
+        {
+            "type":"class",
+            "ID":"body",
+            "CSS":"margin: 0 auto;  overflow: hidden;"
+        },
+        
+        {
+            "type":"class",
+            "ID":".items",
+            "CSS":  "font-size: 2vmin;\
+                     position: absolute;\
+                     background: none;\
+                     overflow:hidden;\
+                     color:white;\
+                     font-family: 'CoalhandLuke';"
+        }
+    ];
  
 
 //-------------------------------- building and setting up the domm ---------------------------------------------//
@@ -191,7 +202,7 @@
     }
     document.documentElement.style.setProperty('--height-factor',  window.innerHeight);
     document.documentElement.style.setProperty('--boardWidth-factor',  window.innerWidth);
-    
+
     var length = object.length, i;
     for (i = 0; i< length; ++i){
       (function(target){
