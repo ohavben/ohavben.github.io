@@ -183,6 +183,15 @@
     myStyleSheet = document.createElement('style');
     myStyleSheet.appendChild(document.createTextNode('')); // this is for webkit
     document.head.appendChild(myStyleSheet);
+
+    if (window.innerWidth > window.innerHeight){
+            document.documentElement.style.setProperty('--width-factor',  Math.floor(Number(window.innerWidth / (window.innerWidth / window.innerHeight))));
+        } else {
+            document.documentElement.style.setProperty('--width-factor',  window.innerWidth);
+    }
+    document.documentElement.style.setProperty('--height-factor',  window.innerHeight);
+    document.documentElement.style.setProperty('--boardWidth-factor',  window.innerWidth);
+    
     var length = object.length, i;
     for (i = 0; i< length; ++i){
       (function(target){
