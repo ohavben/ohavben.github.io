@@ -289,6 +289,27 @@
     return new setStyleSheet(adjustDefs(propeties));
   };
 
+  var transition = function(element){
+        console.log(active)
+        var i;
+        var currentElement;
+        var tl = new TimelineMax();
+        var elements = document.getElementsByClassName('items');
+        for ( i = 0 ; i < elements.length; i ++){
+            if (elements[i] === element) {
+                  currentElement = elements[i];
+                 //tl.to(elements[i], 0.25, {left: 0, top: 0, width: window.innerWidth, height: window.innerHeight, fontSize: 50});
+            } else {
+                tl.to(elements[i], 0.25, {opacity:0});
+
+            }
+        }
+        tl.to(currentElement, 0.25, { left: 0, top: 0, width: window.innerWidth, height: window.innerHeight });
+        //tl.to(currentElement, 0.25, { fontSize: 6 +'vmin',  autoRound: false });
+        active = true;
+        return tl;
+    };
+
  
   //------- debounce and throttle functions courtsey of David Walsh https://davidwalsh.name/javascript-debounce-function ------//
   function debounce(func, wait, immediate) {
@@ -340,5 +361,16 @@
     console.log(Elements);
     window.addEventListener('resize', debounce(resize, 250), false);
 
+    Elements[1].addEventListener('dblclick', function (e) {
+            e.preventDefault();
+            if (!e.target.classList.contains('items')) return
+            if (active == true){ 
+                active = false;
+                return currentTransition.reverse(); 
+            }
+            else if (active == false) {
+                currentTransition = new transition(e.target);
+            }
+        }, false);
   };
 }()); // end of main scope
