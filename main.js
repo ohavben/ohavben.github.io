@@ -218,9 +218,7 @@
     var length = object.length, i;
     for (i = 0; i< length; ++i){
       (function(target){
-        if (target.type == 'div' || target.type == 'canvas'){
-          return myStyleSheet.sheet.insertRule( '#' + target.id + ' {' + target.css + '}' , 0 );
-        }else if(target.type == 'class'){try {
+        if(target.type == 'class' || target.type == 'div' || target.type == 'canvas'){try {
               myStyleSheet.sheet.insertRule( target.id + ' {' + target.css + '}' , 0 );
           }
           catch(err) {
