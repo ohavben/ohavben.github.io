@@ -169,8 +169,10 @@
   function buildDoMM(data){
     var objects = data.map(function(defs){
       console.log(defs)
+      var parent;
       if (defs.type == 'class' || defs.type == 'keyframe') return null;
-      var Parent = document.getElementById(defs.parent) || document.getElementsByName('body')[0];
+      if (defs.parent == 'body')  Parent =  document.getElementsByName('body')[0];
+      else parent = ocument.getElementById(defs.parent);
       var Child = document.createElement(defs.type);
       Child.id = defs.ID;
       if (defs.class && defs.class !=='') { Child.classList.add(defs.class) }
