@@ -134,11 +134,22 @@
       return newText;
     });
 
+    var NotesPosition = function(){
+            var width = window.innerWidth, height = window.innerHeight, result;
+                if(width/height > 1){ //landscape
+                    result = [ '8%',  '24%', '5%',  '25%',  '30%', '74%', '30%', '2.5%', '30%', '28%', '62%', '2.5%' ];
+                }
+                else { //portrait
+                    result = ['7%',  '2.5%', '5%', '2.5%', '60%', '2.5%', '80%', '52.5%', '20%', '2.5%', '60%', '52.5%' ];
+                }
+            return result;
+        };
+
     var DivHeight = window.innerHeight;
     var DivWidth = window.innerWidth;
-    var itemsToBeReplaced = ['DivWidth', 'DivHeight','Div95Width', 'Div95Height', 'marginWidth95', 'marginHeight95', 'marginHeight70'];
-    var newValues = [DivWidth+'px', DivHeight+'px', Math.floor(DivWidth*0.95)+'px', Math.floor(DivHeight*0.95)+'px', Math.floor(DivWidth/-2)+'px', Math.floor(DivHeight/-2)+'px', Math.floor((DivHeight*0.7)/-2)+'px'];
-    var length = defs.length;///
+    var itemsToBeReplaced = ['totalWidth', 'totalHeight','carouselHeight', 'marginWidth', 'marginHeight', 'marginCarouselHeight', 'note1Top', 'note1Left',  'note2Top', 'note2Left',  'note3Top', 'note3Left',  'note4Top', 'note4Left',  'note5Top', 'note5Left',  'note6Top', 'note6Left'];
+        var newValues = [totalWidth+'px', DivHeight+'px', Math.floor(DivHeight-130)+'px', Math.floor(totalWidth/-2)+'px', Math.floor(DivHeight/-2)+'px', Math.floor((DivHeight-130)/-2)+'px', NotesPosition()[0], NotesPosition()[1], NotesPosition()[2], NotesPosition()[3], NotesPosition()[4], NotesPosition()[5], NotesPosition()[6], NotesPosition()[7], NotesPosition()[8], NotesPosition()[9], NotesPosition()[10], NotesPosition()[11], NotesPosition()[12]];///
+    var length = defs.length;
     var itemsLength = itemsToBeReplaced.length;
 
     for (var s = 0 ; s < length; ++s){
