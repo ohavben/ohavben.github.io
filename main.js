@@ -168,6 +168,7 @@
 
   function buildDoMM(data){
     var objects = data.map(function(defs){
+      console.log(defs)
       if (defs.type == 'class' || defs.type == 'keyframe') return null;
       var Parent = document.getElementById(defs.parent)
       var Child = document.createElement(defs.type);
