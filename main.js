@@ -33,7 +33,7 @@
             "type": "div",
             "ID": "#name",
             "parent": "board",
-            "class": "items photo",
+            "class": "photo",
             "text": "",
             "html":"",
             "CSS":  "width: calc(var(--width-factor) * 0.95px);\
@@ -357,7 +357,7 @@
 
     Elements[1].addEventListener('dblclick', function (event) {
             e.preventDefault();
-            if (!event.target.classList.contains('items') || event.target.id =='name') return
+            if (!event.target.classList.contains('items')) return
             if (active == true){ 
                 active = false;
                 return currentTransition.reverse(); 
@@ -368,7 +368,7 @@
         }, false);
 
     Elements[1].addEventListener('touchend', function(event) {
-        if (!event.target.classList.contains('items') || event.target.classList.id == 'name') return
+        if (!event.target.classList.contains('items')) return
         var currentTime = new Date().getTime();
         var tapLength = currentTime - lastTap;
         clearTimeout(timeout);
