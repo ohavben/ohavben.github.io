@@ -21,20 +21,7 @@
                      overflow:hidden;\
                      background-color:grey;"
         }, 
-        /*
-        {
-            "type": "div",
-            "ID": "face",
-            "parent": "board",
-            "class": "items face",
-            "text": "",
-            "html":"<canvas id = 'canvas1'></canvas>",
-            "CSS":  "width: calc(var(--width-factor) * 0.2px);\
-                     height: calc(var(--height-factor) * 0.2px);\
-                     top: note1Top;\
-                     left: note1Left;"
-        }, 
-        */
+        
          {
             "type": "div",
             "ID": "#name",
@@ -206,14 +193,15 @@
     myStyleSheet = document.createElement('style');
     myStyleSheet.appendChild(document.createTextNode('')); // this is for webkit
     document.head.appendChild(myStyleSheet);
+    document.documentElement.style.setProperty('--height-factor',  window.innerHeight);
+    document.documentElement.style.setProperty('--boardWidth-factor',  window.innerWidth);
 
     if (window.innerWidth > window.innerHeight){
             document.documentElement.style.setProperty('--width-factor',  Math.floor(Number(window.innerWidth / (window.innerWidth / window.innerHeight))));
         } else {
             document.documentElement.style.setProperty('--width-factor',  window.innerWidth);
     }
-    document.documentElement.style.setProperty('--height-factor',  window.innerHeight);
-    document.documentElement.style.setProperty('--boardWidth-factor',  window.innerWidth);
+    
 
     var length = object.length, i;
     for (i = 0; i< length; ++i){
@@ -307,10 +295,3 @@
 
   };
 }()); // end of main scope
-/*
-//requestNewCarousel(type, callback)
-requestNewCarousel('private', doPost)
-{
-  //doSomethingWith loc
-});
-*/
