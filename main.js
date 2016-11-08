@@ -171,7 +171,7 @@
       console.log(defs)
       var parent;
       if (defs.type == 'class' || defs.type == 'keyframe') return null;
-      if (defs.parent == 'body')  Parent =  document.getElementsByName('body')[0];
+      if (defs.parent == 'body')  Parent =  document.getElementsByTagName('body')[0];
       else Parent = document.getElementById(defs.parent);
       var Child = document.createElement(defs.type);
       Child.id = defs.ID;
