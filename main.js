@@ -453,7 +453,7 @@
 
   function resize(){
     console.log('resize');
-    var element = document.getElementsByTagName('style')[1];
+    var element = document.getElementsByTagName('style')[0];
         console.log(element)
         element.parentNode.removeChild(element);
         console.log(fontSize())
