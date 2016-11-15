@@ -4,7 +4,7 @@
         {
             "type": "class",
             "ID":":root",
-            "CSS":"--width-factor: totalWidth; --height-factor: totalHeight;"
+            "CSS":"--width-factor: totalWidth; --height-factor: totalHeight; --font-factor: 0;"
         },
 
         {
@@ -15,40 +15,28 @@
             "text": "",
             "html":"",
             "CSS":  "width: calc(var(--boardWidth-factor) * 1px);\
-                     height: calc(var(--height-factor) * 1px);\
+                     height: calc(var(--boardHeight-factor) * 1px);\
                      position: relative;\
                      display:block;\
+                     position:absolute;\
                      overflow:hidden;\
-                     background: url('/images/chalkboard_gb6dnb.jpg');\
-                     background-size: 100%;\
-                     background-repeat: no-repeat;\
-                     background-position: center center;\
-                     background-attachment: scroll;\
-                     -webkit-background-size: 100%;\
-                     -webkit-background-repeat: no-repeat;\
-                     -webkit-background-position: center center;"
+                     left: calc(calc(var(--width-factor) - var(--boardWidth-factor)) * 0.5px);\
+                     top: calc(calc(var(--height-factor) - var(--boardHeight-factor)) * 0.5px);"
         }, 
         
          {
             "type": "div",
             "ID": "#name",
             "parent": "board",
-            "class": "items name",
+            "class": "items",
             "text": "",
-            "html":"",
-            "CSS":  "width: calc(var(--width-factor) * 0.95px);\
-                    height: calc(var(--width-factor) * 0.223 * 0.95px);\
+            "html":"<div class = 'name'>OHAV BEN YANAI</div><div class = 'webdev'>Full Stack Web Developer</div>",
+            "CSS":  "width: calc(var(--boardWidth-factor) * 0.72px);\
+                    height: calc(var(--boardHeight-factor) * 0.38px);\
                     top: note2Top;\
                     left: note2Left;\
-                    background: url('/images/name.png');\
-                    background-size: 100%;\
-                    background-repeat: no-repeat;\
-                    background-position: center center;\
-                    background-attachment: scroll;\
-                    -webkit-background-size: 100%;\
-                    -webkit-background-repeat: no-repeat;\
-                    -webkit-background-position: center center;\
-                    -webkit-background-attachment: scroll;"
+                    position:absolute;\
+                    overflow:hidden;"
         }, 
 
         {
@@ -57,20 +45,13 @@
             "parent": "board",
             "class": "items photo",
             "text": "",
-            "html":"",
-            "CSS":  "width: calc(var(--width-factor) * 0.95px);\
-                     height: calc(var(--width-factor) * 0.66 * 0.95px);\
+            "html":"<div class = 'AboutTitle'>ABOUT</div><div class = 'AboutDescription'>I create single page web applications with Node.js Express and MongoDb</div>",
+            "CSS": "width: calc(var(--boardWidth-factor) * var(--aboutWidth-factor) * 0.95px);\
+                    height: calc(var(--boardHeight-factor) * (1/var(--aboutWidth-factor)) * 0.52px);\
                     top: note5Top;\
                     left: note5Left;\
-                    background: url('/images/About.png');\
-                    background-size: 100%;\
-                    background-repeat: no-repeat;\
-                    background-position: center center;\
-                    background-attachment: scroll;\
-                    -webkit-background-size: 100%;\
-                    -webkit-background-repeat: no-repeat;\
-                    -webkit-background-position: center center;\
-                    -webkit-background-attachment: scroll;"
+                    position:absolute;\
+                    overflow:hidden;"
         }, 
 
         {
@@ -79,88 +60,249 @@
             "parent": "board",
             "class": "items photo",
             "text": "",
-            "html":"",
-            "CSS":  "width: calc(var(--width-factor) * 0.45px);\
-                    height: calc(var(--width-factor) * 0.66 * 1px);\
+            "html":"<div class = 'skillsTitle'>SKILLS</div><div class = 'skillHolder'><span>JavaScript</span><span>Socket.io</span><span>HTML5</span><span>jQuery</span><span>CSS3</span><span>Linux</span><span>Node.js</span><span></span><span>Express</span><span>Git</span><span>Gimp </span><span>Jade</span><span>SVG</span><span>InkScape</span><span>CANVAS</span><span>GreenSock</span><span>JSON</span><span>Ajax</span><span>MongoDb</span><span>Docker</span></div>",
+            "CSS":  "width: calc(var(--boardWidth-factor) * var(--aboutWidth-factor) * 0.95px);\
+                    height: calc(var(--boardHeight-factor) * (1/var(--aboutWidth-factor)) * 0.4px);\
                     top: note3Top;\
                     left: note3Left;\
-                    background: url('/images/skillsChalk.png');\
-                    background-size: 100%;\
-                    background-repeat: no-repeat;\
-                    background-position: center center;\
-                    background-attachment: scroll;\
-                    -webkit-background-size: 100%;\
-                    -webkit-background-repeat: no-repeat;\
-                    -webkit-background-position: center center;\
-                    -webkit-background-attachment: scroll;"
+                    position:absolute;\
+                    overflow:hidden;"
         }, 
-
+        /*
         {
             "type": "div",
             "ID": "#todo",
             "parent": "board",
             "class": "items photo",
             "text": "",
-            "html":"",
+            "html":"<div class = 'todoTitle'>TODO</div><ul type = 'none' class = 'todoList'><li>The Internet</li><li>Cool Sites</li><li>Apps</li><li>Learn</li><li>Have Fun</li></ul>",
             "CSS":  "width: calc(var(--width-factor) * 0.45px);\
-                    height: calc(var(--width-factor) * 0.66 * 0.45px);\
+                    height: calc(var(--width-factor) * 0.66 * 0.60px);\
                     top: note4Top;\
                     left: note4Left;\
-                    background: url('/images/ToDo.png');\
-                    background-size: 100%;\
-                    background-repeat: no-repeat;\
-                    background-position: center center;\
-                    background-attachment: scroll;\
-                    -webkit-background-size: 100%;\
-                    -webkit-background-repeat: no-repeat;\
-                    -webkit-background-position: center center;\
-                    -webkit-background-attachment: scroll;"
+                    position:absolute;\
+                    overflow:hidden;"
         }, 
-
+        */
         {
             "type": "div",
             "ID": "#links",
             "parent": "board",
             "class": "items photo",
             "text": "",
-            "html":"",
-            "CSS":  "width: calc(var(--width-factor) * 0.45px);\
-                    height: calc(var(--width-factor) * 0.66 * 0.45px);\
+            "html":"<div class = 'linksTitle'>LINKS</div><ul type = 'none' class = 'ulLinks items'><li id = 'LinkedIn'>LinkedIn</li><li id = 'GitHub'>GitHub</li><li id = 'Project'>Project</li></ul>",
+            "CSS":  " --about-factor: 1;\
+                    width: calc(var(--linksDimension-factor));\
+                    height: calc(var(--linksDimension-factor));\
                     top: note6Top;\
-                    left: note6Left;\
-                    background: url('/images/LinksChalk5.png');\
-                    background-size: 100%;\
-                    background-repeat: no-repeat;\
-                    background-position: center center;\
-                    background-attachment: scroll;\
-                    -webkit-background-size: 100%;\
-                    -webkit-background-repeat: no-repeat;\
-                    -webkit-background-position: center center;\
-                    -webkit-background-attachment: scroll;"
-        }, 
-        //    <a href='http://www.w3schools.com'>   1. LinkedIn</a><br><a href='http://www.w3schools.com'>   2. GitHub</a><br><a href='http://www.w3schools.com'>   3. Project</a>
-        
+                    right: note6Left;\
+                    position:absolute;\
+                    overflow:hidden;"
+        },
+
+        {
+            "type": "class",
+            "ID":".name",
+            "CSS": "font-family: 'BasicScratch';\
+                    font-size: calc(var(--nameFont-factor)  * 1.5rem);\
+                    position:relative;\
+                    display:block;\
+                    top: calc(1/(var(--aboutName-factor)) * 1rem);\
+                    left: 50%;\
+                    transform: translateX(-50%) scale(1,4);\
+                    -webkit-transform: translateX(-50%) scale(1,4);\
+                    text-align: center;\
+                    z-index: -1;\
+                    color: #27CDE7;"
+        },// green  = #07D846   // blue = #5755C8 // light blue = // turqize = #27CDE7
+
+        {
+            "type": "class",
+            "ID":".webdev",
+            "CSS": "font-family: 'KG Second Chances Sketch';\
+                    font-size: calc(var(--nameFont-factor) *  0.925rem);\
+                    position:relative;\
+                    display:block;\
+                    top: calc((1/var(--aboutName-factor)) * 1.7777rem);\
+                    left: 50%;\
+                    transform: translateX(-50%) scale(1,1.33);\
+                    -webkit-transform: translateX(-50%) scale(1,1.33);\
+                    text-align: center;\
+                    z-index: -1;\
+                    color:white;\
+                    padding-top: calc(var(--aboutName-factor) * 0.25rem);"
+        },
+
+        {  
+            "type": "class",
+            "ID":".AboutTitle",
+            "CSS": "font-family: 'BasicScratch';\
+                    font-size: calc((1/(var(--aboutFont-factor))) * 2.8125rem);\
+                    position:relative;\
+                    display:block;\
+                    left: 50%;\
+                    transform: translateX(-50%) scale(1,1);\
+                    -webkit-transform: translateX(-50%) scale(1,1);\
+                    text-align: center;\
+                    z-index: -1;\
+                    color:#DDA1DB;"
+        },// yellow = #F2EC42   //purple  = #730C69
+
+        {
+            "type": "class",
+            "ID":".AboutDescription",
+            "CSS": "font-family: 'KG Second Chances Sketch';\
+                    font-size: calc((1/(var(--aboutFont-factor)))  * .9375rem);\
+                    text-align: center;\
+                    position:absolute;\
+                    z-index: -1;\
+                    color:white;\
+                    top:calc(var(--boardHeight-factor) * calc(var(--aboutName-factor) / var(--aboutName-factor)) * 0.16px);"
+        },
+
+        {
+            "type": "class",
+            "ID":".skillsTitle",
+            "CSS": "width: calc(var(--boardWidth-factor) * var(--aboutWidth-factor) * 0.95px);\
+                    font-family: 'BasicScratch';\
+                    font-size: calc((1/(var(--skillsFont-factor))) *  2.8125rem);\
+                    position:absolute;\
+                    display:inline;\
+                    top: 0px;\
+                    transform: scale(1,1);\
+                    -webkit-transform: scale(1,1);\
+                    text-align: center;\
+                    z-index: -1;\
+                    color:#F8FB50;"
+        },
+        // red = #F34658;"   ligtht yellow = #F8FB50  orange = #DD8A0C
          {
             "type": "class",
-            "ID":".a:link",
-            "CSS":"text-decoration:none; color:white; font-size: 3vmin;"
+            "ID":".skillHolder>span",
+            "CSS": "color:white;\
+                    font-size: calc((1/(var(--skillsListFont-factor))) * 0.71rem);\
+                    font-family: 'KG Second Chances Sketch';\
+                    padding-left: 0.4rem;"
+        },
+
+        {
+            "type": "class",
+            "ID":".todoTitle",
+            "CSS": "font-family: 'BasicScratch';\
+                    font-size: calc(var(--font-factor) * 21px);\
+                    position:relative;\
+                    display:block;\
+                    left: 25%;\
+                    transform: scale(1,1);\
+                    -webkit-transform: scale(1,1);\
+                    line-height: calc(var(--width-factor) * 0.15px);\
+                    text-align: left;\
+                    z-index: -1;\
+                    color:#F34658;"
+        },
+
+         {
+            "type": "class",
+            "ID":".todoList",
+            "CSS": "font-family: 'KG Second Chances Sketch';\
+                    font-size: calc(var(--font-factor) * 7px);\
+                    text-align: left;\
+                    left: 30%;\
+                    transform: scale(1,1);\
+                    -webkit-transform: scale(1,1);\
+                    position:relative;\
+                    display:block;\
+                    z-index: -1;\
+                    color:white;\overflow: hidden;"
+        },
+
+        {
+            "type": "class",
+            "ID":".linksTitle",
+            "CSS": "font-family: 'BasicScratch';\
+                     font-size: calc(var(--nameFont-factor) * 1.75rem);\
+                    position:relative;\
+                    display:block;\
+                    left: ;\
+                    transform: scale(1,1.6);\
+                    -webkit-transform: scale(1,1.6);\
+                    text-align: left;\
+                    z-index: -1;\
+                    color: #F8FB50;"
+        },// red = #F34658; orange = #DD8A0C    light yellow = #F8FB50
+        
+        {
+            "type": "class",
+            "ID":".ulLinks",
+            "CSS": "font-family: 'KG Second Chances Sketch';\
+                     font-size: calc(var(--linksFont-factor) * 0.8125rem);\
+                    text-align: left;\
+                    position:relative;\
+                    display:block;\
+                    top: -1%;\
+                    right: -15%;\
+                    transform: scale(1.2,1);\
+                    -webkit-transform: scale(1.2,1);\
+                    z-index: 1;\
+                    color:white;"
+        },
+
+        {
+            "type": "class",
+            "ID":"*",
+            "CSS":"-webkit-user-select: none;\
+                   -moz-select: none;\
+                   -o-select: none;\
+                   -ms-select: none;\
+                   user-select: none;\
+                   overflow: hidden;\
+                   margin: 0 auto;\
+                   padding: 0px 0px;"
         },
        
         {
             "type":"class",
             "ID":"body",
-            "CSS":"margin: 0 auto;  overflow: hidden;"
+            "CSS":"margin: 0 auto;\
+                   overflow: hidden;\
+                   width: calc(var(--width-factor) * 1px);\
+                   height: calc(var(--height-factor) * 1px);\
+                   background: url('./images/chalkboard_gb6dnb.jpg') no-repeat center center fixed;\
+                   -webkit-background-size: cover;\
+                   -moz-background-size: cover;\
+                   -o-background-size: cover;\
+                   background-size: cover;"
         },
         
         {
             "type":"class",
+            "ID":".skillHolder",
+            "CSS":  "display:flex;\
+                    flex-direction: row;\
+                    flex-wrap: wrap;\
+                    justify-content:center;\
+                    align-items: center;\
+                    align-content: stretch;\
+                    position: absolute;\
+                    top:calc(var(--boardHeight-factor) * calc(var(--aboutName-factor) / var(--aboutName-factor)) * 0.1777px);" //calc(var(--boardHeight-factor) * (1/var(--aboutWidth-factor))
+        },//calc(calc(var(--height-factor) - var(--boardHeight-factor)) * 0.5px);"
+
+        {
+            "type":"class",
             "ID":".items",
-            "CSS":  "font-size: 2vmin;\
-                     position: absolute;\
-                     background: none;\
-                     overflow:hidden;\
-                     color:white;\
-                     font-family: 'CoalhandLuke';"
+            "CSS":  ""
+        },
+
+         {
+            "type":"class",
+            "ID":".hide",
+            "CSS":  "opacity:0;"
+        },
+
+        {
+            "type":"class",
+            "ID":"html",
+            "CSS":  "font-size: calc(var(--font-factor) * 1px);"
         }
     ];
  
@@ -176,18 +318,18 @@
     var NotesPosition = function(){
             var width = window.innerWidth, height = window.innerHeight, result;
                 if(width/height > 1){ //landscape
-                    result = [ '8%',  '24%', '5%',  '25%',  '30%', '74%', '30%', '2.5%', '30%', '28%', '62%', '2.5%' ];
+                    result = [ '8%',  '24%', '3.5%',  '3.5%',  '38%', '50%', '44%', '77.5%', '38%', '2.5%', '4%', '2.5%' ];
                 }
                 else { //portrait
-                    result = ['7%',  '2.5%', '5%', '2.5%', '60%', '2.5%', '80%', '52.5%', '20%', '2.5%', '60%', '52.5%' ];
+                    result = ['7%',  '2.5%', '3.5%', '3.5%', '66%', '2.5%', '80%', '52.5%', '23.5%', '2.5%', '3%', '2%' ];
                 }
             return result;
         };
 
     var DivHeight = window.innerHeight;
     var totalWidth = window.innerWidth;
-    var itemsToBeReplaced = ['totalWidth', 'totalHeight','carouselHeight', 'marginWidth', 'marginHeight', 'marginCarouselHeight', 'note1Top', 'note1Left',  'note2Top', 'note2Left',  'note3Top', 'note3Left',  'note4Top', 'note4Left',  'note5Top', 'note5Left',  'note6Top', 'note6Left'];
-        var newValues = [totalWidth+'px', DivHeight+'px', Math.floor(DivHeight-130)+'px', Math.floor(totalWidth/-2)+'px', Math.floor(DivHeight/-2)+'px', Math.floor((DivHeight-130)/-2)+'px', NotesPosition()[0], NotesPosition()[1], NotesPosition()[2], NotesPosition()[3], NotesPosition()[4], NotesPosition()[5], NotesPosition()[6], NotesPosition()[7], NotesPosition()[8], NotesPosition()[9], NotesPosition()[10], NotesPosition()[11], NotesPosition()[12]];///
+    var itemsToBeReplaced = ['totalWidth', 'totalHeight','carouselHeight', 'marginWidth', 'marginHeight', 'marginCarouselHeight', 'note1Top', 'note1Left',  'note2Top', 'note2Left',  'note3Top', 'note3Left',  'note4Top', 'note4Left',  'note5Top', 'note5Left',  'note6Top', 'note6Left', 'myFontSize'];
+        var newValues = [totalWidth+'px', DivHeight+'px', Math.floor(DivHeight-130)+'px', Math.floor(totalWidth/-2)+'px', Math.floor(DivHeight/-2)+'px', Math.floor((DivHeight-130)/-2)+'px', NotesPosition()[0], NotesPosition()[1], NotesPosition()[2], NotesPosition()[3], NotesPosition()[4], NotesPosition()[5], NotesPosition()[6], NotesPosition()[7], NotesPosition()[8], NotesPosition()[9], NotesPosition()[10], NotesPosition()[11], NotesPosition()[12], fontSize()];///
     var length = defs.length;
     var itemsLength = itemsToBeReplaced.length;
 
@@ -234,13 +376,35 @@
     myStyleSheet = document.createElement('style');
     myStyleSheet.appendChild(document.createTextNode('')); // this is for webkit
     document.head.appendChild(myStyleSheet);
+
+    //var fontSizeFactor = new fontSize();
+    document.documentElement.style.setProperty('--font-factor',  fontSize());
     document.documentElement.style.setProperty('--height-factor',  window.innerHeight);
     document.documentElement.style.setProperty('--boardWidth-factor',  window.innerWidth);
+    document.documentElement.style.setProperty('--boardHeight-factor',  window.innerHeight);
 
     if (window.innerWidth > window.innerHeight){
-            document.documentElement.style.setProperty('--width-factor',  Math.floor(Number(window.innerWidth / (window.innerWidth / window.innerHeight))));
+            document.documentElement.style.setProperty('--width-factor', window.innerWidth); ///Math.floor(Number(window.innerWidth / (window.innerWidth / window.innerHeight))));
+            document.documentElement.style.setProperty('--nameFont-factor',  Number(1));
+            document.documentElement.style.setProperty('--aboutWidth-factor',  Number(0.5));
+            document.documentElement.style.setProperty('--aboutName-factor',  Number(0.77));
+            document.documentElement.style.setProperty('--linksDimension-factor',  window.innerHeight *0.33);
+            document.documentElement.style.setProperty('--aboutFont-factor',  Number(1));
+            document.documentElement.style.setProperty('--skillsFont-factor',  Number(1));
+            document.documentElement.style.setProperty('--linksFont-factor',  Number(1));
+            document.documentElement.style.setProperty('--skillsListFont-factor',  Number(1));
+            document.documentElement.style.setProperty('--boardWidth-factor',  window.innerHeight*1.333);
         } else {
             document.documentElement.style.setProperty('--width-factor',  window.innerWidth);
+            document.documentElement.style.setProperty('--linksFont-factor',  Number(0.77));
+            document.documentElement.style.setProperty('--nameFont-factor',  Number(0.77));
+            document.documentElement.style.setProperty('--aboutWidth-factor',  Number(1));
+            document.documentElement.style.setProperty('--linksDimension-factor',  window.innerWidth *0.33);
+            document.documentElement.style.setProperty('--aboutFont-factor',  Number(0.85));
+            document.documentElement.style.setProperty('--skillsFont-factor',  Number(0.80));
+            document.documentElement.style.setProperty('--skillsListFont-factor',  Number(1.25));
+            document.documentElement.style.setProperty('--boardHeight-factor',  window.innerWidth*1.3333);
+            document.documentElement.style.setProperty('--aboutName-factor',  Number(1)); 
     }
     
 
@@ -262,6 +426,19 @@
     return myStyleSheet.sheet;
   };
 
+  function fontSize(){
+      var Width = window.innerWidth , Height = window.innerHeight , factor;
+      if (Width > Height) {
+          //factor = small font + (Current width - smallWidth)*(1920 - smallWidth/54) //   1024 - 320 = 992 50-16 = 34 
+          factor = Math.floor(Number(16 +  (((Height  * 1.3333333333333) - 320)/21)));
+      } else {
+          //factor = goodSmallFactor + slope * ( Width - SmallWidth );
+          factor = Math.floor(Number(16 + (((Width * 1.3333333333333333) -320)/21)));
+      }
+      //console.log('factor:  ', factor)
+    return factor;
+  }
+
   var sizeCanvas = function(){
     console.log('resizing canvas')
     canvas = document.getElementsByTagName('canvas');
@@ -270,19 +447,24 @@
         var parent = canvas[a].parentNode;
         canvas[a].width = parent.clientWidth;
         canvas[a].height = parent.clientHeight;
-      }(a))
+      }(a));
     };
-    //photos[0].render(document.getElementById('canvas1'))};
   }
 
   function resize(){
     console.log('resize');
     var element = document.getElementsByTagName('style')[0];
         element.parentNode.removeChild(element);
+        console.log(fontSize())
 
     return new setStyleSheet(adjustDefs(propeties));
   };
 
+  function OpenInNewTabWinBrowser(url){
+    var win = window.open(url, '_blank');
+    win.focus();
+  }
+/*
   var transition = function(element){
         var i;
         var currentElement;
@@ -302,6 +484,11 @@
         active = true;
         return tl;
     };
+    */
+  var transition = function(element){
+      var elements = document.getElementById('board').childNodes;
+      return elements
+  }
 
  
   //------- debounce and throttle functions courtsey of David Walsh https://davidwalsh.name/javascript-debounce-function ------//
@@ -351,11 +538,13 @@
     Elements = new buildDoMM(propeties);
     definitions = new adjustDefs(propeties);
     sheet = new setStyleSheet(definitions);
+    console.log(sheet)
     console.log(Elements);
     window.addEventListener('resize', debounce(resize, 250), false);
 
     Elements[1].addEventListener('dblclick', function (event) {
-            e.preventDefault();
+        console.log(' double clicked;  ' , event.target)
+            event.preventDefault();
             if (!event.target.classList.contains('items') || event.target.classList.contains('name')) return
             if (active == true){ 
                 active = false;
@@ -366,7 +555,25 @@
             }
         }, false);
 
+    Elements[1].addEventListener('click', function (event) {
+        event.preventDefault();
+        if (event.target.nodeName !== 'LI') return;
+        switch(event.target.id) {
+            case 'LinkedIn':
+                OpenInNewTabWinBrowser('https://ca.linkedin.com/in/ohavb');
+                break;
+            case 'GitHub':
+                OpenInNewTabWinBrowser('https://github.com/ohavben');
+                break;
+            case 'Project':
+                OpenInNewTabWinBrowser('http://carousel.mobi');
+                break;
+            default: return
+        }
+    }, false);
+
     Elements[1].addEventListener('touchend', function(event) {
+        event.preventDefault();
         if (!event.target.classList.contains('items') || event.target.classList.contains('name')) return
         var currentTime = new Date().getTime();
         var tapLength = currentTime - lastTap;
@@ -388,5 +595,6 @@
         }
         lastTap = currentTime;
     });
+    console.log(transition(1));
   };
 }()); // end of main scope
