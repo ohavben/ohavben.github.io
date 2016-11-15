@@ -455,7 +455,7 @@
     console.log('resize');
     var element = document.getElementsByTagName('style');
         console.log(element)
-        element.parentNode.removeChild(element[1]);
+        element[1].parentNode.removeChild(element[1]);
         console.log(fontSize())
 
     return new setStyleSheet(adjustDefs(propeties));
