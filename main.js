@@ -267,7 +267,7 @@
                    overflow: hidden;\
                    width: calc(var(--width-factor) * 1px);\
                    height: calc(var(--height-factor) * 1px);\
-                   background: url('./images/chalkboard_gb6dnb.jpg') no-repeat center center fixed;\
+                   background: url('https://res.cloudinary.com/carousel/image/upload/v1479181707/board_puhjy7.jpg') no-repeat center center fixed;\
                    -webkit-background-size: cover;\
                    -moz-background-size: cover;\
                    -o-background-size: cover;\
