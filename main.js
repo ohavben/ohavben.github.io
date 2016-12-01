@@ -182,7 +182,8 @@
             "CSS": "color:white;\
                     font-size: calc((1/(var(--skillsListFont-factor))) * 0.71rem);\
                     font-family: 'KG Second Chances Sketch';\
-                    padding-left: 0.4rem;"
+                    padding-left: 0.4rem;\
+                    z-index:-1;"
         },
 
         {
