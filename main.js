@@ -56,7 +56,7 @@
         window.addEventListener('resize', debounce(resize, 50), false);
 
         //console.log(sheet);
-        console.log(Elements);
+        //console.log(Elements);
         //console.log(animation.about)
         //console.log(animation.skills)
         //console.log(animation.links)
