@@ -846,7 +846,7 @@
   function resize(){
         TweenMax.killAll();
         var element = document.getElementsByTagName('style');
-                console.log(element)
+                //console.log(element)
                 element[1].parentNode.removeChild(element[1]);
 
         return new setStyleSheet(adjustDefs(propeties).definitions);
