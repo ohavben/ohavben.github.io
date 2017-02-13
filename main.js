@@ -1,11 +1,75 @@
 (function(){
-  var definitions, Elements, sheet, myStyleSheet, currentTransition, active = false, myPrefix =  prefix(), timeout, lastTap = 0 ,propeties = [
 
-        {
-            "type": "class",
-            "ID":":root",
-            "CSS":"--width-factor: totalWidth; --height-factor: totalHeight; --font-factor: 0;"
-        },
+    window.onload = function(){
+
+        Elements = new buildDoMM(propeties);
+        definitions = new adjustDefs(propeties).definitions;
+        sheet = new setStyleSheet(definitions);
+        //animation = new adjustDefs(propeties).animation();
+
+        document.addEventListener('click', function (event) {
+            if (!event.target.id) return
+            switch(event.target.id) {
+                case 'LinkedIn':
+                    event.preventDefault();
+                    OpenInNewTabWinBrowser('https://ca.linkedin.com/in/ohavb');
+                    break;
+                case 'GitHub':
+                    event.preventDefault();
+                    OpenInNewTabWinBrowser('https://github.com/ohavben');
+                    break;
+                case 'Carousel':
+                    event.preventDefault();
+                    OpenInNewTabWinBrowser('http://carousel.mobi');
+                    break;
+                case 'about':
+                    event.preventDefault();
+                    if (event.target.classList.contains('big')) {
+                        //return animation.about.reverse();
+                    }
+                    else {
+                        //return animation.about.play();
+                    }
+                    break;
+                case 'skills':
+                    event.preventDefault();
+                    if (event.target.classList.contains('big')) {
+                        //return animation.skills.reverse();
+                    }
+                    else {
+                        //return animation.skills.play();
+                    }  
+                    break;
+                case 'links':
+                    event.preventDefault();
+                    if (event.target.classList.contains('big')) {
+                        //return animation.links.reverse();
+                    }
+                    else {
+                        //return animation.links.play();
+                    }
+                    break;
+                default: return
+            }
+        }, false);
+
+        window.addEventListener('resize', debounce(resize, 50), false);
+
+        //console.log(sheet);
+        console.log(Elements);
+        //console.log(animation.about)
+        //console.log(animation.skills)
+        //console.log(animation.links)
+    };
+
+    var definitions,
+        Elements,
+        sheet,
+        myStyleSheet,
+        myPrefix =  prefix(),
+        animation;
+
+    const propeties = [
 
         {
             "type": "div",
@@ -14,25 +78,25 @@
             "class": "",
             "text": "",
             "html":"",
-            "CSS":  "width: calc(var(--boardWidth-factor) * 1px);\
-                     height: calc(var(--boardHeight-factor) * 1px);\
+            "CSS":  "width: boardWidth;\
+                     height: boardHeight;\
                      position: relative;\
                      display:block;\
                      position:absolute;\
                      overflow:hidden;\
-                     left: calc(calc(var(--width-factor) - var(--boardWidth-factor)) * 0.5px);\
-                     top: calc(calc(var(--height-factor) - var(--boardHeight-factor)) * 0.5px);"
+                     left: boardLeft;\
+                     top: boardTop;" 
         }, 
-        
-         {
+
+        {
             "type": "div",
             "ID": "#name",
             "parent": "board",
-            "class": "items",
+            "class": "",
             "text": "",
-            "html":"<div class = 'name'>OHAV BEN YANAI</div><div class = 'webdev'>Full Stack Web Developer</div>",
-            "CSS":  "width: calc(var(--boardWidth-factor) * 0.72px);\
-                    height: calc(var(--boardHeight-factor) * 0.38px);\
+            "html":"<div class = 'name'>OHAV BEN YANAI</div><div class = 'webdev Hide'>Full Stack Web Developer</div>",
+            "CSS":  "width: nameWidth;\
+                    height: nameHeight;\
                     top: note2Top;\
                     left: note2Left;\
                     position:absolute;\
@@ -43,11 +107,11 @@
             "type": "div",
             "ID": "#about",
             "parent": "board",
-            "class": "items photo",
+            "class": "clickable",
             "text": "",
-            "html":"<div class = 'AboutTitle'>ABOUT</div><div class = 'AboutDescription'>I create single page web applications with Node.js Express and MongoDb</div>",
-            "CSS": "width: calc(var(--boardWidth-factor) * var(--aboutWidth-factor) * 0.95px);\
-                    height: calc(var(--boardHeight-factor) * (1/var(--aboutWidth-factor)) * 0.52px);\
+            "html":"<div class = 'AboutTitle Hide'>ABOUT</div><div class = 'AboutDescription Hide zoom'>I create progressive web applications with Node.js, webworkers and MongoDb</div>",
+            "CSS": "width: aboutWidth;\
+                    height: aboutHeight;\
                     top: note5Top;\
                     left: note5Left;\
                     position:absolute;\
@@ -58,42 +122,26 @@
             "type": "div",
             "ID": "#skills",
             "parent": "board",
-            "class": "items photo",
+            "class": "clickable",
             "text": "",
-            "html":"<div class = 'skillsTitle'>SKILLS</div><div class = 'skillHolder'><span>JavaScript</span><span>Socket.io</span><span>HTML5</span><span>jQuery</span><span>CSS3</span><span>Linux</span><span>Node.js</span><span></span><span>Express</span><span>Git</span><span>Gimp </span><span>Jade</span><span>SVG</span><span>InkScape</span><span>CANVAS</span><span>GreenSock</span><span>JSON</span><span>Ajax</span><span>MongoDb</span><span>Docker</span></div>",
-            "CSS":  "width: calc(var(--boardWidth-factor) * var(--aboutWidth-factor) * 0.95px);\
-                    height: calc(var(--boardHeight-factor) * (1/var(--aboutWidth-factor)) * 0.4px);\
+            "html":"<div class = 'skillsTitle Hide'>SKILLS</div><div class = 'skillHolder Hide zoom'><span>JavaScript</span><span>Socket.io</span><span>HTML5</span><span>jQuery</span><span>CSS3</span><span>Linux</span><span>Node.js</span><span></span><span>Express</span><span>Git</span><span>Gimp </span><span>Jade</span><span>SVG</span><span>InkScape</span><span>CANVAS</span><span>GreenSock</span><span>JSON</span><span>Ajax</span><span>MongoDb</span><span>Docker</span></div>",
+            "CSS":  "width: skillsWidth;\
+                    height: skillsHeight;\
                     top: note3Top;\
                     left: note3Left;\
                     position:absolute;\
                     overflow:hidden;"
         }, 
-        /*
-        {
-            "type": "div",
-            "ID": "#todo",
-            "parent": "board",
-            "class": "items photo",
-            "text": "",
-            "html":"<div class = 'todoTitle'>TODO</div><ul type = 'none' class = 'todoList'><li>The Internet</li><li>Cool Sites</li><li>Apps</li><li>Learn</li><li>Have Fun</li></ul>",
-            "CSS":  "width: calc(var(--width-factor) * 0.45px);\
-                    height: calc(var(--width-factor) * 0.66 * 0.60px);\
-                    top: note4Top;\
-                    left: note4Left;\
-                    position:absolute;\
-                    overflow:hidden;"
-        }, 
-        */
+
         {
             "type": "div",
             "ID": "#links",
             "parent": "board",
-            "class": "items photo",
+            "class": "clickable",
             "text": "",
-            "html":"<div class = 'linksTitle'>LINKS</div><ul type = 'none' class = 'ulLinks items'><li id = 'LinkedIn'>LinkedIn</li><li id = 'GitHub'>GitHub</li><li id = 'Project'>Project</li></ul>",
-            "CSS":  " --about-factor: 1;\
-                    width: calc(var(--linksDimension-factor));\
-                    height: calc(var(--linksDimension-factor));\
+            "html":"<div class = 'linksTitle Hide'>LINKS</div><ul type = 'none' class = 'ulLinks Hide zoom'><li id = 'LinkedIn'>LinkedIn</li><li id = 'GitHub'>GitHub</li><li id = 'Carousel'>Carousel</li></ul>",
+            "CSS":  "width: linksWidth;\
+                    height: linksHeight;\
                     top: note6Top;\
                     right: note6Left;\
                     position:absolute;\
@@ -104,146 +152,106 @@
             "type": "class",
             "ID":".name",
             "CSS": "font-family: 'BasicScratch';\
-                    font-size: calc(var(--nameFont-factor)  * 1.5rem);\
+                    font-size: nameFontSize;\
                     position:relative;\
                     display:block;\
-                    top: calc(1/(var(--aboutName-factor)) * 1rem);\
+                    top: nameTop;\
                     left: 50%;\
-                    transform: translateX(-50%) scale(1,4);\
-                    -webkit-transform: translateX(-50%) scale(1,4);\
+                    -prefix-transform: translateX(-50%) scale(1,4);\
                     text-align: center;\
                     z-index: -1;\
                     color: #27CDE7;"
-        },// green  = #07D846   // blue = #5755C8 // light blue = // turqize = #27CDE7
+        },
 
         {
             "type": "class",
             "ID":".webdev",
             "CSS": "font-family: 'KG Second Chances Sketch';\
-                    font-size: calc(var(--nameFont-factor) *  0.925rem);\
+                    font-size: webDevFontSize;\
                     position:relative;\
                     display:block;\
-                    top: calc((1/var(--aboutName-factor)) * 1.7777rem);\
+                    top: webDevTop;\
                     left: 50%;\
-                    transform: translateX(-50%) scale(1,1.33);\
-                    -webkit-transform: translateX(-50%) scale(1,1.33);\
+                    -prefix-transform: translateX(-50%) scale(1,1.33);\
                     text-align: center;\
                     z-index: -1;\
                     color:white;\
-                    padding-top: calc(var(--aboutName-factor) * 0.25rem);"
+                    padding-top: webDevPaddingTop;" 
         },
 
         {  
             "type": "class",
             "ID":".AboutTitle",
             "CSS": "font-family: 'BasicScratch';\
-                    font-size: calc((1/(var(--aboutFont-factor))) * 2.8125rem);\
+                    font-size: AboutTitleFontSize;\
                     position:relative;\
                     display:block;\
                     left: 50%;\
-                    transform: translateX(-50%) scale(1,1);\
-                    -webkit-transform: translateX(-50%) scale(1,1);\
+                    -prefix-transform: translateX(-50%) scale(1,1);\
                     text-align: center;\
                     z-index: -1;\
                     color:#DDA1DB;"
-        },// yellow = #F2EC42   //purple  = #730C69
+        },
 
         {
             "type": "class",
             "ID":".AboutDescription",
             "CSS": "font-family: 'KG Second Chances Sketch';\
-                    font-size: calc((1/(var(--aboutFont-factor)))  * .9375rem);\
+                    font-size: AboutDescriptionFontSize;\
                     text-align: center;\
                     position:absolute;\
                     z-index: -1;\
                     color:white;\
-                    top:calc(var(--boardHeight-factor) * calc(var(--aboutName-factor) / var(--aboutName-factor)) * 0.16px);"
+                    top:AboutDescriptionTop;"  
         },
 
         {
             "type": "class",
             "ID":".skillsTitle",
-            "CSS": "width: calc(var(--boardWidth-factor) * var(--aboutWidth-factor) * 0.95px);\
+            "CSS": "width: skillsWidth;\
                     font-family: 'BasicScratch';\
-                    font-size: calc((1/(var(--skillsFont-factor))) *  2.8125rem);\
+                    font-size: SkillsTitleFontSize;\
                     position:absolute;\
                     display:inline;\
                     top: 0px;\
-                    transform: scale(1,1);\
-                    -webkit-transform: scale(1,1);\
                     text-align: center;\
                     z-index: -1;\
                     color:#F8FB50;"
         },
-        // red = #F34658;"   ligtht yellow = #F8FB50  orange = #DD8A0C
-         {
-            "type": "class",
-            "ID":".skillHolder>span",
-            "CSS": "color:white;\
-                    font-size: calc((1/(var(--skillsListFont-factor))) * 0.71rem);\
-                    font-family: 'KG Second Chances Sketch';\
-                    padding-left: 0.4rem;\
-                    z-index:-1;"
-        },
 
         {
             "type": "class",
-            "ID":".todoTitle",
-            "CSS": "font-family: 'BasicScratch';\
-                    font-size: calc(var(--font-factor) * 21px);\
-                    position:relative;\
-                    display:block;\
-                    left: 25%;\
-                    transform: scale(1,1);\
-                    -webkit-transform: scale(1,1);\
-                    line-height: calc(var(--width-factor) * 0.15px);\
-                    text-align: left;\
-                    z-index: -1;\
-                    color:#F34658;"
-        },
-
-         {
-            "type": "class",
-            "ID":".todoList",
-            "CSS": "font-family: 'KG Second Chances Sketch';\
-                    font-size: calc(var(--font-factor) * 7px);\
-                    text-align: left;\
-                    left: 30%;\
-                    transform: scale(1,1);\
-                    -webkit-transform: scale(1,1);\
-                    position:relative;\
-                    display:block;\
-                    z-index: -1;\
-                    color:white;\overflow: hidden;"
+            "ID":".skillHolder>span",
+            "CSS": "color:white;\
+                    font-size: skillsHolderFontSize;\
+                    font-family: 'KG Second Chances Sketch';\
+                    padding-left: 0.4rem;"
         },
 
         {
             "type": "class",
             "ID":".linksTitle",
             "CSS": "font-family: 'BasicScratch';\
-                     font-size: calc(var(--nameFont-factor) * 1.75rem);\
+                    font-size: linksTitleFontSize;\
                     position:relative;\
                     display:block;\
-                    left: ;\
-                    transform: scale(1,1.6);\
-                    -webkit-transform: scale(1,1.6);\
-                    text-align: left;\
+                    -prefix-transform: scale(1,1.6);\
+                    text-align: center;\
                     z-index: -1;\
                     color: #F8FB50;"
-        },// red = #F34658; orange = #DD8A0C    light yellow = #F8FB50
+        },
         
         {
             "type": "class",
             "ID":".ulLinks",
             "CSS": "font-family: 'KG Second Chances Sketch';\
-                     font-size: calc(var(--linksFont-factor) * 0.8125rem);\
+                    font-size: linkFontSize;\
                     text-align: left;\
                     position:relative;\
                     display:block;\
-                    top: -1%;\
+                    top: linksTop;\
                     right: -15%;\
-                    transform: scale(1.2,1);\
-                    -webkit-transform: scale(1.2,1);\
+                    -prefix-transform: scale(1.2,1);\
                     z-index: 1;\
                     color:white;"
         },
@@ -251,11 +259,7 @@
         {
             "type": "class",
             "ID":"*",
-            "CSS":"-webkit-user-select: none;\
-                   -moz-select: none;\
-                   -o-select: none;\
-                   -ms-select: none;\
-                   user-select: none;\
+            "CSS":"-prefix-user-select: none;\
                    overflow: hidden;\
                    margin: 0 auto;\
                    padding: 0px 0px;"
@@ -266,13 +270,10 @@
             "ID":"body",
             "CSS":"margin: 0 auto;\
                    overflow: hidden;\
-                   width: calc(var(--width-factor) * 1px);\
-                   height: calc(var(--height-factor) * 1px);\
+                   width: totalWidth;\
+                   height: totalHeight;\
                    background: url('https://res.cloudinary.com/carousel/image/upload/v1479181707/board_puhjy7.jpg') no-repeat center center fixed;\
-                   -webkit-background-size: cover;\
-                   -moz-background-size: cover;\
-                   -o-background-size: cover;\
-                   background-size: cover;"
+                   -prefix-background-size: cover;"
         },
         
         {
@@ -285,36 +286,17 @@
                     align-items: center;\
                     align-content: stretch;\
                     position: absolute;\
-                    top:calc(var(--boardHeight-factor) * calc(var(--aboutName-factor) / var(--aboutName-factor)) * 0.1777px);" //calc(var(--boardHeight-factor) * (1/var(--aboutWidth-factor))
-        },//calc(calc(var(--height-factor) - var(--boardHeight-factor)) * 0.5px);"
-
-        {
-            "type":"class",
-            "ID":".items",
-            "CSS":  ""
-        },
-
-         {
-            "type":"class",
-            "ID":".hide",
-            "CSS":  "opacity:0;"
-        },
-
-        {
-            "type":"class",
-            "ID":"html",
-            "CSS":  "font-size: calc(var(--font-factor) * 1px);"
+                    top: skillHolderTop;" 
         }
     ];
- 
 
 //-------------------------------- building and setting up the domm ---------------------------------------------//
 
   function adjustDefs(obj){
-    var defs = obj.map(function(value){
-      var newText = {id:value.ID , type: value.type, css:value.CSS};
-      return newText;
-    });
+        var defs = obj.map(function(value){
+            var newText = {id:value.ID , type: value.type, css:value.CSS};
+            return newText;
+        });
 
     var NotesPosition = function(){
             var width = window.innerWidth, height = window.innerHeight, result;
@@ -322,42 +304,504 @@
                     result = [ '8%',  '24%', '3.5%',  '3.5%',  '38%', '50%', '44%', '77.5%', '38%', '2.5%', '4%', '2.5%' ];
                 }
                 else { //portrait
-                    result = ['7%',  '2.5%', '3.5%', '3.5%', '66%', '2.5%', '80%', '52.5%', '23.5%', '2.5%', '3%', '2%' ];
+                    result = ['7%',  '2.5%', '3.5%', '3.5%', '66%', '2.5%', '80%', '52.5%', '24%', '2.5%', '4%', '1%' ];
                 }
             return result;
-        };
+    };
 
-    var DivHeight = window.innerHeight;
+    var totalHeight = window.innerHeight;
     var totalWidth = window.innerWidth;
-    var itemsToBeReplaced = ['totalWidth', 'totalHeight','carouselHeight', 'marginWidth', 'marginHeight', 'marginCarouselHeight', 'note1Top', 'note1Left',  'note2Top', 'note2Left',  'note3Top', 'note3Left',  'note4Top', 'note4Left',  'note5Top', 'note5Left',  'note6Top', 'note6Left', 'myFontSize'];
-        var newValues = [totalWidth+'px', DivHeight+'px', Math.floor(DivHeight-130)+'px', Math.floor(totalWidth/-2)+'px', Math.floor(DivHeight/-2)+'px', Math.floor((DivHeight-130)/-2)+'px', NotesPosition()[0], NotesPosition()[1], NotesPosition()[2], NotesPosition()[3], NotesPosition()[4], NotesPosition()[5], NotesPosition()[6], NotesPosition()[7], NotesPosition()[8], NotesPosition()[9], NotesPosition()[10], NotesPosition()[11], NotesPosition()[12], fontSize()];///
+    var itemsToBeReplaced = [
+                                'totalWidth',               
+                                'totalHeight',              
+                                'marginWidth',              
+                                'marginHeight',             
+                                'marginCarouselHeight',     
+                                'note1Top',                 
+                                'note1Left',                
+                                'note2Top',                 
+                                'note2Left',                
+                                'note3Top',                 
+                                'note3Left',                
+                                'note4Top',                 
+                                'note4Left',                
+                                'note5Top',                 
+                                'note5Left',                
+                                'note6Top',                 
+                                'note6Left',               
+                                'boardLeft',                
+                                'boardTop',                 
+                                'boardWidth',               
+                                'boardHeight',              
+                                'aboutWidth',               
+                                'aboutHeight',              
+                                'skillsWidth',              
+                                'skillsHeight',             
+                                'linksWidth',               
+                                'linksHeight',              
+                                'webDevTop',                
+                                'webDevPaddingTop',         
+                                'AboutDescriptionTop',      
+                                'skillHolderTop',           
+                                'nameWidth',
+                                'nameHeight',
+                                'nameTop',
+                                'skillsWidth',
+                                'linkFontSize',
+                                'linksTitleFontSize',
+                                'nameFontSize',
+                                'webDevFontSize',
+                                'AboutTitleFontSize',
+                                'SkillsTitleFontSize',
+                                'skillsHolderFontSize',
+                                'AboutDescriptionFontSize',
+                                'linksTop',
+                                '-prefix-'
+                            ];
+
+        var newValues = [
+                            totalWidth+'px',                        
+                            totalHeight+'px',                       
+                            Math.floor(totalWidth/-2)+'px',         
+                            Math.floor(totalHeight/-2)+'px',        
+                            Math.floor((totalHeight-130)/-2)+'px',  
+                            NotesPosition()[0],                     
+                            NotesPosition()[1],                     
+                            NotesPosition()[2],                     
+                            NotesPosition()[3],                     
+                            NotesPosition()[4],                     
+                            NotesPosition()[5],                     
+                            NotesPosition()[6],                     
+                            NotesPosition()[7],                     
+                            NotesPosition()[8],                     
+                            NotesPosition()[9],                     
+                            NotesPosition()[10],                    
+                            NotesPosition()[11],                   
+                            boardLeft(),                            
+                            boardTop(),                             
+                            boardWidth(),                           
+                            boardHeight(),                          
+                            aboutWidth(),                           
+                            aboutHeight(),                          
+                            skillsWidth(),                          
+                            skillsHeight(),                         
+                            linksWidth(),                           
+                            linksHeight(),                          
+                            webDevTop(),                            
+                            webDevPaddingTop(),                     
+                            AboutDescriptionTop(),                  
+                            skillHolderTop(),                       
+                            nameWidth(),
+                            nameHeight(),
+                            nameTop(), 
+                            skillsWidth(),
+                            linkFontSize(),
+                            linksTitleFontSize(),
+                            nameFontSize(),
+                            webDevFontSize(),
+                            AboutTitleFontSize(),
+                            SkillsTitleFontSize(),
+                            skillsHolderFontSize(),
+                            AboutDescriptionFontSize(),
+                            linksTop(),
+                            myPrefix.css
+                         ];
+
     var length = defs.length;
     var itemsLength = itemsToBeReplaced.length;
 
     for (var s = 0 ; s < length; ++s){
         for (var r = 0; r < itemsLength; ++r){
           (function(oldValue,newValue,u){
-            defs[u].css = defs[u].css.replace(oldValue, newValue);
+            defs[u].css = defs[u].css.replaceAll(oldValue, newValue);
           }(itemsToBeReplaced[r],newValues[r],s))
         }
     }
 
-    return defs;
+    function boardLeft(){
+         var size;
+        if (totalWidth > totalHeight){ //landscape
+            size = Math.floor((totalWidth - (totalHeight * 1.333))/2);
+        } 
+        else {
+            size = 0;
+        }
+        return size.toString() + 'px';
+    }
+
+    function boardTop(){
+         var size;
+        if (totalWidth > totalHeight){ //landscape
+            size = 0;
+        } 
+        else {
+            size = Math.floor(( totalHeight - (totalWidth * 1.333))/2);
+        }
+        return size.toString() + 'px';
+    }
+
+    function boardWidth(){
+      var size;
+      if (totalWidth > totalHeight){ //landscape
+        size = Math.floor(totalHeight * 1.333);
+      } 
+      else {
+        size = Math.floor(totalWidth);
+      }
+      return size.toString() + 'px';
+    }
+
+    function boardHeight(){
+      var size;
+      if (totalWidth > totalHeight){ //landscape
+        size = Math.floor(totalHeight);
+      } 
+      else {
+        size = Math.floor(totalWidth * 1.333);
+      }
+      return size.toString() + 'px';
+    }
+
+    function nameWidth(){
+        var size;
+        if (totalWidth > totalHeight){ //landscape
+            size = Math.floor(totalHeight * 1.333 * 0.72);
+        } 
+        else {
+            size = Math.floor(totalWidth * 0.72);
+        }
+        return size.toString() + 'px';
+    }
+
+    function nameHeight(){
+        var size;
+        if (totalWidth > totalHeight){ //landscape
+            size = Math.floor(totalHeight * 0.38);
+        } 
+        else {
+            size = Math.floor(totalWidth * 1.333 * 0.38);
+        }
+        return size.toString() + 'px';
+    }
+
+    function skillsWidth(){
+        var size;
+        if (totalWidth > totalHeight){ //landscape
+            size = Math.floor(totalHeight * 1.333 * 0.5 * 0.95);
+        } 
+        else {
+            size = Math.floor(totalWidth * 0.95);
+        }
+        return size .toString() + 'px';
+    }
+
+    function skillsHeight(){
+        var size;
+        if (totalWidth > totalHeight){ //landscape
+            size = Math.floor(totalHeight * 2 * 0.4);
+        } 
+        else {
+            size = Math.floor(totalWidth * 1.333 * 0.4);
+        }
+        return size.toString() + 'px';
+    }
+
+    function linksWidth(){
+        var size;
+        if (totalWidth > totalHeight){ //landscape
+            size = Math.floor(totalHeight * 0.33);
+        } 
+        else {
+            size = Math.floor(totalWidth * 0.25);
+        }
+        return size.toString() + 'px';
+    }
+
+    function linksHeight(){
+        var size;
+        if (totalWidth > totalHeight){ //landscape
+            size = Math.floor(totalHeight * 0.33);
+        } 
+        else {
+            size = Math.floor(totalWidth * 0.33);
+        }
+        return size.toString() + 'px';
+    }
+
+    function webDevTop(){
+        var size;
+            if (totalWidth > totalHeight){ //landscape
+                size = Math.floor(totalHeight * 0.38 * 0.3666);
+            } 
+            else {
+                size = Math.floor(totalWidth * 1.333 * 0.38 * 0.2);
+            }
+        return size.toString() + 'px';
+    }
+
+    function linksTop(){
+        var size;
+            if (totalWidth > totalHeight){ //landscape
+                size = Math.floor(totalHeight * -0.008);
+            } 
+            else {
+                size = Math.floor(totalWidth * 0.0117);
+            }
+        return size.toString() + 'px';
+    }
+
+    function nameTop(){
+        var size;
+            if (totalWidth > totalHeight){ //landscape
+                size = Math.floor(totalHeight * 0.38 * 0.22);
+            } 
+            else {
+                size = Math.floor(totalWidth * 1.333 * 0.38 * 0.125);
+            }
+        return size.toString() + 'px';
+    }
+
+    function webDevPaddingTop(){
+        var size;
+            if (totalWidth > totalHeight){ //landscape
+                size = Math.floor(totalHeight * 0.38 * 0.03125);
+            } 
+            else {
+                size = Math.floor(totalWidth * 1.333 * 0.38 * 0.03125);
+            }
+        return size.toString() + 'px';
+    }
+
+    function AboutDescriptionTop(){
+        var size;
+            if (totalWidth > totalHeight){ //landscape
+                size = Math.floor(totalHeight * 0.16667);
+            } 
+            else {
+                size = Math.floor(totalWidth * 0.2);
+            }
+        return size.toString() + 'px';
+    }
+
+    function skillHolderTop(){
+        var size;
+            if (totalWidth > totalHeight){ //landscape
+                size = Math.floor(totalHeight * 0.1777);
+            } 
+            else {
+                size = Math.floor(totalWidth * 0.225);
+            }
+        return size.toString() + 'px';
+    }
+
+    function aboutWidth(){
+        var size;
+        if (totalWidth > totalHeight){ //landscape
+            size = Math.floor(totalHeight * 1.333 * 0.5 * 0.95);
+        } 
+        else {
+            size = Math.floor(totalWidth * 0.95);
+        }
+        return size.toString() + 'px';
+    }
+
+    function aboutHeight(){
+        var size;
+        if (totalWidth > totalHeight){ //landscape
+            size = Math.floor(totalHeight * 2 * 0.52);
+        } 
+        else {
+            size = Math.floor(totalWidth * 1.333 * 0.52);
+        }
+        return size.toString() + 'px';
+    }
+
+    function skillsWidth(){
+        var size;
+        if (totalWidth > totalHeight){ //landscape
+            size = Math.floor(totalHeight * 1.333 * 0.5 * 0.95);
+        } 
+        else {
+            size = Math.floor(totalWidth * 0.95);
+        }
+        return size.toString() + 'px';
+    }
+
+    function linkFontSize(){
+        var size;
+        if (totalWidth > totalHeight){ //landscape
+            size = Math.floor(totalHeight * 0.0556);
+        } 
+        else {
+            size = Math.floor(totalWidth * 0.04125);
+        }
+        return size.toString() + 'px';
+    }
+
+    function linksTitleFontSize(){
+        var size;
+        if (totalWidth > totalHeight){ //landscape
+            size = Math.floor(totalHeight * 0.1177);
+        } 
+        else {
+            size = Math.floor(totalWidth * 0.09);
+        }
+        return size.toString() + 'px';
+    }
+
+    function nameFontSize(){
+        var size;
+        if (totalWidth > totalHeight){ //landscape
+            size = Math.floor(totalHeight * 0.1);
+        } 
+        else {
+            size = Math.floor(totalWidth * 0.08);
+        }
+        return size.toString() + 'px';
+    }
+
+    function webDevFontSize(){
+        var size;
+        if (totalWidth > totalHeight){ //landscape
+            size = Math.floor(totalHeight * 0.06);
+        } 
+        else {
+            size = Math.floor(totalWidth * 0.0475);
+        }
+        return size.toString() + 'px';
+    }
+
+    function AboutTitleFontSize(){
+        var size;
+        if (totalWidth > totalHeight){ //landscape
+            size = Math.floor(totalHeight * 0.1887);
+        } 
+        else {
+            size = Math.floor(totalWidth * 0.2125);
+        }
+        return size.toString() + 'px';
+    }
+
+    function SkillsTitleFontSize(){
+        var size;
+        if (totalWidth > totalHeight){ //landscape
+            size = Math.floor(totalHeight * 0.1887);
+        } 
+        else {
+            size = Math.floor(totalWidth * 0.2325);
+        }
+        return size.toString() + 'px';
+    }
+
+    function skillsHolderFontSize(){
+        var size;
+        if (totalWidth > totalHeight){ //landscape
+            size = Math.floor(totalHeight * 0.0475);
+        } 
+        else {
+            size = Math.floor(totalWidth * 0.035);
+        }
+        return size.toString() + 'px';
+    }
+
+    function AboutDescriptionFontSize(){
+        var size;
+        if (totalWidth > totalHeight){ //landscape
+            size = Math.floor(totalHeight * 0.055);
+        } 
+        else {
+            size = Math.floor(totalWidth * 0.077);
+        }
+        return size.toString() + 'px';
+    }
+
+    var setAnimationValues = function(){
+        var top = totalHeight * 0.38;
+
+        var animateAbout = new TimelineMax({
+            paused:true,
+            onComplete: function(){ Elements[2].classList.add('big')},
+            onReverseComplete: function(){Elements[2].classList.remove('big')}
+        });
+
+        var animateSkills = new TimelineMax({
+            paused:true,
+            onComplete: function(){Elements[3].classList.add('big')},
+            onReverseComplete: function(){Elements[3].classList.remove('big')}
+        });
+
+        var animateLinks = new TimelineMax({
+            paused:true,
+            onComplete: function(){Elements[4].classList.add('big')},
+            onReverseComplete: function(){Elements[4].classList.remove('big')}
+        });
+        var x = 0;
+
+        animateAbout.add(TweenMax.to(Elements[2], 1, {
+            top: top,
+            left: 0,
+            //width: x,
+            //height: x,
+            fontSize: 16
+        } ));
+
+        animateAbout.add(TweenMax.to(Elements[1], 1, { css:{width: window.innerWidth, left:0 }}),'-=1');
+        animateAbout.add(TweenMax.to(Elements[3], 1, { autoAlpha: 0} ),'-=2');
+        animateAbout.add(TweenMax.to(Elements[4], 1, { autoAlpha: 0} ),'-=3');
+
+        animateSkills.add(TweenMax.to(Elements[3], 1, { 
+            top:top,
+            left: 0,
+            //width: x,
+            //height: x,
+            fontSize: 16
+        } ));
+
+        animateSkills.add(TweenMax.to(Elements[1], 1, { width: window.innerWidth, left:0} ),'-=1');
+        animateSkills.add(TweenMax.to(Elements[2], 1, { autoAlpha: 0} ),'-=2');
+        animateSkills.add(TweenMax.to(Elements[4], 1, { autoAlpha: 0} ),'-=3');
+
+        animateLinks.add(TweenMax.to(Elements[4], 1, { 
+            top: top,
+            left: 0,
+           // width: x,
+            //height: x,
+            //fontSize: 36
+        } ));
+        animateLinks.add(TweenMax.to(Elements[4].children[0], 1, { fontSize:30, autoRound: false}));
+        animateLinks.add(TweenMax.to(Elements[4].children[1], 1, { fontSize:30, autoRound: false}));
+        animateLinks.add(TweenMax.to(Elements[1], 1, { width: window.innerWidth, left:0} ),'-=1');
+        animateLinks.add(TweenMax.to(Elements[2], 1, { autoAlpha: 0} ),'-=2');
+        animateLinks.add(TweenMax.to(Elements[3], 1, { autoAlpha: 0} ),'-=3');
+
+        return {
+            about: animateAbout,
+            skills: animateSkills,
+            links: animateLinks
+        }
+    }
+
+    return {
+        definitions: defs,
+        animation: function(){
+            return setAnimationValues()
+        }
+     }
   };
 
   function buildDoMM(data){
-    var objects = data.map(function(defs){
-      var parent;
-      if (defs.type == 'class' || defs.type == 'keyframe') return null;
-      if (defs.parent == 'body')  Parent =  document.getElementsByTagName('body')[0];
-      else Parent = document.getElementById(defs.parent);
-      var Child = document.createElement(defs.type);
-      Child.id = defs.ID.substring(1);;
-      if (defs.class && defs.class !=='') {  addClasses(Child,defs.class); }
-      if (defs.html) {Child.innerHTML = defs.html;}
-      Parent.appendChild(Child);
-      return Child;
-    });
+        var objects = data.map(function(defs){
+            var parent;
+            if (defs.type == 'class' || defs.type == 'keyframe') return null;
+            if (defs.parent == 'body')  Parent =  document.getElementsByTagName('body')[0];
+            else Parent = document.getElementById(defs.parent);
+            var Child = document.createElement(defs.type);
+            Child.id = defs.ID.substring(1);
+            if (defs.class && defs.class !=='') {  addClasses(Child,defs.class); }
+            if (defs.html) {Child.innerHTML = defs.html;}
+            Parent.appendChild(Child);
+            return Child;
+        });
   return objects;
   };
 
@@ -372,161 +816,81 @@
             }(i));
         }
     }
-//
+
   function setStyleSheet(object){
-    myStyleSheet = document.createElement('style');
-    myStyleSheet.appendChild(document.createTextNode('')); // this is for webkit
-    document.head.appendChild(myStyleSheet);
+        myStyleSheet = document.createElement('style');
+        myStyleSheet.appendChild(document.createTextNode('')); // this is for webkit
+        document.head.appendChild(myStyleSheet);
 
-    //var fontSizeFactor = new fontSize();
-    document.documentElement.style.setProperty('--font-factor',  fontSize());
-    document.documentElement.style.setProperty('--height-factor',  window.innerHeight);
-    document.documentElement.style.setProperty('--boardWidth-factor',  window.innerWidth);
-    document.documentElement.style.setProperty('--boardHeight-factor',  window.innerHeight);
-
-    if (window.innerWidth > window.innerHeight){
-            document.documentElement.style.setProperty('--width-factor', window.innerWidth); ///Math.floor(Number(window.innerWidth / (window.innerWidth / window.innerHeight))));
-            document.documentElement.style.setProperty('--nameFont-factor',  Number(1));
-            document.documentElement.style.setProperty('--aboutWidth-factor',  Number(0.5));
-            document.documentElement.style.setProperty('--aboutName-factor',  Number(0.77));
-            document.documentElement.style.setProperty('--linksDimension-factor',  window.innerHeight *0.33);
-            document.documentElement.style.setProperty('--aboutFont-factor',  Number(1));
-            document.documentElement.style.setProperty('--skillsFont-factor',  Number(1));
-            document.documentElement.style.setProperty('--linksFont-factor',  Number(1));
-            document.documentElement.style.setProperty('--skillsListFont-factor',  Number(1));
-            document.documentElement.style.setProperty('--boardWidth-factor',  window.innerHeight*1.333);
-        } else {
-            document.documentElement.style.setProperty('--width-factor',  window.innerWidth);
-            document.documentElement.style.setProperty('--linksFont-factor',  Number(0.77));
-            document.documentElement.style.setProperty('--nameFont-factor',  Number(0.77));
-            document.documentElement.style.setProperty('--aboutWidth-factor',  Number(1));
-            document.documentElement.style.setProperty('--linksDimension-factor',  window.innerWidth *0.33);
-            document.documentElement.style.setProperty('--aboutFont-factor',  Number(0.85));
-            document.documentElement.style.setProperty('--skillsFont-factor',  Number(0.80));
-            document.documentElement.style.setProperty('--skillsListFont-factor',  Number(1.25));
-            document.documentElement.style.setProperty('--boardHeight-factor',  window.innerWidth*1.3333);
-            document.documentElement.style.setProperty('--aboutName-factor',  Number(1)); 
-    }
-    
-
-    var length = object.length, i;
-    for (i = 0; i< length; ++i){
-      (function(target){
-        if(target.type == 'class' || target.type == 'div' || target.type == 'canvas'){try {
-              myStyleSheet.sheet.insertRule( target.id + ' {' + target.css + '}' , 0 );
-          }
-          catch(err) {
-              console.log(err)
-          }
-        }else if(target.type == 'keyframe'){
-          return myStyleSheet.sheet.insertRule( '@' + myPrefix + 'keyframes ' + target.id + '{'+ target.css + '}', 0 );
-        }else return console.log(target.id + 'is not valid for CSS rules')
-      }(object[i]));
-    }
-    
-    return myStyleSheet.sheet;
+        var length = object.length, i;
+        for (i = 0; i< length; ++i){
+            (function(target){
+                if(target.type == 'class' || target.type == 'div' || target.type == 'canvas'){
+                    try {
+                        myStyleSheet.sheet.insertRule( target.id + ' {' + target.css + '}' , 0 );
+                    }
+                    catch(err) {
+                        console.log(err)
+                    }
+                }
+                else if(target.type == 'keyframe'){
+                    return myStyleSheet.sheet.insertRule( '@' + myPrefix + 'keyframes ' + target.id + '{'+ target.css + '}', 0 );
+                }
+                else return console.log(target.id + 'is not valid for CSS rules')
+            }(object[i]));
+        }
+        
+        return myStyleSheet.sheet;
   };
 
-  function fontSize(){
-      var Width = window.innerWidth , Height = window.innerHeight , factor;
-      if (Width > Height) {
-          //factor = small font + (Current width - smallWidth)*(1920 - smallWidth/54) //   1024 - 320 = 992 50-16 = 34 
-          factor = Math.floor(Number(16 +  (((Height  * 1.3333333333333) - 320)/21)));
-      } else {
-          //factor = goodSmallFactor + slope * ( Width - SmallWidth );
-          factor = Math.floor(Number(16 + (((Width * 1.3333333333333333) -320)/21)));
-      }
-      //console.log('factor:  ', factor)
-    return factor;
-  }
-
-  var sizeCanvas = function(){
-    console.log('resizing canvas')
-    canvas = document.getElementsByTagName('canvas');
-    for (a = 0; a < canvas.length; a++){
-      (function(a){
-        var parent = canvas[a].parentNode;
-        canvas[a].width = parent.clientWidth;
-        canvas[a].height = parent.clientHeight;
-      }(a));
-    };
-  }
-
   function resize(){
-    console.log('resize');
-    var element = document.getElementsByTagName('style');
-        console.log(element)
-        element[1].parentNode.removeChild(element[1]);
-        console.log(fontSize())
+        TweenMax.killAll();
+        var element = document.getElementsByTagName('style');
+                console.log(element)
+                element[1].parentNode.removeChild(element[1]);
 
-    return new setStyleSheet(adjustDefs(propeties));
+        return new setStyleSheet(adjustDefs(propeties).definitions);
   };
 
   function OpenInNewTabWinBrowser(url){
-    var win = window.open(url, '_blank');
-    win.focus();
+        var win = window.open(url, '_blank');
+        win.focus();
   }
-/*
-  var transition = function(element){
-        var i;
-        var currentElement;
-        var tl = new TimelineMax();
-        var elements = document.getElementsByClassName('items');
-        for ( i = 0 ; i < elements.length; i ++){
-            if (elements[i] === element) {
-                  currentElement = elements[i];
-                 //tl.to(elements[i], 0.25, {left: 0, top: 0, width: window.innerWidth, height: window.innerHeight, fontSize: 50});
-            } else {
-                tl.to(elements[i], 0.25, {opacity:0});
-
-            }
-        }
-        tl.to(currentElement, 0.25, { left: 0, top: 0, width: window.innerWidth, height: window.innerHeight });
-        //tl.to(currentElement, 0.25, { fontSize: 6 +'vmin',  autoRound: false });
-        active = true;
-        return tl;
-    };
-    */
-  var transition = function(element){
-      var elements = document.getElementById('board').childNodes;
-      return elements
-  }
-
  
   //------- debounce and throttle functions courtsey of David Walsh https://davidwalsh.name/javascript-debounce-function ------//
   function debounce(func, wait, immediate) {
-    var timeout;
-    return function() {
-      var context = this, args = arguments;
-      var later = function() {
-        timeout = null;
-        if (!immediate) func.apply(context, args);
-      };
-      var callNow = immediate && !timeout;
-      clearTimeout(timeout);
-      timeout = setTimeout(later, wait);
-      if (callNow) func.apply(context, args);
-    };
+        var timeout;
+            return function() {
+            var context = this, args = arguments;
+            var later = function() {
+                timeout = null;
+                if (!immediate) func.apply(context, args);
+            };
+            var callNow = immediate && !timeout;
+            clearTimeout(timeout);
+            timeout = setTimeout(later, wait);
+            if (callNow) func.apply(context, args);
+        };
   };
 
   function throttle(delay, callback) {
-    var previousCall = new Date().getTime();
-    return function() {
-      var time = new Date().getTime();
-      if ((time - previousCall) >= delay) {
-        previousCall = time;
-        callback.apply(null, arguments);
-      }
-    };
+        var previousCall = new Date().getTime();
+        return function() {
+            var time = new Date().getTime();
+            if ((time - previousCall) >= delay) {
+                previousCall = time;
+                callback.apply(null, arguments);
+            }
+        };
   };
 
   function prefix() { // courtosy of David Walch https://davidwalsh.name/vendor-prefix
-    var styles = window.getComputedStyle(document.documentElement, ''),
-    pre = (Array.prototype.slice
-    .call(styles)
-    .join('')
-    .match(/-(moz|webkit|ms)-/) || (styles.OLink === '' && ['', 'o']))[1],
-    dom = ('WebKit|Moz|MS|O').match(new RegExp('(' + pre + ')', 'i'))[1];
+        var styles = window.getComputedStyle(document.documentElement, ''),
+        pre = (Array.prototype.slice
+        .call(styles)
+        .join('')
+        .match(/-(moz|webkit|ms)-/) || (styles.OLink === '' && ['', 'o']))[1],
+        dom = ('WebKit|Moz|MS|O').match(new RegExp('(' + pre + ')', 'i'))[1];
     return {
       dom: dom,
       lowercase: pre,
@@ -535,68 +899,13 @@
     }
   };
 
-  window.onload = function(){
-    console.log('loaded')
-    Elements = new buildDoMM(propeties);
-    definitions = new adjustDefs(propeties);
-    sheet = new setStyleSheet(definitions);
-    console.log(sheet)
-    console.log(Elements);
-    window.addEventListener('resize', debounce(resize, 250), false);
-
-    Elements[1].addEventListener('dblclick', function (event) {
-        console.log(' double clicked;  ' , event.target)
-            event.preventDefault();
-            if (!event.target.classList.contains('items') || event.target.classList.contains('name')) return
-            if (active == true){ 
-                active = false;
-                return currentTransition.reverse(); 
-            }
-            else if (active == false) {
-                currentTransition = new transition(event.target);
-            }
-        }, false);
-
-    Elements[1].addEventListener('click', function (event) {
-        event.preventDefault();
-        if (event.target.nodeName !== 'LI') return;
-        switch(event.target.id) {
-            case 'LinkedIn':
-                OpenInNewTabWinBrowser('https://ca.linkedin.com/in/ohavb');
-                break;
-            case 'GitHub':
-                OpenInNewTabWinBrowser('https://github.com/ohavben');
-                break;
-            case 'Project':
-                OpenInNewTabWinBrowser('http://carousel.mobi');
-                break;
-            default: return
-        }
-    }, false);
-
-    Elements[1].addEventListener('touchend', function(event) {
-        event.preventDefault();
-        if (!event.target.classList.contains('items') || event.target.classList.contains('name')) return
-        var currentTime = new Date().getTime();
-        var tapLength = currentTime - lastTap;
-        clearTimeout(timeout);
-        if (tapLength < 500 && tapLength > 0) {
-            //elm2.innerHTML = 'Double Tap';
-            event.preventDefault();
-            if (active == true){ 
-                active = false;
-                return currentTransition.reverse(); 
-            }
-            else if (active == false) {
-                currentTransition = new transition(event.target);
-            }
-        } else {
-            timeout = setTimeout(function() {
-                clearTimeout(timeout);
-            }, 500);
-        }
-        lastTap = currentTime;
-    });
-    console.log(transition(1));
+  String.prototype.replaceAll = function(str1, str2, ignore) {
+        return this.replace(new RegExp(str1.replace(/([\/\,\!\\\^\$\{\}\[\]\(\)\.\*\+\?\|\<\>\-\&])/g,"\\$&"),(ignore?"gi":"g")),(typeof(str2)=="string")?str2.replace(/\$/g,"$$$$"):str2);
   };
 }()); // end of main scope
+
+
+
+
+
+
