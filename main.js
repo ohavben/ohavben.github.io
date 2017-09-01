@@ -1,5 +1,5 @@
 (function(){
-
+    alert()
     window.onload = function(){
 
         Elements = new buildDoMM(propeties);
