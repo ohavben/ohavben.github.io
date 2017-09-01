@@ -43,7 +43,7 @@
                 case 'links':
                     event.preventDefault();
                     if (event.target.classList.contains('big')) {
-                        //return animation.links.reverse();
+                        //return animation.links.reverse();//
                     }
                     else {
                         //return animation.links.play();
