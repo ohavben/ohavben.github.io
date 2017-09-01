@@ -20,7 +20,7 @@
                     break;
                 case 'Carousel':
                     event.preventDefault();
-                    OpenInNewTabWinBrowser('http://carousel.mobi');
+                    OpenInNewTabWinBrowser('http://carousel.ga');
                     break;
                 case 'about':
                     event.preventDefault();
